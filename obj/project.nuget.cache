@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1F7ifHBH0xl1wrpcCZ8yDfZcM3MBGYymaBxnU5j4e2flrECIrVov/uDFJihsb4kiSS2Dnp+4gl2Ni3VeinzEHA==",
+  "dgSpecHash": "Elsdrmlrf+mCfKC1PwPwCuf8BtMpShszItU/C91bQL0PredhS1QRcNSTLHejV7qwE0fpCUMbGXX2VGrV9aE4Pg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\kidis\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.3\\microsoft.entityframeworkcore.design.8.0.3.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.3\\microsoft.entityframeworkcore.relational.8.0.3.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.3\\microsoft.entityframeworkcore.sqlserver.8.0.3.nupkg.sha512",
+    "C:\\Users\\kidis\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.3\\microsoft.entityframeworkcore.tools.8.0.3.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
