@@ -144,3 +144,4 @@ C:\Users\kidis\Visual Studio Code\Final Project\Backend\obj\Debug\net8.0\Backend
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Scrutor.dll
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\AutoMapper.dll

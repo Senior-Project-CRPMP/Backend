@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Elsdrmlrf+mCfKC1PwPwCuf8BtMpShszItU/C91bQL0PredhS1QRcNSTLHejV7qwE0fpCUMbGXX2VGrV9aE4Pg==",
+  "dgSpecHash": "2yJbj4MeweaHsdZzQPUmOWiBEr8tG3QBkaVUM8RJSqvoFGqEgg5f9CB+8if7VKuqnY2zZFcJ1j/kttvP8Durjg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kidis\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\kidis\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
