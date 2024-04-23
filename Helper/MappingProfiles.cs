@@ -8,8 +8,10 @@ namespace Backend.Helper
     {
         public MappingProfiles() 
         {
-            CreateMap<Project, ProjectDto>();
-            CreateMap<ProjectDto, Project>();
+            CreateMap<ProjectModel, ProjectDto>();
+            CreateMap<ProjectDto, ProjectModel>();
+            CreateMap<TaskModel, TaskDto>();
+            CreateMap<TaskDto, TaskModel>();
         }
     }
 }

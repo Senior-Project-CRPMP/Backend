@@ -11,11 +11,18 @@ namespace Backend.Data
         
         }
 
-        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectModel> Projects { get; set; }
+        public DbSet<TaskModel> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<TaskModel>()
+                .HasOne(t => t.Project)
+                .WithMany(p => p.Tasks)
+                .HasForeignKey(t => t.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
     }

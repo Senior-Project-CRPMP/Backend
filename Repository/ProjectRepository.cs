@@ -12,29 +12,29 @@ namespace Backend.Repository
             _context = context;
         }
 
-        public bool CreateProject(Project project)
+        public bool CreateProject(ProjectModel project)
         {
             _context.Add(project);
             return Save();
         }
 
-        public bool DeleteProject(Project project)
+        public bool DeleteProject(ProjectModel project)
         {
             _context.Remove(project);
             return Save();
         }
 
-        public Project GetProject(string title)
+        public ProjectModel GetProject(string title)
         {
             return _context.Projects.Where(p => p.Title == title).FirstOrDefault();
         }
 
-        public Project GetProject(int id)
+        public ProjectModel GetProject(int id)
         {
             return _context.Projects.Where(p => p.Id == id).FirstOrDefault();
         }
 
-        public ICollection<Project> GetProjects()
+        public ICollection<ProjectModel> GetProjects()
         {
             return _context.Projects.OrderBy(p => p.Id).ToList();
         }
@@ -55,7 +55,7 @@ namespace Backend.Repository
             return saved > 0 ? true : false;
         }
 
-        public bool UpdateProject(Project project)
+        public bool UpdateProject(ProjectModel project)
         {
             _context.Update(project);
             return Save();
