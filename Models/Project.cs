@@ -1,6 +1,6 @@
 ﻿namespace Backend.Models
 {
-    public class ProjectModel
+    public class Project
     {
         public int Id { get; set; }
         public string? Title { get; set; }
@@ -10,8 +10,9 @@
         public DateTime EndDate { get; set; }
         public string? Status { get; set; }
         public string? ManagerId { get; set; }
-
-        public virtual ICollection<TaskModel> Tasks { get; set; }
         public ICollection<UserProject> UserProjects { get; set; }
+        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<Models.Form.Form> Forms { get; set; }
+
     }
 }

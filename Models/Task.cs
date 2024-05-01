@@ -1,10 +1,13 @@
-﻿namespace Backend.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Backend.Models
 {
-    public class TaskModel
+    public class Task
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
+        [ForeignKey("Project")]
         public int ProjectId { get; set; }
-        public virtual ProjectModel? Project { get; set; }
+        public virtual Project? Project { get; set; }
         public string? Title { get; set; }
         public string Description { get; set; } = string.Empty;
         public string? AssignedTo { get; set; }

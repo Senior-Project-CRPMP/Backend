@@ -19,8 +19,8 @@ namespace Backend.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<ProjectModel>))]
+        [HttpGet("EveryProject")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Project>))]
         public IActionResult GetProjects()
         {
             var projects = _mapper.Map<List<ProjectDto>>(_projectRepository.GetProjects());
@@ -33,8 +33,8 @@ namespace Backend.Controllers
             return Ok(projects);
         }
 
-        [HttpGet("{projectId}")]
-        [ProducesResponseType(200, Type = typeof(ProjectModel))]
+        [HttpGet("SingleProject/{projectId}")]
+        [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(int projectId)
         {
@@ -49,8 +49,8 @@ namespace Backend.Controllers
             return Ok(project);
         }
 
-        [HttpGet("{projectTitle}")]
-        [ProducesResponseType(200, Type = typeof(ProjectModel))]
+        [HttpGet("SingleProject/{projectTitle}")]
+        [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(string projectTitle)
         {
@@ -65,7 +65,7 @@ namespace Backend.Controllers
             return Ok(project);
         }
 
-        [HttpPost]
+        [HttpPost("CreateProject")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public IActionResult CreateProject([FromBody] ProjectDto projectCreate)
@@ -86,7 +86,7 @@ namespace Backend.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var projectMap = _mapper.Map<ProjectModel>(projectCreate);
+            var projectMap = _mapper.Map<Project>(projectCreate);
 
             if (!_projectRepository.CreateProject(projectMap))
             {
@@ -97,7 +97,7 @@ namespace Backend.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{projectId}")]
+        [HttpPut("UpdateProject/{projectId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -115,7 +115,7 @@ namespace Backend.Controllers
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var projectMap = _mapper.Map<ProjectModel>(updatedProject);
+            var projectMap = _mapper.Map<Project>(updatedProject);
 
             if (!_projectRepository.UpdateProject(projectMap))
             {
@@ -126,7 +126,7 @@ namespace Backend.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{projectId}")]
+        [HttpDelete("DeleteProject/{projectId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]

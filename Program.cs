@@ -1,6 +1,9 @@
 using Backend.Data;
 using Backend.Interfaces;
+using Backend.Interfaces.Form;
 using Backend.Repository;
+using Backend.Repository.Form;
+using Backend.Repository.FormQuestion;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -20,8 +23,10 @@ builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserInfoRepository, UserInfoRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
-
-
+builder.Services.AddScoped<IFormRepository, FormRepository>();
+builder.Services.AddScoped<IFormQuestionRepository, FormQuestionRepository>();
+builder.Services.AddScoped<IFormLinkQuestionRepository, FormLinkQuestionRepository>();
+builder.Services.AddScoped<FormOptionRepository, FormOptionRepository>();
 
 
 builder.Services.AddEndpointsApiExplorer();

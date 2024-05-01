@@ -1,94 +1,95 @@
 ﻿using AutoMapper;
 using Backend.Dto;
+using Backend.Dto.Form;
 using Backend.Interfaces;
+using Backend.Interfaces.Form;
 using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 
-namespace Backend.Controllers
+namespace Backend.Controllers.Form
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TaskController : ControllerBase
+    public class FormController : ControllerBase
     {
-        private readonly ITaskRepository _taskRepository;
+        private readonly IFormRepository _formRepository;
         private readonly IProjectRepository _projectRepository;
         private readonly IMapper _mapper;
 
-        public TaskController(ITaskRepository taskRepository, IProjectRepository projectRepository, IMapper mapper)
+        public FormController(IFormRepository formRepository, IProjectRepository projectRepository, IMapper mapper)
         {
-            _taskRepository = taskRepository;
+            _formRepository = formRepository;
             _projectRepository = projectRepository;
             _mapper = mapper;
         }
 
-        [HttpGet("EveryTask")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Task>))]
-        public IActionResult GetTasks()
+        [HttpGet("EveryForm")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.Form>))]
+        public IActionResult GetForms()
         {
-            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetTasks());
+            var forms = _mapper.Map<List<FormDto>>(_formRepository.GetForms());
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(tasks);
+            return Ok(forms);
         }
 
-        [HttpGet("ProjectTasks/{projectId}")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Task>))]
+        [HttpGet("ProjectForms/{projectId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.Form>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetProjectTasks(int taskId)
+        public IActionResult GetProjectForms(int formId)
         {
-            if (!_taskRepository.ProjectTaskExists(taskId))
+            if (!_formRepository.ProjectFormExists(formId))
                 return NotFound();
 
-            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetProjectTasks(taskId));
+            var forms = _mapper.Map<List<FormDto>>(_formRepository.GetProjectForms(formId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(tasks);
+            return Ok(forms);
         }
 
-        [HttpGet("SingleTask/{taskId}")]
-        [ProducesResponseType(200, Type = typeof(Models.Task))]
+        [HttpGet("SingleForm/{formId}")]
+        [ProducesResponseType(200, Type = typeof(Models.Form.Form))]
         [ProducesResponseType(400)]
-        public IActionResult GetTask(int taskId)
+        public IActionResult GetForm(int formId)
         {
-            if (_taskRepository.TaskExists(taskId))
+            if (!_formRepository.FormExists(formId))
                 return NotFound();
 
-            var task = _mapper.Map<TaskDto>(_taskRepository.GetTask(taskId));
+            var form = _mapper.Map<FormDto>(_formRepository.GetForm(formId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(task);
+            return Ok(form);
         }
 
-        [HttpGet("TaskCount")]
+        [HttpGet("FormCount")]
         [ProducesResponseType(200)]
-        public IActionResult GetTaskCount()
+        public IActionResult GetFormCount()
         {
-            var count = _taskRepository.GetTaskCount();
+            var count = _formRepository.GetFormCount();
             return Ok(count);
         }
 
-        [HttpPost("CreateTask")]
+        [HttpPost("CreateForm")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult CreateTask([FromBody] TaskDto taskToCreate)
+        public IActionResult CreateForm([FromBody] FormDto formToCreate)
         {
-            if (taskToCreate == null)
+            if (formToCreate == null)
                 return BadRequest(ModelState);
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var taskMap = _mapper.Map<Models.Task>(taskToCreate);
+            var formMap = _mapper.Map<Models.Form.Form>(formToCreate);
 
-            if (!_taskRepository.CreateTask(taskMap))
+            if (!_formRepository.CreateForm(formMap))
             {
                 ModelState.AddModelError("", "Something Went Wrong While Saving");
                 return StatusCode(500, ModelState);
@@ -97,23 +98,23 @@ namespace Backend.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("UpdateTask/{taskId}")]
+        [HttpPut("UpdateForm/{formId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult UpdateTask(int taskId, [FromBody] TaskDto taskToUpdate)
+        public IActionResult UpdateForm(int formId, [FromBody] FormDto formToUpdate)
         {
-            if (taskToUpdate == null)
+            if (formToUpdate == null)
             {
                 return BadRequest(ModelState);
             }
 
-            if (taskId != taskToUpdate.Id)
+            if (formId != formToUpdate.Id)
             {
                 return BadRequest(ModelState);
             }
 
-            if (!_taskRepository.TaskExists(taskId))
+            if (!_formRepository.FormExists(formId))
             {
                 return BadRequest(ModelState);
             }
@@ -123,9 +124,9 @@ namespace Backend.Controllers
                 return BadRequest();
             }
 
-            var taskMap = _mapper.Map<Models.Task>(taskToUpdate);
+            var formMap = _mapper.Map<Models.Form.Form>(formToUpdate);
 
-            if (!_taskRepository.UpdateTask(taskMap))
+            if (!_formRepository.UpdateForm(formMap))
             {
                 ModelState.AddModelError("", "Something Went Wrong Updating");
                 return StatusCode(500, ModelState);
@@ -134,27 +135,25 @@ namespace Backend.Controllers
             return Ok("Successfully Updated");
         }
 
-        [HttpDelete("DeleteTask/{taskId}")]
+        [HttpDelete("DeleteForm/{formId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteTask(int taskId)
+        public IActionResult DeleteForm(int formId)
         {
-            if (_taskRepository.TaskExists(taskId))
+            if (!_formRepository.FormExists(formId))
             {
                 return NotFound();
             }
 
-            var taskToDelete = _taskRepository.GetTask(taskId);
+            var formToDelete = _formRepository.GetForm(formId);
 
-            if (!_taskRepository.DeleteTask(taskToDelete))
+            if (!_formRepository.DeleteForm(formToDelete))
             {
                 ModelState.AddModelError("", "Something Went Wrong Deleting");
             }
 
             return Ok("Successfully Deleted");
         }
-
-
     }
 }
