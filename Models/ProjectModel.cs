@@ -12,5 +12,6 @@
         public string? ManagerId { get; set; }
 
         public virtual ICollection<TaskModel> Tasks { get; set; }
+        public ICollection<UserProject> UserProjects { get; set; }
     }
 }

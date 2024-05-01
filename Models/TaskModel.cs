@@ -11,6 +11,6 @@
         public DateTime Deadline { get; set; }
         public string? Status { get; set; }
 
-
+        public ICollection<UserTask> UserTasks { get; set; }
     }
 }
