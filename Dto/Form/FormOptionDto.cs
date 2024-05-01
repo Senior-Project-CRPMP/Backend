@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend.Dto.Form
 {
-    public class FormOptionsDto
+    public class FormOptionDto
     {
         public int Id { get; set; }
         public int FormQuestionId { get; set; }

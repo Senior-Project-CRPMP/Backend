@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Backend.Dto;
 using Backend.Models;
+using Backend.Models.Form;
+using Backend.Dto.Form;
 
 namespace Backend.Helper
 {
@@ -14,8 +16,12 @@ namespace Backend.Helper
             CreateMap<TaskDto, Models.Task>();
             CreateMap<Models.Form.Form, Dto.Form.FormDto>();
             CreateMap<Dto.Form.FormDto, Models.Form.Form>();
-            CreateMap<Models.Form.FormQuestion, Dto.Form.FormQuestionDto>();
-            CreateMap<Dto.Form.FormQuestionDto, Models.Form.FormQuestion>();
+            CreateMap<FormQuestion, FormQuestionDto>();
+            CreateMap<FormQuestionDto, FormQuestion>();
+            CreateMap<FormLinkQuestion, FormLinkQuestionDto>();
+            CreateMap<FormLinkQuestionDto, FormLinkQuestion>();
+            CreateMap<FormOption, FormOptionDto>();
+            CreateMap<FormOptionDto, FormOption>();
         }
     }
 }

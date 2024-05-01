@@ -1,7 +1,6 @@
 ﻿using Backend.Data;
-using Backend.Interfaces;
 using Backend.Interfaces.Form;
-using Backend.Models;
+using Backend.Models.Form;
 
 namespace Backend.Repository.FormQuestion
 {
@@ -13,15 +12,15 @@ namespace Backend.Repository.FormQuestion
             _context = context;
         }
 
-        public bool CreateFormQuestion(Models.Form.FormQuestion FormQuestion)
+        public bool CreateFormQuestion(Models.Form.FormQuestion formQuestion)
         {
-            _context.Add(FormQuestion);
+            _context.Add(formQuestion);
             return Save();
         }
 
-        public bool DeleteFormQuestion(Models.Form.FormQuestion FormQuestion)
+        public bool DeleteFormQuestion(Models.Form.FormQuestion formQuestion)
         {
-            _context.Remove(FormQuestion);
+            _context.Remove(formQuestion);
             return Save();
         }
 
@@ -52,15 +51,12 @@ namespace Backend.Repository.FormQuestion
             return saved > 0 ? true : false;
         }
 
-        public bool UpdateFormQuestion(Models.Form.FormQuestion FormQuestion)
+        public bool UpdateFormQuestion(Models.Form.FormQuestion formQuestion)
         {
-            _context.Update(FormQuestion);
+            _context.Update(formQuestion);
             return Save();
         }
 
-        Models.Form.FormQuestion IFormQuestionRepository.GetFormQuestion(int id)
-        {
-            return _context.FormQuestions.Where(t => t.Id == id).FirstOrDefault();
-        }
+  
     }
 }

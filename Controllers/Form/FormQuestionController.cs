@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Backend.Dto;
+using Backend.Dto.Form;
 using Backend.Interfaces.Form;
-using Backend.Models;
-using Microsoft.AspNetCore.Http;
+using Backend.Models.Form;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers.Form
@@ -24,11 +24,11 @@ namespace Backend.Controllers.Form
             _mapper = mapper;
         }
 
-        [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.FormQuestion>))]
+        [HttpGet("EveryQuestion")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormQuestion>))]
         public IActionResult GetFormQuestions()
         {
-            var forms = _mapper.Map<List<Dto.Form.FormQuestionDto>>(_formQuestionRepository.GetFormQuestions());
+            var forms = _mapper.Map<List<FormQuestionDto>>(_formQuestionRepository.GetFormQuestions());
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -36,8 +36,8 @@ namespace Backend.Controllers.Form
             return Ok(forms);
         }
 
-        [HttpGet("{questionId}/formquestion")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.FormQuestion>))]
+        [HttpGet("SingleQuestion/{questionId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormQuestion>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult GetFormQuestion(int questionId)
@@ -53,7 +53,7 @@ namespace Backend.Controllers.Form
             return Ok(question);
         }
 
-        [HttpGet("formQuestion/count")]
+        [HttpGet("QuestionCount")]
         [ProducesResponseType(200)]
         public IActionResult GetFormQuestionCount()
         {
@@ -61,10 +61,10 @@ namespace Backend.Controllers.Form
             return Ok(count);
         }
 
-        [HttpPost]
+        [HttpPost("CreateQuestion")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult CreateFormQuestion([FromBody] Dto.Form.FormQuestionDto questionToCreate)
+        public IActionResult CreateFormQuestion([FromBody] FormQuestionDto questionToCreate)
         {
             if (questionToCreate == null)
                 return BadRequest(ModelState);
@@ -72,7 +72,7 @@ namespace Backend.Controllers.Form
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var questionMap = _mapper.Map<Models.Form.FormQuestion>(questionToCreate);
+            var questionMap = _mapper.Map<FormQuestion>(questionToCreate);
 
             if (!_formQuestionRepository.CreateFormQuestion(questionMap))
             {
@@ -83,11 +83,11 @@ namespace Backend.Controllers.Form
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{questionId}")]
+        [HttpPut("UpdateQuestion/{questionId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult UpdateFormQuestion(int questionId, [FromBody] Dto.Form.FormQuestionDto questionToUpdate)
+        public IActionResult UpdateFormQuestion(int questionId, [FromBody] FormQuestionDto questionToUpdate)
         {
             if (questionToUpdate == null)
             {
@@ -109,7 +109,7 @@ namespace Backend.Controllers.Form
                 return BadRequest();
             }
 
-            var questionMap = _mapper.Map<Models.Form.FormQuestion>(questionToUpdate);
+            var questionMap = _mapper.Map<FormQuestion>(questionToUpdate);
 
             if (!_formQuestionRepository.UpdateFormQuestion(questionMap))
             {
@@ -120,7 +120,7 @@ namespace Backend.Controllers.Form
             return Ok("Successfully Updated");
         }
 
-        [HttpDelete("{questionId}")]
+        [HttpDelete("DeleteQuestion/{questionId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]

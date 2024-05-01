@@ -1,14 +1,16 @@
-﻿namespace Backend.Interfaces.Form
+﻿using Backend.Models.Form;
+
+namespace Backend.Interfaces.Form
 {
     public interface IFormQuestionRepository
     {
-        ICollection<Models.Form.FormQuestion> GetFormQuestions();
+        ICollection<FormQuestion> GetFormQuestions();
         int GetFormQuestionCount();
-        Models.Form.FormQuestion GetFormQuestion(int id);
+        FormQuestion GetFormQuestion(int id);
         bool FormQuestionExists(int id);
-        bool CreateFormQuestion(Models.Form.FormQuestion formQuestion);
-        bool UpdateFormQuestion(Models.Form.FormQuestion formQuestion);
-        bool DeleteFormQuestion(Models.Form.FormQuestion formQuestion);
+        bool CreateFormQuestion(FormQuestion formQuestion);
+        bool UpdateFormQuestion(FormQuestion formQuestion);
+        bool DeleteFormQuestion(FormQuestion formQuestion);
         bool Save();
     }
 }

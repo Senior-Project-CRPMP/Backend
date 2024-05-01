@@ -19,7 +19,7 @@ namespace Backend.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("EveryProject")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Project>))]
         public IActionResult GetProjects()
         {
@@ -33,7 +33,7 @@ namespace Backend.Controllers
             return Ok(projects);
         }
 
-        [HttpGet("{projectId}")]
+        [HttpGet("SingleProject/{projectId}")]
         [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(int projectId)
@@ -49,7 +49,7 @@ namespace Backend.Controllers
             return Ok(project);
         }
 
-        [HttpGet("{projectTitle}")]
+        [HttpGet("SingleProject/{projectTitle}")]
         [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(string projectTitle)
@@ -65,7 +65,7 @@ namespace Backend.Controllers
             return Ok(project);
         }
 
-        [HttpPost]
+        [HttpPost("CreateProject")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public IActionResult CreateProject([FromBody] ProjectDto projectCreate)
@@ -97,7 +97,7 @@ namespace Backend.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{projectId}")]
+        [HttpPut("UpdateProject/{projectId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -126,7 +126,7 @@ namespace Backend.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{projectId}")]
+        [HttpDelete("DeleteProject/{projectId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]

@@ -22,7 +22,7 @@ namespace Backend.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("EveryTask")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Task>))]
         public IActionResult GetTasks()
         {
@@ -34,16 +34,16 @@ namespace Backend.Controllers
             return Ok(tasks);
         }
 
-        [HttpGet("{id}/project")]
+        [HttpGet("ProjectTasks/{projectId}")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Task>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetProjectTasks(int id)
+        public IActionResult GetProjectTasks(int taskId)
         {
-            if (!_taskRepository.ProjectTaskExists(id))
+            if (!_taskRepository.ProjectTaskExists(taskId))
                 return NotFound();
 
-            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetProjectTasks(id));
+            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetProjectTasks(taskId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -51,15 +51,15 @@ namespace Backend.Controllers
             return Ok(tasks);
         }
 
-        [HttpGet("{id}", Name = "GetTaskById")]
+        [HttpGet("SingleTask/{taskId}")]
         [ProducesResponseType(200, Type = typeof(Models.Task))]
         [ProducesResponseType(400)]
-        public IActionResult GetTask(int id)
+        public IActionResult GetTask(int taskId)
         {
-            if (_taskRepository.TaskExists(id))
+            if (_taskRepository.TaskExists(taskId))
                 return NotFound();
 
-            var task = _mapper.Map<TaskDto>(_taskRepository.GetTask(id));
+            var task = _mapper.Map<TaskDto>(_taskRepository.GetTask(taskId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -67,7 +67,7 @@ namespace Backend.Controllers
             return Ok(task);
         }
 
-        [HttpGet("count")]
+        [HttpGet("TaskCount")]
         [ProducesResponseType(200)]
         public IActionResult GetTaskCount()
         {
@@ -75,7 +75,7 @@ namespace Backend.Controllers
             return Ok(count);
         }
 
-        [HttpPost]
+        [HttpPost("CreateTask")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public IActionResult CreateTask([FromBody] TaskDto taskToCreate)
@@ -97,7 +97,7 @@ namespace Backend.Controllers
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{taskId}")]
+        [HttpPut("UpdateTask/{taskId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -134,7 +134,7 @@ namespace Backend.Controllers
             return Ok("Successfully Updated");
         }
 
-        [HttpDelete("{taskId}")]
+        [HttpDelete("DeleteTask/{taskId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]

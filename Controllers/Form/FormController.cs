@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Backend.Dto;
+using Backend.Dto.Form;
 using Backend.Interfaces;
 using Backend.Interfaces.Form;
-using Microsoft.AspNetCore.Http;
+using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers.Form
@@ -22,11 +23,11 @@ namespace Backend.Controllers.Form
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("EveryForm")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.Form>))]
         public IActionResult GetForms()
         {
-            var forms = _mapper.Map<List<Dto.Form.FormDto>>(_formRepository.GetForms());
+            var forms = _mapper.Map<List<FormDto>>(_formRepository.GetForms());
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -34,16 +35,16 @@ namespace Backend.Controllers.Form
             return Ok(forms);
         }
 
-        [HttpGet("{id}/form")]
+        [HttpGet("ProjectForms/{projectId}")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.Form>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetProjectForms(int id)
+        public IActionResult GetProjectForms(int formId)
         {
-            if (!_formRepository.ProjectFormExists(id))
+            if (!_formRepository.ProjectFormExists(formId))
                 return NotFound();
 
-            var forms = _mapper.Map<List<Dto.Form.FormDto>>(_formRepository.GetProjectForms(id));
+            var forms = _mapper.Map<List<FormDto>>(_formRepository.GetProjectForms(formId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -51,23 +52,23 @@ namespace Backend.Controllers.Form
             return Ok(forms);
         }
 
-        [HttpGet("{id}", Name = "FormById")]
+        [HttpGet("SingleForm/{formId}")]
         [ProducesResponseType(200, Type = typeof(Models.Form.Form))]
         [ProducesResponseType(400)]
-        public IActionResult GetForm(int id)
+        public IActionResult GetForm(int formId)
         {
-            if (_formRepository.FormExists(id))
+            if (!_formRepository.FormExists(formId))
                 return NotFound();
 
-            var Form = _mapper.Map<Dto.Form.FormDto>(_formRepository.GetForm(id));
+            var form = _mapper.Map<FormDto>(_formRepository.GetForm(formId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(Form);
+            return Ok(form);
         }
 
-        [HttpGet("form/count")]
+        [HttpGet("FormCount")]
         [ProducesResponseType(200)]
         public IActionResult GetFormCount()
         {
@@ -75,10 +76,10 @@ namespace Backend.Controllers.Form
             return Ok(count);
         }
 
-        [HttpPost]
+        [HttpPost("CreateForm")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult CreateForm([FromBody] Dto.Form.FormDto formToCreate)
+        public IActionResult CreateForm([FromBody] FormDto formToCreate)
         {
             if (formToCreate == null)
                 return BadRequest(ModelState);
@@ -97,11 +98,11 @@ namespace Backend.Controllers.Form
             return Ok("Successfully Created");
         }
 
-        [HttpPut("{formId}")]
+        [HttpPut("UpdateForm/{formId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult UpdateForm(int formId, [FromBody] Dto.Form.FormDto formToUpdate)
+        public IActionResult UpdateForm(int formId, [FromBody] FormDto formToUpdate)
         {
             if (formToUpdate == null)
             {
@@ -134,13 +135,13 @@ namespace Backend.Controllers.Form
             return Ok("Successfully Updated");
         }
 
-        [HttpDelete("{formId}")]
+        [HttpDelete("DeleteForm/{formId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
         public IActionResult DeleteForm(int formId)
         {
-            if (_formRepository.FormExists(formId))
+            if (!_formRepository.FormExists(formId))
             {
                 return NotFound();
             }
