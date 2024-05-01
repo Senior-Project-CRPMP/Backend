@@ -231,7 +231,6 @@ namespace Backend.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -239,7 +238,6 @@ namespace Backend.Migrations
                     b.ToTable("Roles");
                 });
 
-           
             modelBuilder.Entity("Backend.Models.Task", b =>
                 {
                     b.Property<int>("Id")
@@ -286,22 +284,18 @@ namespace Backend.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MiddleName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -320,18 +314,15 @@ namespace Backend.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RoleId")
+                    b.Property<int?>("RoleId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -681,9 +672,7 @@ namespace Backend.Migrations
                 {
                     b.HasOne("Backend.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });
@@ -692,16 +681,14 @@ namespace Backend.Migrations
                 {
                     b.HasOne("Backend.Models.RoleModel", "Role")
                         .WithMany("Users")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoleId");
 
                     b.Navigation("Role");
                 });
 
             modelBuilder.Entity("Backend.Models.UserProject", b =>
                 {
-                    b.HasOne("Backend.Models.ProjectModel", "Project")
+                    b.HasOne("Backend.Models.Project", "Project")
                         .WithMany("UserProjects")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -720,7 +707,7 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.UserTask", b =>
                 {
-                    b.HasOne("Backend.Models.TaskModel", "Task")
+                    b.HasOne("Backend.Models.Task", "Task")
                         .WithMany("UserTasks")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -823,7 +810,7 @@ namespace Backend.Migrations
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("Backend.Models.TaskModel", b =>
+            modelBuilder.Entity("Backend.Models.Task", b =>
                 {
                     b.Navigation("UserTasks");
                 });

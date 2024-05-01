@@ -6,6 +6,7 @@ namespace Backend.Repository
 {
     public class RoleRepository : IRoleRepository
     {
+
         private readonly DataContext _context;
         public RoleRepository(DataContext context)
         {

@@ -14,8 +14,8 @@ namespace Backend.Data
         }
 
 
-        public DbSet<ProjectModel> Projects { get; set; }
-        public DbSet<TaskModel> Tasks { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Models.Task> Tasks { get; set; }
         public DbSet<UserModel> Users {  get; set; }
         public DbSet<UserInfoModel> UserInfo { get; set; }
         public DbSet<UserProject> UserProjects { get; set; }
