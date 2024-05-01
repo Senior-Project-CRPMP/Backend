@@ -17,29 +17,29 @@ namespace Backend.Repository
             return _context.Tasks.Any(t => t.Id == id);
         }
 
-        public bool CreateTask(TaskModel task)
+        public bool CreateTask(Models.Task task)
         {
             _context.Add(task);
             return Save();
         }
 
-        public bool DeleteTask(TaskModel task)
+        public bool DeleteTask(Models.Task task)
         {
             _context.Remove(task);
             return Save();
         }
 
-        public ICollection<TaskModel> GetProjectTasks(int id)
+        public ICollection<Models.Task> GetProjectTasks(int id)
         {
             return _context.Tasks.Where(t => t.ProjectId == id).ToList();
         }
 
-        public TaskModel GetTask(int id)
+        public Models.Task GetTask(int id)
         {
             return _context.Tasks.Where(t => t.Id == id).FirstOrDefault();
         }
 
-        public TaskModel GetTask(string title)
+        public Models.Task GetTask(string title)
         {
             return _context.Tasks.Where(t => t.Title == title).FirstOrDefault();
         }
@@ -49,7 +49,7 @@ namespace Backend.Repository
             return _context.Tasks.Count();
         }
 
-        public ICollection<TaskModel> GetTasks()
+        public ICollection<Models.Task> GetTasks()
         {
             return _context.Tasks.ToList();
         }
@@ -70,7 +70,7 @@ namespace Backend.Repository
             return _context.Tasks.Any(m => m.Title == title);
         }
 
-        public bool UpdateTask(TaskModel task)
+        public bool UpdateTask(Models.Task task)
         {
             _context.Update(task);
             return Save();

@@ -8,10 +8,14 @@ namespace Backend.Helper
     {
         public MappingProfiles() 
         {
-            CreateMap<ProjectModel, ProjectDto>();
-            CreateMap<ProjectDto, ProjectModel>();
-            CreateMap<TaskModel, TaskDto>();
-            CreateMap<TaskDto, TaskModel>();
+            CreateMap<Project, ProjectDto>();
+            CreateMap<ProjectDto, Project>();
+            CreateMap<Models.Task, TaskDto>();
+            CreateMap<TaskDto, Models.Task>();
+            CreateMap<Models.Form.Form, Dto.Form.FormDto>();
+            CreateMap<Dto.Form.FormDto, Models.Form.Form>();
+            CreateMap<Models.Form.FormQuestion, Dto.Form.FormQuestionDto>();
+            CreateMap<Dto.Form.FormQuestionDto, Models.Form.FormQuestion>();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<ProjectModel>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Project>))]
         public IActionResult GetProjects()
         {
             var projects = _mapper.Map<List<ProjectDto>>(_projectRepository.GetProjects());
@@ -34,7 +34,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet("{projectId}")]
-        [ProducesResponseType(200, Type = typeof(ProjectModel))]
+        [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(int projectId)
         {
@@ -50,7 +50,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet("{projectTitle}")]
-        [ProducesResponseType(200, Type = typeof(ProjectModel))]
+        [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(string projectTitle)
         {
@@ -86,7 +86,7 @@ namespace Backend.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var projectMap = _mapper.Map<ProjectModel>(projectCreate);
+            var projectMap = _mapper.Map<Project>(projectCreate);
 
             if (!_projectRepository.CreateProject(projectMap))
             {
@@ -115,7 +115,7 @@ namespace Backend.Controllers
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var projectMap = _mapper.Map<ProjectModel>(updatedProject);
+            var projectMap = _mapper.Map<Project>(updatedProject);
 
             if (!_projectRepository.UpdateProject(projectMap))
             {

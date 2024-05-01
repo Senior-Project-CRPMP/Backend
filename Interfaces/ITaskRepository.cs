@@ -5,17 +5,17 @@ namespace Backend.Interfaces
 {
     public interface ITaskRepository
     {
-        ICollection<TaskModel> GetTasks();
-        ICollection<TaskModel> GetProjectTasks(int id);
+        ICollection<Models.Task> GetTasks();
+        ICollection<Models.Task> GetProjectTasks(int id);
         int GetTaskCount();
-        TaskModel GetTask(int id);
-        TaskModel GetTask(string title);
+        Models.Task GetTask(int id);
+        Models.Task GetTask(string title);
         bool TaskExists(int id);
         bool TaskExists(string title);
         bool ProjectTaskExists(int id);
-        bool CreateTask(TaskModel task);
-        bool UpdateTask(TaskModel task);
-        bool DeleteTask(TaskModel task);
+        bool CreateTask(Models.Task task);
+        bool UpdateTask(Models.Task task);
+        bool DeleteTask(Models.Task task);
         bool Save();
     }
 }
