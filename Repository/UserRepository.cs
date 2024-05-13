@@ -11,7 +11,10 @@ namespace Backend.Repository
         {
             _context = context;
         }
-
+        public bool UserProjectExists(int id)
+        {
+            return _context.Users.Any(u => u.Id == id);
+        }
         public bool CreateUser(UserModel user)
         {
             _context.Add(user);
@@ -27,6 +30,16 @@ namespace Backend.Repository
         public UserModel GetUser(string username)
         {
             return _context.Users.Where(p => p.UserName == username).FirstOrDefault();
+        }
+
+        public ICollection<UserModel> GetUsersByProjectId(int projectId)
+        {
+            var users = _context.UserProjects
+                .Where(up => up.ProjectId == projectId)
+                .Select(up => up.User)
+                .ToList();
+
+            return users;
         }
 
         public UserModel GetUser(int id)

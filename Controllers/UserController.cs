@@ -2,6 +2,7 @@
 using Backend.Dto;
 using Backend.Interfaces;
 using Backend.Models;
+using Backend.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -31,7 +32,23 @@ namespace Backend.Controllers
             }
 
             return Ok(users);
+
         }
+        [HttpGet("EveryUserInTheProject")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<UserModel>))]
+        public IActionResult GetUsersByProjectId(int projectId)
+        {
+            if (!_userRepository.UserProjectExists(projectId))
+                return NotFound();
+
+            var tasks = _mapper.Map<List<UserDto>>(_userRepository.GetUsersByProjectId(projectId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(tasks);
+        }
+
 
         [HttpGet("{userId}")]
         [ProducesResponseType(200, Type = typeof(UserModel))]
