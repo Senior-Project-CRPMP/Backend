@@ -292,3 +292,5 @@ C:\Users\Melat\OneDrive\Documents\GitHub\Backend\obj\Debug\net8.0\scopedcss\bund
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\obj\Debug\net8.0\Backend.csproj.Up2Date
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\obj\Debug\net8.0\Backend.genruntimeconfig.cache
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\obj\Debug\net8.0\ref\Backend.dll
+C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Newtonsoft.Json.dll

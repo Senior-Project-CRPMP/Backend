@@ -1,5 +1,6 @@
 ﻿using Backend.Models;
 using Backend.Models.Form;
+using Backend.Models.Document;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
@@ -28,8 +29,9 @@ namespace Backend.Data
         public DbSet<FormFileStorage> FormFileStorages { get; set; }
         public DbSet<FormResponse> FormResponses { get; set; }
         public DbSet<FormAnswer> FormAnswers { get; set; }
+        public DbSet<Document> Documents { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
@@ -88,6 +90,15 @@ namespace Backend.Data
                 .WithMany(fr => fr.FormAnswers)
                 .HasForeignKey(a => a.FormResponseId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<Document>()
+        .HasOne(d => d.Project)
+        .WithMany(p => p.Documents)
+        .HasForeignKey(d => d.ProjectId)
+        .IsRequired(false)
+        .OnDelete(DeleteBehavior.SetNull);
+
+
 
 
         }

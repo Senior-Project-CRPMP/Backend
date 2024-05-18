@@ -9,10 +9,11 @@
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string? Status { get; set; }
-        public string? ManagerId { get; set; }
+        public int? ManagerId { get; set; }
         public ICollection<UserProject>? UserProjects { get; set; }
         public virtual ICollection<Task>? Tasks { get; set; }
         public virtual ICollection<Models.Form.Form>? Forms { get; set; }
+        public virtual ICollection<Models.Document.Document>? Documents { get; set; }
 
     }
 }

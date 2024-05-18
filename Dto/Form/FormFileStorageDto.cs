@@ -1,6 +1,6 @@
 ﻿namespace Backend.Dto.Form
 {
-    public class FileStorageDto
+    public class FormFileStorageDto
     {
         public int Id { get; set; }
         public string? Name { get; set; }

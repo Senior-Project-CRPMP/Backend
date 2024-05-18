@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Backend.csproj": {}
+    "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Backend.csproj": {
+    "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\Melat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\kidis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Melat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kidis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,6 +67,18 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -95,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
