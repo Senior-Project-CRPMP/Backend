@@ -3,6 +3,8 @@ using Backend.Dto;
 using Backend.Models;
 using Backend.Models.Form;
 using Backend.Dto.Form;
+using Backend.Models.Document;
+using Backend.Dto.Document;
 
 namespace Backend.Helper
 {
@@ -36,6 +38,9 @@ namespace Backend.Helper
 
             CreateMap<FormAnswer, FormAnswerDto>();
             CreateMap<FormAnswerDto, FormAnswer>();
+
+            CreateMap<Models.Document.Document, DocumentDto>();
+            CreateMap<DocumentDto, Models.Document.Document>();
         }
     }
 }
