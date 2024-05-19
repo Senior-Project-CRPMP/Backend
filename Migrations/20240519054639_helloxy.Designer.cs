@@ -4,6 +4,7 @@ using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240519054639_helloxy")]
+    partial class helloxy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -79,9 +82,6 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("FormOptionId")
-                        .HasColumnType("int");
-
                     b.Property<int>("FormQuestionId")
                         .HasColumnType("int");
 
@@ -92,8 +92,6 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FormOptionId");
 
                     b.HasIndex("FormQuestionId");
 
@@ -589,24 +587,17 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Form.FormAnswer", b =>
                 {
-                    b.HasOne("Backend.Models.Form.FormOption", "FormOption")
-                        .WithMany()
-                        .HasForeignKey("FormOptionId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
                     b.HasOne("Backend.Models.Form.FormQuestion", "FormQuestion")
-                        .WithMany("FormAnswers")
+                        .WithMany()
                         .HasForeignKey("FormQuestionId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Backend.Models.Form.FormResponse", "FormResponse")
                         .WithMany("FormAnswers")
                         .HasForeignKey("FormResponseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("FormOption");
 
                     b.Navigation("FormQuestion");
 
@@ -651,7 +642,7 @@ namespace Backend.Migrations
                     b.HasOne("Backend.Models.Form.Form", "Form")
                         .WithMany("FormResponses")
                         .HasForeignKey("FormId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Form");
@@ -784,8 +775,6 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Form.FormQuestion", b =>
                 {
-                    b.Navigation("FormAnswers");
-
                     b.Navigation("FormOptions");
                 });
 

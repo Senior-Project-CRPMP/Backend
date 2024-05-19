@@ -2,8 +2,8 @@
 using Backend.Dto.Form;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Backend.Controllers.Form
 {
@@ -11,120 +11,117 @@ namespace Backend.Controllers.Form
     [ApiController]
     public class FormAnswerController : ControllerBase
     {
-        private readonly IFormAnswerRepository _FormAnswerRepository;
+        private readonly IFormAnswerRepository _formAnswerRepository;
         private readonly IMapper _mapper;
 
-        public FormAnswerController(IFormAnswerRepository FormAnswerRepository, IMapper mapper)
+        public FormAnswerController(IFormAnswerRepository formAnswerRepository, IMapper mapper)
         {
-            _FormAnswerRepository = FormAnswerRepository;
+            _formAnswerRepository = formAnswerRepository;
             _mapper = mapper;
         }
 
         [HttpGet("EveryFormAnswer")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<FormAnswer>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormAnswerDto>))]
         public IActionResult GetFormAnswers()
         {
-            var FormAnswers = _mapper.Map<List<FormAnswerDto>>(_FormAnswerRepository.GetFormAnswers());
+            var formAnswers = _mapper.Map<List<FormAnswerDto>>(_formAnswerRepository.GetFormAnswers());
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(FormAnswers);
+            return Ok(formAnswers);
         }
 
-        [HttpGet("SingleFormAnswer/{FormAnswerId}")]
-        [ProducesResponseType(200, Type = typeof(FormAnswer))]
+        [HttpGet("SingleFormAnswer/{formAnswerId}")]
+        [ProducesResponseType(200, Type = typeof(FormAnswerDto))]
         [ProducesResponseType(400)]
-        public IActionResult GetFormAnswer(int FormAnswerId)
+        public IActionResult GetFormAnswer(int formAnswerId)
         {
-            if (!_FormAnswerRepository.FormAnswerExists(FormAnswerId))
+            if (!_formAnswerRepository.FormAnswerExists(formAnswerId))
                 return NotFound();
 
-            var FormAnswer = _mapper.Map<FormAnswerDto>(_FormAnswerRepository.GetFormAnswer(FormAnswerId));
+            var formAnswer = _mapper.Map<FormAnswerDto>(_formAnswerRepository.GetFormAnswer(formAnswerId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(FormAnswer);
+            return Ok(formAnswer);
         }
 
         [HttpPost("CreateFormAnswer")]
-        [ProducesResponseType(200)]
+        [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public IActionResult CreateFormAnswer([FromBody] FormAnswerDto FormAnswerCreate)
+        public IActionResult CreateFormAnswer([FromBody] FormAnswerDto formAnswerCreate)
         {
-            if (FormAnswerCreate == null)
+            if (formAnswerCreate == null)
                 return BadRequest(ModelState);
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var FormAnswerMap = _mapper.Map<FormAnswer>(FormAnswerCreate);
+            var formAnswerMap = _mapper.Map<FormAnswer>(formAnswerCreate);
 
-            if (!_FormAnswerRepository.CreateFormAnswer(FormAnswerMap))
+            if (!_formAnswerRepository.CreateFormAnswer(formAnswerMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
 
-            return Ok("Successfully Created");
+            return CreatedAtAction("GetFormAnswer", new { formAnswerId = formAnswerMap.Id }, "Successfully Created");
         }
 
-        [HttpPut("UpdateFormAnswer/{FormAnswerId}")]
-        [ProducesResponseType(400)]
+        [HttpPut("UpdateFormAnswer/{formAnswerId}")]
         [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult UpdateFormAnswer(int FormAnswerId, [FromBody] FormAnswerDto updatedFormAnswer)
+        public IActionResult UpdateFormAnswer(int formAnswerId, [FromBody] FormAnswerDto updatedFormAnswer)
         {
             if (updatedFormAnswer == null)
                 return BadRequest(ModelState);
 
-            if (FormAnswerId != updatedFormAnswer.Id)
+            if (formAnswerId != updatedFormAnswer.Id)
                 return BadRequest(ModelState);
 
-            if (!_FormAnswerRepository.FormAnswerExists(FormAnswerId))
+            if (!_formAnswerRepository.FormAnswerExists(formAnswerId))
                 return NotFound();
 
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var FormAnswerMap = _mapper.Map<FormAnswer>(updatedFormAnswer);
+            var formAnswerMap = _mapper.Map<FormAnswer>(updatedFormAnswer);
 
-            if (!_FormAnswerRepository.UpdateFormAnswer(FormAnswerMap))
+            if (!_formAnswerRepository.UpdateFormAnswer(formAnswerMap))
             {
-                ModelState.AddModelError("", "Something went wrong updating the category");
+                ModelState.AddModelError("", "Something went wrong while updating");
                 return StatusCode(500, ModelState);
             }
 
             return NoContent();
         }
 
-        [HttpDelete("DeleteFormAnswer/{FormAnswerId}")]
-        [ProducesResponseType(400)]
+        [HttpDelete("DeleteFormAnswer/{formAnswerId}")]
         [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteFormAnswer(int FormAnswerId)
+        public IActionResult DeleteFormAnswer(int formAnswerId)
         {
-            if (!_FormAnswerRepository.FormAnswerExists(FormAnswerId))
+            if (!_formAnswerRepository.FormAnswerExists(formAnswerId))
                 return NotFound();
 
-            var FormAnswerToDelete = _FormAnswerRepository.GetFormAnswer(FormAnswerId);
+            var formAnswerToDelete = _formAnswerRepository.GetFormAnswer(formAnswerId);
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (!_FormAnswerRepository.DeleteFormAnswer(FormAnswerToDelete))
+            if (!_formAnswerRepository.DeleteFormAnswer(formAnswerToDelete))
             {
-                ModelState.AddModelError("", "Something went wrong deleting FormAnswer");
-
+                ModelState.AddModelError("", "Something went wrong while deleting");
+                return StatusCode(500, ModelState);
             }
 
             return NoContent();
-
-
-
         }
     }
 }

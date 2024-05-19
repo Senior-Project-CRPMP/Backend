@@ -4,7 +4,7 @@ using Backend.Interfaces.Form;
 using Backend.Models.Form;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Backend.Controllers
+namespace Backend.Controllers.Form
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -20,22 +20,23 @@ namespace Backend.Controllers
         }
 
         [HttpGet("EveryOption")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<FormOption>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormOptionDto>))]
         public IActionResult GetFormOptions()
         {
-            var projects = _mapper.Map<List<FormOptionDto>>(_formOptionRepository.GetFormOptions());
+            var options = _mapper.Map<List<FormOptionDto>>(_formOptionRepository.GetFormOptions());
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(projects);
+            return Ok(options);
         }
 
         [HttpGet("SingleOption/{optionId}")]
-        [ProducesResponseType(200, Type = typeof(FormOption))]
+        [ProducesResponseType(200, Type = typeof(FormOptionDto))]
         [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult GetFormOption(int optionId)
         {
             if (!_formOptionRepository.FormOptionExists(optionId))
@@ -52,18 +53,17 @@ namespace Backend.Controllers
         [HttpPost("CreateOption")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public IActionResult CreateProject([FromBody] FormOptionDto optionCreate)
+        public IActionResult CreateFormOption([FromBody] FormOptionDto optionCreate)
         {
             if (optionCreate == null)
                 return BadRequest(ModelState);
 
-
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var projectMap = _mapper.Map<FormOption>(optionCreate);
+            var optionMap = _mapper.Map<FormOption>(optionCreate);
 
-            if (!_formOptionRepository.CreateFormOption(projectMap))
+            if (!_formOptionRepository.CreateFormOption(optionMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
@@ -76,12 +76,12 @@ namespace Backend.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult UpdateProject(int optionId, [FromBody] FormOptionDto updatedProject)
+        public IActionResult UpdateFormOption(int optionId, [FromBody] FormOptionDto updatedOption)
         {
-            if (updatedProject == null)
+            if (updatedOption == null)
                 return BadRequest(ModelState);
 
-            if (optionId != updatedProject.Id)
+            if (optionId != updatedOption.Id)
                 return BadRequest(ModelState);
 
             if (!_formOptionRepository.FormOptionExists(optionId))
@@ -90,11 +90,11 @@ namespace Backend.Controllers
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var projectMap = _mapper.Map<FormOption>(updatedProject);
+            var optionMap = _mapper.Map<FormOption>(updatedOption);
 
-            if (!_formOptionRepository.UpdateFormOption(projectMap))
+            if (!_formOptionRepository.UpdateFormOption(optionMap))
             {
-                ModelState.AddModelError("", "Something went wrong updating the category");
+                ModelState.AddModelError("", "Something went wrong updating the form option");
                 return StatusCode(500, ModelState);
             }
 
@@ -105,26 +105,23 @@ namespace Backend.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteProject(int optionId)
+        public IActionResult DeleteFormOption(int optionId)
         {
             if (!_formOptionRepository.FormOptionExists(optionId))
                 return NotFound();
 
-            var projectToDelete = _formOptionRepository.GetFormOption(optionId);
+            var optionToDelete = _formOptionRepository.GetFormOption(optionId);
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (!_formOptionRepository.DeleteFormOption(projectToDelete))
+            if (!_formOptionRepository.DeleteFormOption(optionToDelete))
             {
-                ModelState.AddModelError("", "Something went wrong deleting formOption");
-
+                ModelState.AddModelError("", "Something went wrong deleting the form option");
+                return StatusCode(500, ModelState);
             }
 
             return NoContent();
-
-
-
         }
     }
 }

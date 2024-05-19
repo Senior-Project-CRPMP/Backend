@@ -27,7 +27,6 @@ builder.Services.AddScoped<IUserInfoRepository, UserInfoRepository>();
 //builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IFormRepository, FormRepository>();
 builder.Services.AddScoped<IFormQuestionRepository, FormQuestionRepository>();
-builder.Services.AddScoped<IFormLinkQuestionRepository, FormLinkQuestionRepository>();
 builder.Services.AddScoped<IFormOptionRepository, FormOptionRepository>();
 builder.Services.AddScoped<IFormFileStorageRepository, FormFileStorageRepository>();
 builder.Services.AddScoped<IFormResponseRepository, FormResponseRepository>();

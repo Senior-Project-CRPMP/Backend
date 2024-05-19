@@ -24,9 +24,6 @@ namespace Backend.Helper
             CreateMap<FormQuestion, FormQuestionDto>();
             CreateMap<FormQuestionDto, FormQuestion>();
 
-            CreateMap<FormLinkQuestion, FormLinkQuestionDto>();
-            CreateMap<FormLinkQuestionDto, FormLinkQuestion>();
-
             CreateMap<FormOption, FormOptionDto>();
             CreateMap<FormOptionDto, FormOption>();
 

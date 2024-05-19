@@ -30,9 +30,9 @@ namespace Backend.Repository.Form
             return _context.Forms.Any(m => m.Id == id);
         }
 
-        public bool FormExists(string name)
+        public bool FormExists(string title)
         {
-            return _context.Forms.Any(m => m.Name == name);
+            return _context.Forms.Any(m => m.Title == title);
         }
 
         public Models.Form.Form GetForm(int id)
@@ -40,9 +40,9 @@ namespace Backend.Repository.Form
             return _context.Forms.Where(m => m.Id == id).FirstOrDefault();
         }
 
-        public Models.Form.Form GetForm(string name)
+        public Models.Form.Form GetForm(string title)
         {
-            return _context.Forms.Where(m => m.Name == name).FirstOrDefault();
+            return _context.Forms.Where(m => m.Title == title).FirstOrDefault();
         }
 
         public int GetFormCount()

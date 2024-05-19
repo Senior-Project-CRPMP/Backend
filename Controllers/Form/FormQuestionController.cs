@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Backend.Dto;
 using Backend.Dto.Form;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
@@ -7,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers.Form
 {
-    // GetFormQuestion and DeleteFormQuestion endpoints dont work.
-
     [Route("api/[controller]")]
     [ApiController]
     public class FormQuestionController : ControllerBase
@@ -25,19 +22,19 @@ namespace Backend.Controllers.Form
         }
 
         [HttpGet("EveryQuestion")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<FormQuestion>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormQuestionDto>))]
         public IActionResult GetFormQuestions()
         {
-            var forms = _mapper.Map<List<FormQuestionDto>>(_formQuestionRepository.GetFormQuestions());
+            var questions = _mapper.Map<List<FormQuestionDto>>(_formQuestionRepository.GetFormQuestions());
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(forms);
+            return Ok(questions);
         }
 
         [HttpGet("SingleQuestion/{questionId}")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<FormQuestion>))]
+        [ProducesResponseType(200, Type = typeof(FormQuestionDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult GetFormQuestion(int questionId)
@@ -45,7 +42,7 @@ namespace Backend.Controllers.Form
             if (!_formQuestionRepository.FormQuestionExists(questionId))
                 return NotFound();
 
-            var question = _mapper.Map<ProjectDto>(_formQuestionRepository.GetFormQuestion(questionId));
+            var question = _mapper.Map<FormQuestionDto>(_formQuestionRepository.GetFormQuestion(questionId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -90,24 +87,16 @@ namespace Backend.Controllers.Form
         public IActionResult UpdateFormQuestion(int questionId, [FromBody] FormQuestionDto questionToUpdate)
         {
             if (questionToUpdate == null)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (questionId != questionToUpdate.Id)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (!_formQuestionRepository.FormQuestionExists(questionId))
-            {
-                return BadRequest(ModelState);
-            }
+                return NotFound();
 
             if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
+                return BadRequest(ModelState);
 
             var questionMap = _mapper.Map<FormQuestion>(questionToUpdate);
 
@@ -124,18 +113,20 @@ namespace Backend.Controllers.Form
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteForm(int questionId)
+        public IActionResult DeleteFormQuestion(int questionId)
         {
-            if (_formQuestionRepository.FormQuestionExists(questionId))
-            {
+            if (!_formQuestionRepository.FormQuestionExists(questionId))
                 return NotFound();
-            }
 
             var questionToDelete = _formQuestionRepository.GetFormQuestion(questionId);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
             if (!_formQuestionRepository.DeleteFormQuestion(questionToDelete))
             {
                 ModelState.AddModelError("", "Something Went Wrong Deleting");
+                return StatusCode(500, ModelState);
             }
 
             return Ok("Successfully Deleted");

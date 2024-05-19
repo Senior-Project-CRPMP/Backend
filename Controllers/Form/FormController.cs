@@ -24,7 +24,7 @@ namespace Backend.Controllers.Form
         }
 
         [HttpGet("EveryForm")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.Form>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormDto>))]
         public IActionResult GetForms()
         {
             var forms = _mapper.Map<List<FormDto>>(_formRepository.GetForms());
@@ -36,15 +36,15 @@ namespace Backend.Controllers.Form
         }
 
         [HttpGet("ProjectForms/{projectId}")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Form.Form>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormDto>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetProjectForms(int formId)
+        public IActionResult GetProjectForms(int projectId)
         {
-            if (!_formRepository.ProjectFormExists(formId))
+            if (!_projectRepository.ProjectExists(projectId))
                 return NotFound();
 
-            var forms = _mapper.Map<List<FormDto>>(_formRepository.GetProjectForms(formId));
+            var forms = _mapper.Map<List<FormDto>>(_formRepository.GetProjectForms(projectId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -53,8 +53,9 @@ namespace Backend.Controllers.Form
         }
 
         [HttpGet("SingleForm/{formId}")]
-        [ProducesResponseType(200, Type = typeof(Models.Form.Form))]
+        [ProducesResponseType(200, Type = typeof(FormDto))]
         [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult GetForm(int formId)
         {
             if (!_formRepository.FormExists(formId))
@@ -84,6 +85,16 @@ namespace Backend.Controllers.Form
             if (formToCreate == null)
                 return BadRequest(ModelState);
 
+            var form = _formRepository.GetForms()
+                .Where(p => p.Title.Trim().ToUpper() == formToCreate.Title.TrimEnd().ToUpper())
+                .FirstOrDefault();
+
+            if (form != null)
+            {
+                ModelState.AddModelError("", "Form already exists");
+                return StatusCode(422, ModelState);
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -91,7 +102,7 @@ namespace Backend.Controllers.Form
 
             if (!_formRepository.CreateForm(formMap))
             {
-                ModelState.AddModelError("", "Something Went Wrong While Saving");
+                ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
 
@@ -105,30 +116,22 @@ namespace Backend.Controllers.Form
         public IActionResult UpdateForm(int formId, [FromBody] FormDto formToUpdate)
         {
             if (formToUpdate == null)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (formId != formToUpdate.Id)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (!_formRepository.FormExists(formId))
-            {
-                return BadRequest(ModelState);
-            }
+                return NotFound();
 
             if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
+                return BadRequest(ModelState);
 
             var formMap = _mapper.Map<Models.Form.Form>(formToUpdate);
 
             if (!_formRepository.UpdateForm(formMap))
             {
-                ModelState.AddModelError("", "Something Went Wrong Updating");
+                ModelState.AddModelError("", "Something went wrong updating");
                 return StatusCode(500, ModelState);
             }
 
@@ -142,15 +145,17 @@ namespace Backend.Controllers.Form
         public IActionResult DeleteForm(int formId)
         {
             if (!_formRepository.FormExists(formId))
-            {
                 return NotFound();
-            }
 
             var formToDelete = _formRepository.GetForm(formId);
 
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             if (!_formRepository.DeleteForm(formToDelete))
             {
-                ModelState.AddModelError("", "Something Went Wrong Deleting");
+                ModelState.AddModelError("", "Something went wrong deleting");
+                return StatusCode(500, ModelState);
             }
 
             return Ok("Successfully Deleted");

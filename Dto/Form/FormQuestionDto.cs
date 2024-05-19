@@ -1,4 +1,6 @@
-﻿namespace Backend.Dto.Form
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Backend.Dto.Form
 {
     public class FormQuestionDto
     {
@@ -6,5 +8,6 @@
         public int FormId { get; set; }
         public string? InputType { get; set; }
         public string? InputLabel { get; set; }
+        public int DisplayOrder { get; set; }
     }
 }
