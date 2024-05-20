@@ -7,7 +7,6 @@ namespace Backend.Dto.Form
     {
         public int Id { get; set; }
         public int FormQuestionId { get; set; }
-        public virtual FormQuestion? FormQuestions { get; set; }
-        public string? OptionText { get; set; }
+        public string? Label { get; set; }
     }
 }

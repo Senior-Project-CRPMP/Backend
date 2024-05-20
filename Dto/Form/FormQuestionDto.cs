@@ -6,8 +6,13 @@ namespace Backend.Dto.Form
     {
         public int Id { get; set; }
         public int FormId { get; set; }
-        public string? InputType { get; set; }
-        public string? InputLabel { get; set; }
-        public int DisplayOrder { get; set; }
+        public string? Type { get; set; }
+        public string? Label { get; set; }
+        public bool Required { get; set; }
+        public bool IncludeComment { get; set; }
+        public string? Comment { get; set; }
+        public int MaxLength { get; set; }
+        public int MaxUploadSize { get; set; }
+        public string? AllowedTypes { get; set; }
     }
 }
