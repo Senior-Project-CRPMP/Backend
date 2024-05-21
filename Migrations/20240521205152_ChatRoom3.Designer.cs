@@ -4,6 +4,7 @@ using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240521205152_ChatRoom3")]
+    partial class ChatRoom3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -130,11 +133,11 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -151,9 +154,6 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("FormOptionId")
-                        .HasColumnType("int");
-
                     b.Property<int>("FormQuestionId")
                         .HasColumnType("int");
 
@@ -164,8 +164,6 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FormOptionId");
 
                     b.HasIndex("FormQuestionId");
 
@@ -198,6 +196,32 @@ namespace Backend.Migrations
                     b.ToTable("FormFileStorages");
                 });
 
+            modelBuilder.Entity("Backend.Models.Form.FormLinkQuestion", b =>
+                {
+                    b.Property<int>("FormId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FormQuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FormQuestionId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("displayOrder")
+                        .HasColumnType("int");
+
+                    b.HasKey("FormId", "FormQuestionId");
+
+                    b.HasIndex("FormQuestionId");
+
+                    b.HasIndex("FormQuestionId1");
+
+                    b.ToTable("FormLinkQuestions");
+                });
+
             modelBuilder.Entity("Backend.Models.Form.FormOption", b =>
                 {
                     b.Property<int>("Id")
@@ -209,7 +233,7 @@ namespace Backend.Migrations
                     b.Property<int>("FormQuestionId")
                         .HasColumnType("int");
 
-                    b.Property<string>("label")
+                    b.Property<string>("OptionText")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -227,31 +251,13 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AllowedTypes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("FormId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IncludeComment")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Label")
+                    b.Property<string>("InputLabel")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MaxLength")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaxUploadSize")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Required")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Type")
+                    b.Property<string>("InputType")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -696,24 +702,17 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Form.FormAnswer", b =>
                 {
-                    b.HasOne("Backend.Models.Form.FormOption", "FormOption")
-                        .WithMany()
-                        .HasForeignKey("FormOptionId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
                     b.HasOne("Backend.Models.Form.FormQuestion", "FormQuestion")
-                        .WithMany("FormAnswers")
+                        .WithMany()
                         .HasForeignKey("FormQuestionId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Backend.Models.Form.FormResponse", "FormResponse")
                         .WithMany("FormAnswers")
                         .HasForeignKey("FormResponseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("FormOption");
 
                     b.Navigation("FormQuestion");
 
@@ -731,6 +730,29 @@ namespace Backend.Migrations
                     b.Navigation("FormResponse");
                 });
 
+            modelBuilder.Entity("Backend.Models.Form.FormLinkQuestion", b =>
+                {
+                    b.HasOne("Backend.Models.Form.Form", "Form")
+                        .WithMany("FormLinkQuestions")
+                        .HasForeignKey("FormId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Backend.Models.Form.FormQuestion", "FormQuestion")
+                        .WithMany()
+                        .HasForeignKey("FormQuestionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Backend.Models.Form.FormQuestion", null)
+                        .WithMany("FormLinkQuestions")
+                        .HasForeignKey("FormQuestionId1");
+
+                    b.Navigation("Form");
+
+                    b.Navigation("FormQuestion");
+                });
+
             modelBuilder.Entity("Backend.Models.Form.FormOption", b =>
                 {
                     b.HasOne("Backend.Models.Form.FormQuestion", "FormQuestion")
@@ -745,7 +767,7 @@ namespace Backend.Migrations
             modelBuilder.Entity("Backend.Models.Form.FormQuestion", b =>
                 {
                     b.HasOne("Backend.Models.Form.Form", "Form")
-                        .WithMany("FormQuestions")
+                        .WithMany()
                         .HasForeignKey("FormId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -758,7 +780,7 @@ namespace Backend.Migrations
                     b.HasOne("Backend.Models.Form.Form", "Form")
                         .WithMany("FormResponses")
                         .HasForeignKey("FormId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Form");
@@ -889,14 +911,14 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Form.Form", b =>
                 {
-                    b.Navigation("FormQuestions");
+                    b.Navigation("FormLinkQuestions");
 
                     b.Navigation("FormResponses");
                 });
 
             modelBuilder.Entity("Backend.Models.Form.FormQuestion", b =>
                 {
-                    b.Navigation("FormAnswers");
+                    b.Navigation("FormLinkQuestions");
 
                     b.Navigation("FormOptions");
                 });

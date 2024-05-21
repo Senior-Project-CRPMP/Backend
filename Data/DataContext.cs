@@ -3,6 +3,11 @@ using Backend.Models.Form;
 using Backend.Models.Document;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< Updated upstream
+=======
+using System.Reflection.Emit;
+using Backend.Models.Chat;
+>>>>>>> Stashed changes
 
 namespace Backend.Data
 {
@@ -26,6 +31,9 @@ namespace Backend.Data
         public DbSet<FormResponse> FormResponses { get; set; }
         public DbSet<FormAnswer> FormAnswers { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<ChatRoom> ChatRooms { get; set; }
+        public DbSet<ChatMessage> ChatMessages { get; set; }
+        public DbSet<ChatRoomParticipant> ChatRoomParticipant { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -116,6 +124,23 @@ namespace Backend.Data
                 .HasForeignKey(d => d.ProjectId)
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.SetNull);
+<<<<<<< Updated upstream
+=======
+
+            builder.Entity<ChatRoom>()
+            .HasMany(c => c.Messages)
+            .WithOne(m => m.ChatRoom)
+            .HasForeignKey(m => m.ChatRoomId);
+
+            //builder.Entity<ChatRoom>()
+                //.HasMany(c => c.Participants)
+                //.WithOne(p => p.ChatRoom)
+                //.HasForeignKey(p => p.ChatRoomId);
+
+
+
+
+>>>>>>> Stashed changes
         }
     }
 }
