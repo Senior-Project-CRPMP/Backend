@@ -78,7 +78,7 @@ namespace Backend.Controllers.Form
         }
 
         [HttpPost("CreateForm")]
-        [ProducesResponseType(204)]
+        [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public IActionResult CreateForm([FromBody] FormDto formToCreate)
         {
@@ -106,8 +106,10 @@ namespace Backend.Controllers.Form
                 return StatusCode(500, ModelState);
             }
 
-            return Ok("Successfully Created");
+            // Return the form ID
+            return Ok(new { id = formMap.Id });
         }
+
 
         [HttpPut("UpdateForm/{formId}")]
         [ProducesResponseType(400)]

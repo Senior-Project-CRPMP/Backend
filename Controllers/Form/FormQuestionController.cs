@@ -3,6 +3,7 @@ using Backend.Dto.Form;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.SqlServer.Server;
 
 namespace Backend.Controllers.Form
 {
@@ -77,7 +78,7 @@ namespace Backend.Controllers.Form
                 return StatusCode(500, ModelState);
             }
 
-            return Ok("Successfully Created");
+            return Ok(new { id = questionMap.Id });
         }
 
         [HttpPut("UpdateQuestion/{questionId}")]
