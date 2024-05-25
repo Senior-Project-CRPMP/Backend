@@ -95,7 +95,7 @@ namespace Backend.Controllers.Document
                 return StatusCode(500, ModelState);
             }
 
-            return Ok("Successfully Created");
+            return Ok(new { id = documentMap.Id });
         }
 
         [HttpPut("UpdateDocument/{documentId}")]
