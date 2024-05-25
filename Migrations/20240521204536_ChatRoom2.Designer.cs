@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240518123759_update")]
-    partial class update
+    [Migration("20240521204536_ChatRoom2")]
+    partial class ChatRoom2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,78 @@ namespace Backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatRoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatRoomId");
+
+                    b.ToTable("ChatMessages");
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Participants")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChatRooms");
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ChatRoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatRoomId");
+
+                    b.ToTable("ChatRoomParticipant");
+                });
 
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
                 {
@@ -587,6 +659,26 @@ namespace Backend.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Backend.Models.Chat.ChatMessage", b =>
+                {
+                    b.HasOne("Backend.Models.Chat.ChatRoom", "ChatRoom")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatRoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ChatRoom");
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
+                {
+                    b.HasOne("Backend.Models.Chat.ChatRoom", "ChatRoom")
+                        .WithMany()
+                        .HasForeignKey("ChatRoomId");
+
+                    b.Navigation("ChatRoom");
+                });
+
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
                 {
                     b.HasOne("Backend.Models.Project", "Project")
@@ -810,6 +902,11 @@ namespace Backend.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
+                {
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("Backend.Models.Form.Form", b =>
