@@ -3,11 +3,8 @@ using Backend.Models.Form;
 using Backend.Models.Document;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< Updated upstream
-=======
 using System.Reflection.Emit;
 using Backend.Models.Chat;
->>>>>>> Stashed changes
 
 namespace Backend.Data
 {
@@ -124,8 +121,6 @@ namespace Backend.Data
                 .HasForeignKey(d => d.ProjectId)
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.SetNull);
-<<<<<<< Updated upstream
-=======
 
             builder.Entity<ChatRoom>()
             .HasMany(c => c.Messages)
@@ -133,14 +128,9 @@ namespace Backend.Data
             .HasForeignKey(m => m.ChatRoomId);
 
             //builder.Entity<ChatRoom>()
-                //.HasMany(c => c.Participants)
-                //.WithOne(p => p.ChatRoom)
-                //.HasForeignKey(p => p.ChatRoomId);
-
-
-
-
->>>>>>> Stashed changes
+            //.HasMany(c => c.Participants)
+            //.WithOne(p => p.ChatRoom)
+            //.HasForeignKey(p => p.ChatRoomId);
         }
     }
 }

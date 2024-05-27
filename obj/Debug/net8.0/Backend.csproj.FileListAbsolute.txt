@@ -299,3 +299,6 @@ C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.AspN
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
