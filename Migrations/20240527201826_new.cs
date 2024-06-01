@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class @new : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +56,8 @@ namespace Backend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Participants = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -229,8 +230,8 @@ namespace Backend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ChatRoomId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    ChatRoomId = table.Column<int>(type: "int", nullable: true),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -239,8 +240,7 @@ namespace Backend.Migrations
                         name: "FK_ChatRoomParticipant_ChatRooms_ChatRoomId",
                         column: x => x.ChatRoomId,
                         principalTable: "ChatRooms",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -270,7 +270,7 @@ namespace Backend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProjectId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -337,8 +337,14 @@ namespace Backend.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FormId = table.Column<int>(type: "int", nullable: false),
-                    InputType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    InputLabel = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Label = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Required = table.Column<bool>(type: "bit", nullable: false),
+                    IncludeComment = table.Column<bool>(type: "bit", nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MaxLength = table.Column<int>(type: "int", nullable: false),
+                    MaxUploadSize = table.Column<int>(type: "int", nullable: false),
+                    AllowedTypes = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -366,8 +372,7 @@ namespace Backend.Migrations
                         name: "FK_FormResponses_Forms_FormId",
                         column: x => x.FormId,
                         principalTable: "Forms",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -442,44 +447,13 @@ namespace Backend.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FormLinkQuestions",
-                columns: table => new
-                {
-                    FormId = table.Column<int>(type: "int", nullable: false),
-                    FormQuestionId = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    displayOrder = table.Column<int>(type: "int", nullable: false),
-                    FormQuestionId1 = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_FormLinkQuestions", x => new { x.FormId, x.FormQuestionId });
-                    table.ForeignKey(
-                        name: "FK_FormLinkQuestions_FormQuestions_FormQuestionId",
-                        column: x => x.FormQuestionId,
-                        principalTable: "FormQuestions",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_FormLinkQuestions_FormQuestions_FormQuestionId1",
-                        column: x => x.FormQuestionId1,
-                        principalTable: "FormQuestions",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_FormLinkQuestions_Forms_FormId",
-                        column: x => x.FormId,
-                        principalTable: "Forms",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "FormOptions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FormQuestionId = table.Column<int>(type: "int", nullable: false),
-                    OptionText = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    label = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -490,32 +464,6 @@ namespace Backend.Migrations
                         principalTable: "FormQuestions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "FormAnswers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FormResponseId = table.Column<int>(type: "int", nullable: false),
-                    FormQuestionId = table.Column<int>(type: "int", nullable: false),
-                    Response = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_FormAnswers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_FormAnswers_FormQuestions_FormQuestionId",
-                        column: x => x.FormQuestionId,
-                        principalTable: "FormQuestions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_FormAnswers_FormResponses_FormResponseId",
-                        column: x => x.FormResponseId,
-                        principalTable: "FormResponses",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -533,6 +481,39 @@ namespace Backend.Migrations
                     table.PrimaryKey("PK_FormFileStorages", x => x.Id);
                     table.ForeignKey(
                         name: "FK_FormFileStorages_FormResponses_FormResponseId",
+                        column: x => x.FormResponseId,
+                        principalTable: "FormResponses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FormAnswers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FormResponseId = table.Column<int>(type: "int", nullable: false),
+                    FormQuestionId = table.Column<int>(type: "int", nullable: false),
+                    FormOptionId = table.Column<int>(type: "int", nullable: true),
+                    Response = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FormAnswers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FormAnswers_FormOptions_FormOptionId",
+                        column: x => x.FormOptionId,
+                        principalTable: "FormOptions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
+                    table.ForeignKey(
+                        name: "FK_FormAnswers_FormQuestions_FormQuestionId",
+                        column: x => x.FormQuestionId,
+                        principalTable: "FormQuestions",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_FormAnswers_FormResponses_FormResponseId",
                         column: x => x.FormResponseId,
                         principalTable: "FormResponses",
                         principalColumn: "Id",
@@ -594,6 +575,11 @@ namespace Backend.Migrations
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_FormAnswers_FormOptionId",
+                table: "FormAnswers",
+                column: "FormOptionId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_FormAnswers_FormQuestionId",
                 table: "FormAnswers",
                 column: "FormQuestionId");
@@ -607,16 +593,6 @@ namespace Backend.Migrations
                 name: "IX_FormFileStorages_FormResponseId",
                 table: "FormFileStorages",
                 column: "FormResponseId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_FormLinkQuestions_FormQuestionId",
-                table: "FormLinkQuestions",
-                column: "FormQuestionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_FormLinkQuestions_FormQuestionId1",
-                table: "FormLinkQuestions",
-                column: "FormQuestionId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_FormOptions_FormQuestionId",
@@ -698,12 +674,6 @@ namespace Backend.Migrations
                 name: "FormFileStorages");
 
             migrationBuilder.DropTable(
-                name: "FormLinkQuestions");
-
-            migrationBuilder.DropTable(
-                name: "FormOptions");
-
-            migrationBuilder.DropTable(
                 name: "UserInfo");
 
             migrationBuilder.DropTable(
@@ -722,10 +692,10 @@ namespace Backend.Migrations
                 name: "ChatRooms");
 
             migrationBuilder.DropTable(
-                name: "FormResponses");
+                name: "FormOptions");
 
             migrationBuilder.DropTable(
-                name: "FormQuestions");
+                name: "FormResponses");
 
             migrationBuilder.DropTable(
                 name: "Tasks");
@@ -734,10 +704,13 @@ namespace Backend.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Forms");
+                name: "FormQuestions");
 
             migrationBuilder.DropTable(
                 name: "Roles");
+
+            migrationBuilder.DropTable(
+                name: "Forms");
 
             migrationBuilder.DropTable(
                 name: "Projects");

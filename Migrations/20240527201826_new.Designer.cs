@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240519054639_helloxy")]
-    partial class helloxy
+    [Migration("20240527201826_new")]
+    partial class @new
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,78 @@ namespace Backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatRoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatRoomId");
+
+                    b.ToTable("ChatMessages");
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Participants")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChatRooms");
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ChatRoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatRoomId");
+
+                    b.ToTable("ChatRoomParticipant");
+                });
 
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
                 {
@@ -82,6 +154,9 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("FormOptionId")
+                        .HasColumnType("int");
+
                     b.Property<int>("FormQuestionId")
                         .HasColumnType("int");
 
@@ -92,6 +167,8 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FormOptionId");
 
                     b.HasIndex("FormQuestionId");
 
@@ -135,7 +212,7 @@ namespace Backend.Migrations
                     b.Property<int>("FormQuestionId")
                         .HasColumnType("int");
 
-                    b.Property<string>("OptionText")
+                    b.Property<string>("label")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -153,16 +230,31 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
+                    b.Property<string>("AllowedTypes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("FormId")
                         .HasColumnType("int");
 
-                    b.Property<string>("InputLabel")
+                    b.Property<bool>("IncludeComment")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Label")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("InputType")
+                    b.Property<int>("MaxLength")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaxUploadSize")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Required")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -564,6 +656,26 @@ namespace Backend.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Backend.Models.Chat.ChatMessage", b =>
+                {
+                    b.HasOne("Backend.Models.Chat.ChatRoom", "ChatRoom")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatRoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ChatRoom");
+                });
+
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
+                {
+                    b.HasOne("Backend.Models.Chat.ChatRoom", "ChatRoom")
+                        .WithMany()
+                        .HasForeignKey("ChatRoomId");
+
+                    b.Navigation("ChatRoom");
+                });
+
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
                 {
                     b.HasOne("Backend.Models.Project", "Project")
@@ -587,17 +699,24 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Form.FormAnswer", b =>
                 {
-                    b.HasOne("Backend.Models.Form.FormQuestion", "FormQuestion")
+                    b.HasOne("Backend.Models.Form.FormOption", "FormOption")
                         .WithMany()
+                        .HasForeignKey("FormOptionId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Backend.Models.Form.FormQuestion", "FormQuestion")
+                        .WithMany("FormAnswers")
                         .HasForeignKey("FormQuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Backend.Models.Form.FormResponse", "FormResponse")
                         .WithMany("FormAnswers")
                         .HasForeignKey("FormResponseId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("FormOption");
 
                     b.Navigation("FormQuestion");
 
@@ -642,7 +761,7 @@ namespace Backend.Migrations
                     b.HasOne("Backend.Models.Form.Form", "Form")
                         .WithMany("FormResponses")
                         .HasForeignKey("FormId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Form");
@@ -766,6 +885,11 @@ namespace Backend.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
+                {
+                    b.Navigation("Messages");
+                });
+
             modelBuilder.Entity("Backend.Models.Form.Form", b =>
                 {
                     b.Navigation("FormQuestions");
@@ -775,6 +899,8 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Form.FormQuestion", b =>
                 {
+                    b.Navigation("FormAnswers");
+
                     b.Navigation("FormOptions");
                 });
 
