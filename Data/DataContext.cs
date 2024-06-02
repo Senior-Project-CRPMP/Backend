@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 using Backend.Models.Chat;
 using Backend.Models.Account;
+using Backend.Models.FileUpload;
 
 namespace Backend.Data
 {
@@ -29,6 +30,8 @@ namespace Backend.Data
         public DbSet<FormResponse> FormResponses { get; set; }
         public DbSet<FormAnswer> FormAnswers { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<FileUpload> FileUploads { get; set; }
+        public DbSet<ProfilePicUpload> ProfilePicUploads { get; set; }
         public DbSet<ChatRoom> ChatRooms { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<ChatRoomParticipant> ChatRoomParticipant { get; set; }
@@ -122,6 +125,11 @@ namespace Backend.Data
                 .HasForeignKey(d => d.ProjectId)
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.SetNull);
+
+
+            builder.Entity<FileUpload>();
+
+            builder.Entity<ProfilePicUpload>();
 
             builder.Entity<ChatRoom>()
             .HasMany(c => c.Messages)

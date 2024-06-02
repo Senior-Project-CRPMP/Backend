@@ -17,11 +17,22 @@ using Backend.Repository.Document;
 using Backend.Repository.Form;
 using Backend.Repository.FormQuestion;
 using Backend.Repository;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Http.Features;
+using Backend.Repositories;
+using Backend.Interfaces.FileUpload;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.ValueLengthLimit = int.MaxValue;
+    o.MultipartBodyLengthLimit = int.MaxValue;
+    o.MemoryBufferThreshold = int.MaxValue;
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -38,6 +49,10 @@ builder.Services.AddScoped<IFormFileStorageRepository, FormFileStorageRepository
 builder.Services.AddScoped<IFormResponseRepository, FormResponseRepository>();
 builder.Services.AddScoped<IFormAnswerRepository, FormAnswerRepository>();
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
+
+
+builder.Services.AddScoped<IFileUploadRepository, FileUploadRepository>();
+builder.Services.AddScoped<IProfilePicUploadRepository, ProfilePicUploadRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -145,6 +160,11 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+    RequestPath = new PathString("/Resources")
+});
 app.MapHub<ChatHub>("/Chat");
 
 app.Run();
