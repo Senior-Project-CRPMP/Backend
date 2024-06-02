@@ -32,6 +32,8 @@ namespace Backend.Data
         public DbSet<ChatRoom> ChatRooms { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<ChatRoomParticipant> ChatRoomParticipant { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
