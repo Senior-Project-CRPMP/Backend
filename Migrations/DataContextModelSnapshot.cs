@@ -213,7 +213,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FilePath")
+                    b.Property<string>("FilePath");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -230,7 +230,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
                     b.ToTable("FileUploads");
-                });
+                }));
 
             modelBuilder.Entity("Backend.Models.FileUpload.ProfilePicUpload", b =>
                 {
