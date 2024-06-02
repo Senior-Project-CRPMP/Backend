@@ -32,6 +32,30 @@ namespace Backend.Repositories.Account
             if (await _roleManager.RoleExistsAsync(roleName))
             {
                 var result = await _userManager.AddToRoleAsync(user, roleName);
+
+                if (result.Succeeded && roleName == "Admin")
+                {
+                    user.IsAdmin = true;
+                    await _userManager.UpdateAsync(user);
+                }
+
+                return result.Succeeded;
+            }
+            return false;
+        }
+
+        public async Task<bool> RemoveRoleFromUserAsync(User user, string roleName)
+        {
+            if (await _roleManager.RoleExistsAsync(roleName))
+            {
+                var result = await _userManager.RemoveFromRoleAsync(user, roleName);
+
+                if (result.Succeeded && roleName == "Admin")
+                {
+                    user.IsAdmin = false;
+                    await _userManager.UpdateAsync(user);
+                }
+
                 return result.Succeeded;
             }
             return false;
@@ -110,8 +134,6 @@ namespace Backend.Repositories.Account
             return (signInResult, token);
         }
 
-
-
         private string GenerateJwtToken(User user)
         {
             var jwtSettings = _configuration.GetSection("JwtSettings");
@@ -136,10 +158,14 @@ namespace Backend.Repositories.Account
             return tokenHandler.WriteToken(token);
         }
 
-
         public async Task<IdentityResult> RegisterUserAsync(User user, string password)
         {
-            return await _userManager.CreateAsync(user, password);
+            var result = await _userManager.CreateAsync(user, password);
+            if (result.Succeeded)
+            {
+                await AssignRoleToUserAsync(user, "StandardUser");
+            }
+            return result;
         }
     }
 }

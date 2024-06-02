@@ -24,5 +24,6 @@ namespace Backend.Interfaces.Account
         // Role management methods
         Task<bool> CreateRoleAsync(string roleName);
         Task<bool> AssignRoleToUserAsync(User user, string roleName);
+        Task<bool> RemoveRoleFromUserAsync(User user, string roleName);
     }
 }

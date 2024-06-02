@@ -52,8 +52,6 @@ namespace Backend.Controllers.Account
             return BadRequest("Invalid login attempt");
         }
 
-
-
         [HttpPost("create-role")]
         public async Task<IActionResult> CreateRole([FromBody] string roleName)
         {
@@ -74,6 +72,19 @@ namespace Backend.Controllers.Account
             if (result)
                 return Ok("Role assigned successfully");
             return BadRequest("Error assigning role");
+        }
+
+        [HttpPost("remove-role")]
+        public async Task<IActionResult> RemoveRoleFromUser([FromBody] AssignRoleModel model)
+        {
+            var user = _accountRepository.GetUsersByEmail(model.Email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var result = await _accountRepository.RemoveRoleFromUserAsync(user, model.RoleName);
+            if (result)
+                return Ok("Role removed successfully");
+            return BadRequest("Error removing role");
         }
     }
 
