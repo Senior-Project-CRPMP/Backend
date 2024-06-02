@@ -38,12 +38,12 @@ namespace Backend.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Task>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetProjectTasks(int taskId)
+        public IActionResult GetProjectTasks(int projectId)
         {
-            if (!_taskRepository.ProjectTaskExists(taskId))
+            if (!_taskRepository.ProjectTaskExists(projectId))
                 return NotFound();
 
-            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetProjectTasks(taskId));
+            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetProjectTasks(projectId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

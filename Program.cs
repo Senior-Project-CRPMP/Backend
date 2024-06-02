@@ -10,6 +10,13 @@ using Backend.Interfaces.Account;
 using Backend.Models.Account;
 using Backend.Repositories.Account;
 using Microsoft.OpenApi.Models;
+using Backend.Interfaces.Document;
+using Backend.Interfaces.Form;
+using Backend.Interfaces;
+using Backend.Repository.Document;
+using Backend.Repository.Form;
+using Backend.Repository.FormQuestion;
+using Backend.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +26,18 @@ builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserInfoRepository, UserInfoRepository>();
+//builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IFormRepository, FormRepository>();
+builder.Services.AddScoped<IFormQuestionRepository, FormQuestionRepository>();
+builder.Services.AddScoped<IFormOptionRepository, FormOptionRepository>();
+builder.Services.AddScoped<IFormFileStorageRepository, FormFileStorageRepository>();
+builder.Services.AddScoped<IFormResponseRepository, FormResponseRepository>();
+builder.Services.AddScoped<IFormAnswerRepository, FormAnswerRepository>();
+builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>

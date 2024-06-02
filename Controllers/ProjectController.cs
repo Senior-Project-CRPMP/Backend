@@ -33,7 +33,7 @@ namespace Backend.Controllers
             return Ok(projects);
         }
 
-        [HttpGet("SingleProject/{projectId}")]
+        [HttpGet("SingleProjectById/{projectId}")]
         [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(int projectId)
@@ -49,7 +49,7 @@ namespace Backend.Controllers
             return Ok(project);
         }
 
-        [HttpGet("SingleProject/{projectTitle}")]
+        [HttpGet("SingleProjectByTitle/{projectTitle}")]
         [ProducesResponseType(200, Type = typeof(Project))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(string projectTitle)
