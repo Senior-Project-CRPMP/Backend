@@ -3,76 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\fileupload\\fileuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\fileupload\\fileuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\fileupload\\profilepicuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\fileupload\\profilepicuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\fileupload\\iprofilepicuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\fileupload\\iprofilepicuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\fileupload\\ifileuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\fileupload\\ifileuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\fileupload\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\fileupload\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\fileupload\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\fileupload\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\fileupload\\profilepicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\fileupload\\profilepicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\fileupload\\profilepicuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\fileupload\\profilepicuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\fileupload\\profilepicupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\fileupload\\profilepicupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\fileupload\\fileuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\fileupload\\fileuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\fileupload\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\fileupload\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,216 +62,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Account\\AccountController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\Account\\AccountController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:40:21.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\Account\\IAccountRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
-              "RelativeToolTip": "Interfaces\\Account\\IAccountRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAwwBkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:38:02.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAAwDQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:03:18.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
-              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
-              "RelativeToolTip": "Models\\Account\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
+              "Title": "FileUploadDto.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\FileUpload\\FileUploadDto.cs",
+              "RelativeDocumentMoniker": "Dto\\FileUpload\\FileUploadDto.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\FileUpload\\FileUploadDto.cs",
+              "RelativeToolTip": "Dto\\FileUpload\\FileUploadDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:37:01.563Z",
+              "WhenOpened": "2024-06-03T10:22:45.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Account\\AccountRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
-              "RelativeToolTip": "Repository\\Account\\AccountRepository.cs",
-              "ViewState": "AQIAAI4AAAAAAAAAAAAqwAgAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:38:20.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-02T22:01:02.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DataContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\DataContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\DataContextModelSnapshot.cs",
-              "ViewState": "AQIAANgAAAAAAAAAAAApwOgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:00:20.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\ProjectController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProjectController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\ProjectController.cs",
-              "RelativeToolTip": "Controllers\\ProjectController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:47:18.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IProfilePicUploadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\FileUpload\\IProfilePicUploadRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\FileUpload\\IProfilePicUploadRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\FileUpload\\IProfilePicUploadRepository.cs",
-              "RelativeToolTip": "Interfaces\\FileUpload\\IProfilePicUploadRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:10:16.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProfilePicUploadController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\ProfilePicUploadController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FileUpload\\ProfilePicUploadController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\ProfilePicUploadController.cs",
-              "RelativeToolTip": "Controllers\\FileUpload\\ProfilePicUploadController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAIwCgAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:13:57.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IFileUploadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\FileUpload\\IFileUploadRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\FileUpload\\IFileUploadRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\FileUpload\\IFileUploadRepository.cs",
-              "RelativeToolTip": "Interfaces\\FileUpload\\IFileUploadRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:01:33.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FileUploadController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\FileUploadController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FileUpload\\FileUploadController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\FileUploadController.cs",
-              "RelativeToolTip": "Controllers\\FileUpload\\FileUploadController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAmwBYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T20:59:59.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ProfilePicRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\FileUpload\\ProfilePicRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\FileUpload\\ProfilePicRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\FileUpload\\ProfilePicRepository.cs",
-              "RelativeToolTip": "Repository\\FileUpload\\ProfilePicRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAQAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:14:25.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProfilePicUploadDto.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\FileUpload\\ProfilePicUploadDto.cs",
-              "RelativeDocumentMoniker": "Dto\\FileUpload\\ProfilePicUploadDto.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\FileUpload\\ProfilePicUploadDto.cs",
-              "RelativeToolTip": "Dto\\FileUpload\\ProfilePicUploadDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:34:44.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProfilePicUpload.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\FileUpload\\ProfilePicUpload.cs",
-              "RelativeDocumentMoniker": "Models\\FileUpload\\ProfilePicUpload.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\FileUpload\\ProfilePicUpload.cs",
-              "RelativeToolTip": "Models\\FileUpload\\ProfilePicUpload.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:08:22.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "Data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Data\\DataContext.cs",
-              "RelativeToolTip": "Data\\DataContext.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAkwIMAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:19:08.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FileUploadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\FileUpload\\FileUploadRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\FileUpload\\FileUploadRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\FileUpload\\FileUploadRepository.cs",
-              "RelativeToolTip": "Repository\\FileUpload\\FileUploadRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T20:53:54.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 1,
               "Title": "FileUpload.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\FileUpload\\FileUpload.cs",
               "RelativeDocumentMoniker": "Models\\FileUpload\\FileUpload.cs",
@@ -323,7 +83,73 @@
               "RelativeToolTip": "Models\\FileUpload\\FileUpload.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T20:53:08.107Z"
+              "WhenOpened": "2024-06-03T10:21:01.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileUploadController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\FileUploadController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FileUpload\\FileUploadController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\FileUploadController.cs",
+              "RelativeToolTip": "Controllers\\FileUpload\\FileUploadController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T10:19:55.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
+              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
+              "RelativeToolTip": "Models\\Account\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T10:02:06.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Account\\AccountController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\Account\\AccountController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T09:51:32.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Account\\IAccountRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
+              "RelativeToolTip": "Interfaces\\Account\\IAccountRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T09:43:12.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Account\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
+              "RelativeToolTip": "Repository\\Account\\AccountRepository.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T22:38:20.072Z",
+              "EditorCaption": ""
             }
           ]
         }

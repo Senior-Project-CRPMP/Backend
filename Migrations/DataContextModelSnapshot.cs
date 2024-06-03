@@ -78,6 +78,12 @@ namespace Backend.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -197,7 +203,6 @@ namespace Backend.Migrations
                     b.ToTable("Documents");
                 });
 
-            modelBuilder.Entity("Backend.Models.FileUpload.FileUpload", b =>
             modelBuilder.Entity("Backend.Models.Feedback", b =>
                 {
                     b.Property<int>("Id")
@@ -205,15 +210,6 @@ namespace Backend.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FilePath");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -224,13 +220,41 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
+                    b.HasKey("Id");
+
+                    b.ToTable("Feedbacks");
+                });
+
+            modelBuilder.Entity("Backend.Models.FileUpload.FileUpload", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
                     b.ToTable("FileUploads");
-                }));
+                });
 
             modelBuilder.Entity("Backend.Models.FileUpload.ProfilePicUpload", b =>
                 {
@@ -250,7 +274,6 @@ namespace Backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProfilePicUploads");
-                    b.ToTable("Feedbacks");
                 });
 
             modelBuilder.Entity("Backend.Models.Form.Form", b =>

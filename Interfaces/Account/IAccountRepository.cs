@@ -10,10 +10,9 @@ namespace Backend.Interfaces.Account
         Task<bool> RemoveRoleFromUserAsync(User user, string roleName);
         Task<bool> CreateRoleAsync(string roleName);
         int GetAdminCount();
-        int GetNonAdminCount();
-        User GetUserById(int id);
+        int GetStandardUserCount();
+        User GetUserById(string id);
         User GetUserByName(string name);
-        User GetUserByUserName(string username);
         int GetUserCount();
         ICollection<User> GetUsers();
         User GetUsersByEmail(string email);

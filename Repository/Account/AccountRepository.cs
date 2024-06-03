@@ -77,12 +77,12 @@ namespace Backend.Repositories.Account
             return _userManager.Users.Count(u => u.IsAdmin);
         }
 
-        public int GetNonAdminCount()
+        public int GetStandardUserCount()
         {
             return _userManager.Users.Count(u => !u.IsAdmin);
         }
 
-        public User GetUserById(int id)
+        public User GetUserById(string id)
         {
             return _userManager.Users.FirstOrDefault(u => u.Id == id.ToString());
         }
@@ -90,11 +90,6 @@ namespace Backend.Repositories.Account
         public User GetUserByName(string name)
         {
             return _userManager.Users.FirstOrDefault(u => u.FirstName == name || u.LastName == name);
-        }
-
-        public User GetUserByUserName(string username)
-        {
-            return _userManager.FindByNameAsync(username).Result;
         }
 
         public int GetUserCount()

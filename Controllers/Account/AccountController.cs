@@ -16,6 +16,64 @@ namespace Backend.Controllers.Account
             _accountRepository = accountRepository;
         }
 
+        [HttpGet("admin-count")]
+        public IActionResult GetAdminCount()
+        {
+            return Ok(_accountRepository.GetAdminCount());
+        }
+
+        [HttpGet("standard-user-count")]
+        public IActionResult GetStandardUserCount()
+        {
+            return Ok(_accountRepository.GetStandardUserCount());
+        }
+
+        [HttpGet("user/{id}")]
+        public IActionResult GetUserById(string id)
+        {
+            var user = _accountRepository.GetUserById(id);
+            if (user == null)
+                return NotFound();
+            return Ok(user);
+        }
+
+        [HttpGet("user/name/{name}")]
+        public IActionResult GetUserByName(string name)
+        {
+            var user = _accountRepository.GetUserByName(name);
+            if (user == null)
+                return NotFound();
+            return Ok(user);
+        }
+
+        [HttpGet("user-count")]
+        public IActionResult GetUserCount()
+        {
+            return Ok(_accountRepository.GetUserCount());
+        }
+
+        [HttpGet("users")]
+        public IActionResult GetUsers()
+        {
+            return Ok(_accountRepository.GetUsers());
+        }
+
+        [HttpGet("user/email/{email}")]
+        public IActionResult GetUserByEmail(string email)
+        {
+            var user = _accountRepository.GetUsersByEmail(email);
+            if (user == null)
+                return NotFound();
+            return Ok(user);
+        }
+
+        [HttpGet("users/role/{role}")]
+        public IActionResult GetUsersByRole(string role)
+        {
+            var users = _accountRepository.GetUsersByRole(role);
+            return Ok(users);
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> Register(Register model)
         {

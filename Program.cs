@@ -86,7 +86,7 @@ builder.Services.AddSignalR();
 
 builder.Services.AddCors(option => option.AddPolicy("AllowSpecificOrigin", builder =>
 {
-    builder.WithOrigins("http://localhost:5110")
+    builder.WithOrigins("http://localhost:3000")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials();
