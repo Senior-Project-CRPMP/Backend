@@ -20,5 +20,7 @@ namespace Backend.Interfaces.Account
         Task<(SignInResult, string, string)> LoginUserAsync(string email, string password); // Update return type
         Task<(string, string)> RefreshTokenAsync(string token, string refreshToken);
         Task<IdentityResult> RegisterUserAsync(User user, string password);
+        Task<bool> DeleteUserAsync(User user);
+        Task<IdentityResult> UpdateUserAsync(User user);
     }
 }

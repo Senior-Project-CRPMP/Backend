@@ -159,6 +159,39 @@ namespace Backend.Controllers.Account
                 return Ok("Role removed successfully");
             return BadRequest("Error removing role");
         }
+
+        [HttpDelete("delete-user/{id}")]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            var user = _accountRepository.GetUserById(id);
+            if (user == null)
+                return NotFound("User not found");
+
+            var result = await _accountRepository.DeleteUserAsync(user);
+            if (result)
+                return Ok("User deleted successfully");
+            return BadRequest("Error deleting user");
+        }
+
+        [HttpPut("update-user/{id}")]
+        public async Task<IActionResult> UpdateUser(string id, UpdateUserModel model)
+        {
+            var user = _accountRepository.GetUserById(id);
+            if (user == null)
+                return NotFound("User not found");
+
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.Email = model.Email;
+            user.UserName = model.Email;
+            user.IsAdmin = model.IsAdmin;
+
+            var result = await _accountRepository.UpdateUserAsync(user);
+            if (result.Succeeded)
+                return Ok("User updated successfully");
+            return BadRequest(result.Errors);
+        }
+
     }
 
     public class AssignRoleModel
@@ -171,5 +204,13 @@ namespace Backend.Controllers.Account
     {
         public string Token { get; set; }
         public string RefreshToken { get; set; }
+    }
+
+    public class UpdateUserModel
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public bool IsAdmin { get; set; }
     }
 }

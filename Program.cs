@@ -12,7 +12,6 @@ using Backend.Repositories.Account;
 using Microsoft.OpenApi.Models;
 using Backend.Interfaces.Document;
 using Backend.Interfaces.Form;
-using Backend.Interfaces;
 using Backend.Repository.Document;
 using Backend.Repository.Form;
 using Backend.Repository.FormQuestion;
@@ -21,6 +20,8 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Http.Features;
 using Backend.Repositories;
 using Backend.Interfaces.FileUpload;
+using Backend.Interfaces.Project;
+using Backend.Repository.Project;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,8 +40,6 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserInfoRepository, UserInfoRepository>();
 //builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IFormRepository, FormRepository>();
 builder.Services.AddScoped<IFormQuestionRepository, FormQuestionRepository>();

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using Backend.Dto;
 using Backend.Models;
 using Backend.Models.Form;
 using Backend.Dto.Form;
 using Backend.Models.Document;
 using Backend.Dto.Document;
+using Backend.Dto.Project;
 
 namespace Backend.Helper
 {
@@ -12,11 +12,11 @@ namespace Backend.Helper
     {
         public MappingProfiles() 
         {
-            CreateMap<Project, ProjectDto>();
-            CreateMap<ProjectDto, Project>();
+            CreateMap<Models.Project.Project, ProjectDto>();
+            CreateMap<ProjectDto, Models.Project.Project>();
 
-            CreateMap<Models.Task, TaskDto>();
-            CreateMap<TaskDto, Models.Task>();
+            CreateMap<Models.Project.Task, TaskDto>();
+            CreateMap<TaskDto, Models.Project.Task>();
 
             CreateMap<Models.Form.Form, Dto.Form.FormDto>();
             CreateMap<Dto.Form.FormDto, Models.Form.Form>();

@@ -220,5 +220,16 @@ namespace Backend.Repositories.Account
             }
             return result;
         }
+
+        public async Task<bool> DeleteUserAsync(User user)
+        {
+            var result = await _userManager.DeleteAsync(user);
+            return result.Succeeded;
+        }
+
+        public async Task<IdentityResult> UpdateUserAsync(User user)
+        {
+            return await _userManager.UpdateAsync(user);
+        }
     }
 }

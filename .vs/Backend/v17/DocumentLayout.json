@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\fileupload\\fileuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\fileupload\\fileuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\fileupload\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\fileupload\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\fileupload\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\fileupload\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\form\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\form\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\document\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\document\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\project\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\project\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\project\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\project\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\project\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,90 +95,194 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileUploadDto.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\FileUpload\\FileUploadDto.cs",
-              "RelativeDocumentMoniker": "Dto\\FileUpload\\FileUploadDto.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\FileUpload\\FileUploadDto.cs",
-              "RelativeToolTip": "Dto\\FileUpload\\FileUploadDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAC8AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T10:22:45.949Z",
+              "WhenOpened": "2024-06-03T11:27:55.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FileUpload.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\FileUpload\\FileUpload.cs",
-              "RelativeDocumentMoniker": "Models\\FileUpload\\FileUpload.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\FileUpload\\FileUpload.cs",
-              "RelativeToolTip": "Models\\FileUpload\\FileUpload.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Helper\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Helper\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Helper\\MappingProfiles.cs",
+              "RelativeToolTip": "Helper\\MappingProfiles.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T10:21:01.133Z",
+              "WhenOpened": "2024-06-03T11:27:41.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FileUploadController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\FileUploadController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FileUpload\\FileUploadController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\FileUpload\\FileUploadController.cs",
-              "RelativeToolTip": "Controllers\\FileUpload\\FileUploadController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
+              "RelativeDocumentMoniker": "Models\\Project\\Task.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
+              "RelativeToolTip": "Models\\Project\\Task.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T10:19:55.686Z",
+              "WhenOpened": "2024-06-03T11:27:22.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
-              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
-              "RelativeToolTip": "Models\\Account\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "DocumentIndex": 3,
+              "Title": "Form.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\Form.cs",
+              "RelativeDocumentMoniker": "Models\\Form\\Form.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\Form.cs",
+              "RelativeToolTip": "Models\\Form\\Form.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T10:02:06.813Z",
+              "WhenOpened": "2024-06-03T11:27:15.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Document\\Document.cs",
+              "RelativeDocumentMoniker": "Models\\Document\\Document.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Document\\Document.cs",
+              "RelativeToolTip": "Models\\Document\\Document.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:26:03.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Project\\IProjectRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IProjectRepository.cs",
+              "RelativeToolTip": "Interfaces\\Project\\IProjectRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:23:44.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Project\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\ProjectRepository.cs",
+              "RelativeToolTip": "Repository\\Project\\ProjectRepository.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAmwDkAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:21:17.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Project\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\ProjectController.cs",
+              "RelativeToolTip": "Controllers\\Project\\ProjectController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAuwHUAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:20:34.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\ProjectDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Project\\ProjectDto.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\ProjectDto.cs",
+              "RelativeToolTip": "Dto\\Project\\ProjectDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:23:36.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Project.cs",
+              "RelativeDocumentMoniker": "Models\\Project\\Project.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Project.cs",
+              "RelativeToolTip": "Models\\Project\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:17:00.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Data\\DataContext.cs",
+              "RelativeToolTip": "Data\\DataContext.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAQwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:21:31.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Project\\TaskController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
+              "RelativeToolTip": "Controllers\\Project\\TaskController.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAwwDcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T10:43:48.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\Account\\AccountController.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
               "RelativeToolTip": "Controllers\\Account\\AccountController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAAAM0AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T09:51:32.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Account\\IAccountRepository.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
               "RelativeToolTip": "Interfaces\\Account\\IAccountRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wBcAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T09:43:12.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Account\\AccountRepository.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
               "RelativeToolTip": "Repository\\Account\\AccountRepository.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGEAAAAJAAAA",
+              "ViewState": "AQIAANEAAAAAAAAAAAAAwNoAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T22:38:20.072Z",
               "EditorCaption": ""

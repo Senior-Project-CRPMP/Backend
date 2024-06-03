@@ -7,6 +7,7 @@ using System.Reflection.Emit;
 using Backend.Models.Chat;
 using Backend.Models.Account;
 using Backend.Models.FileUpload;
+using Backend.Models.Project;
 
 namespace Backend.Data
 {
@@ -17,12 +18,7 @@ namespace Backend.Data
         }
 
         public DbSet<Project> Projects { get; set; }
-        public DbSet<Models.Task> Tasks { get; set; }
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<UserInfoModel> UserInfo { get; set; }
-        public DbSet<UserProject> UserProjects { get; set; }
-        public DbSet<UserTask> UserTasks { get; set; }
-        public DbSet<RoleModel> Roles { get; set; }
+        public DbSet<Models.Project.Task> Tasks { get; set; }
         public DbSet<Form> Forms { get; set; }
         public DbSet<FormQuestion> FormQuestions { get; set; }
         public DbSet<FormOption> FormOptions { get; set; }
@@ -43,35 +39,12 @@ namespace Backend.Data
             base.OnModelCreating(builder);
 
             // Task and Project relationship
-            builder.Entity<Models.Task>()
+            builder.Entity<Models.Project.Task>()
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)
                 .HasForeignKey(t => t.ProjectId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // UserProject relationships
-            builder.Entity<UserProject>()
-                .HasKey(up => new { up.UserId, up.ProjectId });
-            builder.Entity<UserProject>()
-                .HasOne(up => up.User)
-                .WithMany(u => u.UserProjects)
-                .HasForeignKey(up => up.UserId);
-            builder.Entity<UserProject>()
-                .HasOne(up => up.Project)
-                .WithMany(p => p.UserProjects)
-                .HasForeignKey(up => up.ProjectId);
-
-            // UserTask relationships
-            builder.Entity<UserTask>()
-                .HasKey(ut => new { ut.UserId, ut.TaskId });
-            builder.Entity<UserTask>()
-                .HasOne(ut => ut.User)
-                .WithMany(u => u.UserTasks)
-                .HasForeignKey(ut => ut.UserId);
-            builder.Entity<UserTask>()
-                .HasOne(ut => ut.Task)
-                .WithMany(t => t.UserTasks)
-                .HasForeignKey(ut => ut.TaskId);
 
             // FormQuestion and Form relationship
             builder.Entity<FormQuestion>()
