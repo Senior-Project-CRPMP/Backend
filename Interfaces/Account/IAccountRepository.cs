@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Backend.Models.Account;
 using Microsoft.AspNetCore.Identity;
 
@@ -7,23 +6,20 @@ namespace Backend.Interfaces.Account
 {
     public interface IAccountRepository
     {
-        ICollection<User> GetUsers();
-        ICollection<User> GetUsersByRole(string role);
-        User GetUsersByEmail(string email);
-        User GetUserByUserName(string username);
-        User GetUserByName(string name);
-        User GetUserById(int id);
-        int GetUserCount();
-        int GetAdminCount();
-        int GetNonAdminCount();
-
-        Task<IdentityResult> RegisterUserAsync(User user, string password);
-        Task<(SignInResult, string)> LoginUserAsync(string email, string password);
-
-
-        // Role management methods
-        Task<bool> CreateRoleAsync(string roleName);
         Task<bool> AssignRoleToUserAsync(User user, string roleName);
         Task<bool> RemoveRoleFromUserAsync(User user, string roleName);
+        Task<bool> CreateRoleAsync(string roleName);
+        int GetAdminCount();
+        int GetNonAdminCount();
+        User GetUserById(int id);
+        User GetUserByName(string name);
+        User GetUserByUserName(string username);
+        int GetUserCount();
+        ICollection<User> GetUsers();
+        User GetUsersByEmail(string email);
+        ICollection<User> GetUsersByRole(string role);
+        Task<(SignInResult, string, string)> LoginUserAsync(string email, string password); // Update return type
+        Task<(string, string)> RefreshTokenAsync(string token, string refreshToken);
+        Task<IdentityResult> RegisterUserAsync(User user, string password);
     }
 }

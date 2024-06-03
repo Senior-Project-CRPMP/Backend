@@ -11,5 +11,9 @@ namespace Backend.Models.Account
         [Column(TypeName = "datetime")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public bool IsAdmin { get; set; } = false;
+
+        // Add Refresh Token and its expiration
+        public string RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
     }
 }

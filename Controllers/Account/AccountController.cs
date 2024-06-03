@@ -1,6 +1,7 @@
 ﻿using Backend.Interfaces.Account;
 using Backend.Models.Account;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Backend.Controllers.Account
 {
@@ -44,12 +45,26 @@ namespace Backend.Controllers.Account
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var (signInResult, token) = await _accountRepository.LoginUserAsync(model.Email, model.Password);
+            var (signInResult, token, refreshToken) = await _accountRepository.LoginUserAsync(model.Email, model.Password);
 
             if (signInResult.Succeeded)
-                return Ok(new { Token = token });
+                return Ok(new { Token = token, RefreshToken = refreshToken });
 
             return BadRequest("Invalid login attempt");
+        }
+
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var (newToken, newRefreshToken) = await _accountRepository.RefreshTokenAsync(model.Token, model.RefreshToken);
+
+            if (newToken == null)
+                return BadRequest("Invalid refresh token");
+
+            return Ok(new { Token = newToken, RefreshToken = newRefreshToken });
         }
 
         [HttpPost("create-role")]
@@ -92,5 +107,11 @@ namespace Backend.Controllers.Account
     {
         public string Email { get; set; }
         public string RoleName { get; set; }
+    }
+
+    public class RefreshTokenModel
+    {
+        public string Token { get; set; }
+        public string RefreshToken { get; set; }
     }
 }
