@@ -133,7 +133,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ChatRoomId");
 
-                    b.ToTable("ChatMessages");
+                    b.ToTable("ChatMessages", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
@@ -154,7 +154,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ChatRooms");
+                    b.ToTable("ChatRooms", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
@@ -176,7 +176,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ChatRoomId");
 
-                    b.ToTable("ChatRoomParticipant");
+                    b.ToTable("ChatRoomParticipant", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
@@ -200,7 +200,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("Documents");
+                    b.ToTable("Documents", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Feedback", b =>
@@ -224,7 +224,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Feedbacks");
+                    b.ToTable("Feedbacks", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.FileUpload.FileUpload", b =>
@@ -253,7 +253,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FileUploads");
+                    b.ToTable("FileUploads", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.FileUpload.ProfilePicUpload", b =>
@@ -273,7 +273,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProfilePicUploads");
+                    b.ToTable("ProfilePicUploads", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Form.Form", b =>
@@ -298,7 +298,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("Forms");
+                    b.ToTable("Forms", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Form.FormAnswer", b =>
@@ -329,7 +329,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("FormResponseId");
 
-                    b.ToTable("FormAnswers");
+                    b.ToTable("FormAnswers", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Form.FormFileStorage", b =>
@@ -353,7 +353,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("FormResponseId");
 
-                    b.ToTable("FormFileStorages");
+                    b.ToTable("FormFileStorages", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Form.FormOption", b =>
@@ -374,7 +374,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("FormQuestionId");
 
-                    b.ToTable("FormOptions");
+                    b.ToTable("FormOptions", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Form.FormQuestion", b =>
@@ -416,7 +416,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("FormId");
 
-                    b.ToTable("FormQuestions");
+                    b.ToTable("FormQuestions", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Form.FormResponse", b =>
@@ -434,7 +434,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("FormId");
 
-                    b.ToTable("FormResponses");
+                    b.ToTable("FormResponses", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Notification", b =>
@@ -461,7 +461,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notifications");
+                    b.ToTable("Notifications", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Project", b =>
@@ -497,7 +497,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Projects", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.RoleModel", b =>
@@ -513,7 +513,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Task", b =>
@@ -547,7 +547,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("Tasks");
+                    b.ToTable("Tasks", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.UserInfoModel", b =>
@@ -580,7 +580,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserInfo");
+                    b.ToTable("UserInfo", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.UserModel", b =>
@@ -607,7 +607,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.UserProject", b =>
@@ -622,7 +622,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("UserProjects");
+                    b.ToTable("UserProjects", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.UserTask", b =>
@@ -637,7 +637,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("TaskId");
 
-                    b.ToTable("UserTasks");
+                    b.ToTable("UserTasks", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

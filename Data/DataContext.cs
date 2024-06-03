@@ -3,7 +3,6 @@ using Backend.Models.Form;
 using Backend.Models.Document;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 using Backend.Models.Chat;
 using Backend.Models.Account;
 using Backend.Models.FileUpload;
@@ -33,6 +32,7 @@ namespace Backend.Data
         public DbSet<ChatRoomParticipant> ChatRoomParticipant { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<UserProject> UserProjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -45,6 +45,23 @@ namespace Backend.Data
                 .HasForeignKey(t => t.ProjectId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            // Project and UserProject relationship
+            builder.Entity<UserProject>()
+                .HasOne(up => up.Project)
+                .WithMany(p => p.UserProjects)
+                .HasForeignKey(up => up.ProjectId);
+
+            builder.Entity<UserProject>()
+                .HasOne(up => up.User)
+                .WithMany(u => u.UserProjects)
+                .HasForeignKey(up => up.UserId);
+
+            // Project and User relationship
+            builder.Entity<Project>()
+                .HasOne(p => p.User)
+                .WithMany()
+                .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // FormQuestion and Form relationship
             builder.Entity<FormQuestion>()
@@ -65,7 +82,7 @@ namespace Backend.Data
                 .HasOne(fr => fr.Form)
                 .WithMany(f => f.FormResponses)
                 .HasForeignKey(fr => fr.FormId)
-                .OnDelete(DeleteBehavior.NoAction); // NoAction to prevent multiple cascade paths
+                .OnDelete(DeleteBehavior.NoAction);
 
             // FormFileStorage and FormResponse relationship
             builder.Entity<FormFileStorage>()
@@ -101,20 +118,11 @@ namespace Backend.Data
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.SetNull);
 
-
-            builder.Entity<FileUpload>();
-
-            builder.Entity<ProfilePicUpload>();
-
+            // Chat relationships
             builder.Entity<ChatRoom>()
-            .HasMany(c => c.Messages)
-            .WithOne(m => m.ChatRoom)
-            .HasForeignKey(m => m.ChatRoomId);
-
-            //builder.Entity<ChatRoom>()
-            //.HasMany(c => c.Participants)
-            //.WithOne(p => p.ChatRoom)
-            //.HasForeignKey(p => p.ChatRoomId);
+                .HasMany(c => c.Messages)
+                .WithOne(m => m.ChatRoom)
+                .HasForeignKey(m => m.ChatRoomId);
         }
     }
 }

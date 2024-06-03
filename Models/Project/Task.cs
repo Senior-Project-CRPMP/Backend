@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Backend.Models.Account;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend.Models.Project
 {
@@ -10,7 +11,9 @@ namespace Backend.Models.Project
         public virtual Project? Project { get; set; }
         public string? Title { get; set; }
         public string Description { get; set; } = string.Empty;
-        public string? AssignedTo { get; set; }
+        [ForeignKey("User")]
+        public string? UserId { get; set; }
+        public virtual User? User { get; set; }
         public DateTime Deadline { get; set; }
         public string? Status { get; set; }
 

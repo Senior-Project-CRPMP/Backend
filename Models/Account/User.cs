@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Backend.Models.Project;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,6 +12,7 @@ namespace Backend.Models.Account
         [Column(TypeName = "datetime")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public bool IsAdmin { get; set; } = false;
+        public virtual ICollection<UserProject>? UserProjects { get; set; }
 
         // Add Refresh Token and its expiration
         public string? RefreshToken { get; set; }
