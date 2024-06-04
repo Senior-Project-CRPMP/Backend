@@ -305,3 +305,4 @@ C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Microso
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\web.config
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\web.config

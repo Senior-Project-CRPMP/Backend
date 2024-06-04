@@ -165,5 +165,6 @@ app.UseStaticFiles(new StaticFileOptions()
     RequestPath = new PathString("/Resources")
 });
 app.MapHub<ChatHub>("/Chat");
+app.MapHub<NotificationHub>("/Notification");
 
 app.Run();
