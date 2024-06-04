@@ -151,7 +151,6 @@ C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.Exte
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\web.config
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\bin\Debug\net8.0\appsettings.json
@@ -307,4 +306,3 @@ C:\Users\kidis\Visual Studio Code\Final Project\Backend\obj\Debug\net8.0\Backend
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\obj\Debug\net8.0\Backend.genruntimeconfig.cache
 C:\Users\kidis\Visual Studio Code\Final Project\Backend\obj\Debug\net8.0\ref\Backend.dll
 C:\Users\Melat\OneDrive\Documents\GitHub\Backend\bin\Debug\net8.0\web.config
-

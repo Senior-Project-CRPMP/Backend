@@ -176,11 +176,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ChatRoomId");
 
-
                     b.ToTable("ChatRoomParticipants");
-
-                    b.ToTable("ChatRoomParticipant");
-
                 });
 
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
@@ -817,11 +813,7 @@ namespace Backend.Migrations
                     b.HasOne("Backend.Models.Account.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-
                         .OnDelete(DeleteBehavior.SetNull);
-
-                        .OnDelete(DeleteBehavior.Restrict);
-
 
                     b.Navigation("User");
                 });
@@ -853,12 +845,8 @@ namespace Backend.Migrations
 
                     b.HasOne("Backend.Models.Account.User", "User")
                         .WithMany("UserProjects")
-
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                        .HasForeignKey("UserId");
-
 
                     b.Navigation("Project");
 
