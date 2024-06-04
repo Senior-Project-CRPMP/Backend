@@ -29,7 +29,7 @@ namespace Backend.Data
         public DbSet<ProfilePicUpload> ProfilePicUploads { get; set; }
         public DbSet<ChatRoom> ChatRooms { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
-        public DbSet<ChatRoomParticipant> ChatRoomParticipant { get; set; }
+        public DbSet<ChatRoomParticipant> ChatRoomParticipants { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserProject> UserProjects { get; set; }
@@ -49,19 +49,21 @@ namespace Backend.Data
             builder.Entity<UserProject>()
                 .HasOne(up => up.Project)
                 .WithMany(p => p.UserProjects)
-                .HasForeignKey(up => up.ProjectId);
+                .HasForeignKey(up => up.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<UserProject>()
                 .HasOne(up => up.User)
                 .WithMany(u => u.UserProjects)
-                .HasForeignKey(up => up.UserId);
+                .HasForeignKey(up => up.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Project and User relationship
             builder.Entity<Project>()
                 .HasOne(p => p.User)
                 .WithMany()
                 .HasForeignKey(p => p.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);  // Change to SetNull or Restrict
 
             // FormQuestion and Form relationship
             builder.Entity<FormQuestion>()
@@ -123,6 +125,18 @@ namespace Backend.Data
                 .HasMany(c => c.Messages)
                 .WithOne(m => m.ChatRoom)
                 .HasForeignKey(m => m.ChatRoomId);
+
+           // builder.Entity<ChatRoomParticipant>()
+             //   .HasOne(crp => crp.ChatRoom)
+               // .WithMany(cr => cr.Participants)
+               // .HasForeignKey(crp => crp.ChatRoomId)
+             //   .OnDelete(DeleteBehavior.Cascade);
+
+          //  builder.Entity<ChatRoomParticipant>()
+               // .HasOne(crp => crp.User)
+             //   .WithMany()
+           //     .HasForeignKey(crp => crp.UserId)
+         //       .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

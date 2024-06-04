@@ -5023,19 +5023,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Melat\\.nuget\\packages\\": {}
+    "C:\\Users\\kidis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\Melat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\obj\\",
+      "projectPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Backend.csproj",
+      "packagesPath": "C:\\Users\\kidis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Melat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kidis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5136,7 +5136,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
