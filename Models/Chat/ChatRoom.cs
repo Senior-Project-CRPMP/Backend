@@ -7,6 +7,6 @@ namespace Backend.Models.Chat
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<ChatMessage>? Messages { get; set; }
-        public ICollection<User> Participants { get; set; }
+        public ICollection<string> Participants { get; set; }
     }
 }

@@ -455,7 +455,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Title")
+                    b.Property<string>("userId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
