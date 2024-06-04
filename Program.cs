@@ -48,6 +48,7 @@ builder.Services.AddScoped<IFormFileStorageRepository, FormFileStorageRepository
 builder.Services.AddScoped<IFormResponseRepository, FormResponseRepository>();
 builder.Services.AddScoped<IFormAnswerRepository, FormAnswerRepository>();
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
+builder.Services.AddScoped<IUserProjectRepository, UserProjectRepository>();
 
 
 builder.Services.AddScoped<IFileUploadRepository, FileUploadRepository>();
