@@ -34,20 +34,26 @@ namespace Backend.Controllers
             return CreatedAtAction(nameof(GetNotificationById), new { id = notification.Id }, notification);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> MarkAsRead(int id)
+        [HttpPut("user/{userId}/mark-as-read")]
+        public async Task<IActionResult> MarkAllAsRead(string userId)
         {
-            var notification = await _context.Notifications.FindAsync(id);
-            if (notification == null)
+            var userNotifications = await _context.Notifications.Where(n => n.userId == userId).ToListAsync();
+
+            if (userNotifications == null || userNotifications.Count == 0)
             {
                 return NotFound();
             }
 
-            notification.IsRead = true;
+            foreach (var notification in userNotifications)
+            {
+                notification.IsRead = true;
+            }
+
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
+}
+
 
         [HttpGet("user/{userId}")]
         public async Task<ActionResult<IEnumerable<Notification>>> GetNotificationsByUserId(string userId)
