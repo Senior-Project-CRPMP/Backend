@@ -2,7 +2,7 @@
 using Backend.Dto.Project;
 using Backend.Interfaces.Project;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
+using System.Collections.Generic;
 
 namespace Backend.Controllers.Project
 {
@@ -72,6 +72,19 @@ namespace Backend.Controllers.Project
         {
             var count = _taskRepository.GetTaskCount();
             return Ok(count);
+        }
+
+        [HttpGet("UserTasks/{userId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Project.Task>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetUserTasks(string userId)
+        {
+            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetUserTasks(userId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(tasks);
         }
 
         [HttpPost("CreateTask")]
@@ -153,7 +166,5 @@ namespace Backend.Controllers.Project
 
             return Ok("Successfully Deleted");
         }
-
-
     }
 }

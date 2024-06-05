@@ -1,5 +1,8 @@
-﻿using Backend.Data;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Backend.Data;
 using Backend.Interfaces.Project;
+using Backend.Models.Project;
 
 namespace Backend.Repository.Project
 {
@@ -11,6 +14,7 @@ namespace Backend.Repository.Project
         {
             _context = context;
         }
+
         public bool ProjectTaskExists(int id)
         {
             return _context.Tasks.Any(t => t.Id == id);
@@ -56,7 +60,7 @@ namespace Backend.Repository.Project
         public bool Save()
         {
             var saved = _context.SaveChanges();
-            return saved > 0 ? true : false;
+            return saved > 0;
         }
 
         public bool TaskExists(int id)
@@ -73,6 +77,11 @@ namespace Backend.Repository.Project
         {
             _context.Update(task);
             return Save();
+        }
+
+        public ICollection<Models.Project.Task> GetUserTasks(string userId)
+        {
+            return _context.Tasks.Where(t => t.UserId == userId).ToList();
         }
     }
 }

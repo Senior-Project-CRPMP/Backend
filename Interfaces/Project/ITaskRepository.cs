@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using Backend.Models.Project;
 
 namespace Backend.Interfaces.Project
 {
@@ -6,6 +7,7 @@ namespace Backend.Interfaces.Project
     {
         ICollection<Models.Project.Task> GetTasks();
         ICollection<Models.Project.Task> GetProjectTasks(int id);
+        ICollection<Models.Project.Task> GetUserTasks(string userId);
         int GetTaskCount();
         Models.Project.Task GetTask(int id);
         Models.Project.Task GetTask(string title);

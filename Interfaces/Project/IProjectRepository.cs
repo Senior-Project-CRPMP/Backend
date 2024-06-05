@@ -10,6 +10,7 @@ namespace Backend.Interfaces.Project
         bool ProjectExists(int id);
         bool ProjectExists(string title);
         bool CreateProject(Models.Project.Project project);
+        bool CreateProjectWithUser(Models.Project.Project project, string userId);
         bool UpdateProject(Models.Project.Project project);
         bool DeleteProject(Models.Project.Project project);
         bool Save();

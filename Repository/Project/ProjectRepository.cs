@@ -18,6 +18,33 @@ namespace Backend.Repository.Project
             return Save();
         }
 
+        public bool CreateProjectWithUser(Models.Project.Project project, string userId)
+        {
+            using var transaction = _context.Database.BeginTransaction();
+            try
+            {
+                _context.Add(project);
+                Save();
+
+                var userProject = new UserProject
+                {
+                    ProjectId = project.Id,
+                    UserId = userId,
+                    Role = "ProjectManager"
+                };
+                _context.Add(userProject);
+                Save();
+
+                transaction.Commit();
+                return true;
+            }
+            catch
+            {
+                transaction.Rollback();
+                return false;
+            }
+        }
+
         public bool DeleteProject(Models.Project.Project project)
         {
             _context.Remove(project);

@@ -88,7 +88,9 @@ namespace Backend.Controllers.Project
 
             var projectMap = _mapper.Map<Models.Project.Project>(projectCreate);
 
-            if (!_projectRepository.CreateProject(projectMap))
+            var userId = projectCreate.UserId;
+
+            if (!_projectRepository.CreateProjectWithUser(projectMap, userId))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
@@ -143,13 +145,9 @@ namespace Backend.Controllers.Project
             if (!_projectRepository.DeleteProject(projectToDelete))
             {
                 ModelState.AddModelError("", "Something went wrong deleting project");
-
             }
 
             return NoContent();
-
-
-
         }
     }
 }
