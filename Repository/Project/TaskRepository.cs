@@ -83,5 +83,10 @@ namespace Backend.Repository.Project
         {
             return _context.Tasks.Where(t => t.UserId == userId).ToList();
         }
+
+        public ICollection<Models.Project.Task> GetTasksByProjectAndUser(int projectId, string userId)
+        {
+            return _context.Tasks.Where(t => t.ProjectId == projectId && t.UserId == userId).ToList();
+        }
     }
 }

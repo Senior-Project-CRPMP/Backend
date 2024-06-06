@@ -87,6 +87,22 @@ namespace Backend.Controllers.Project
             return Ok(tasks);
         }
 
+        [HttpGet("TasksByProjectAndUser/{projectId}/{userId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<TaskDto>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetTasksByProjectAndUser(int projectId, string userId)
+        {
+            if (!_projectRepository.ProjectExists(projectId))
+                return NotFound("Project not found");
+
+            var tasks = _mapper.Map<List<TaskDto>>(_taskRepository.GetTasksByProjectAndUser(projectId, userId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(tasks);
+        }
+
         [HttpPost("CreateTask")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -166,5 +182,6 @@ namespace Backend.Controllers.Project
 
             return Ok("Successfully Deleted");
         }
+
     }
 }
