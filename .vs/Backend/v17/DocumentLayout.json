@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240606162515_thisu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606162515_thisu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240606162313_this.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606162313_this.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\account\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -120,137 +132,31 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\controllers\\chat\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\chat\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606095521_Fourth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606095521_Fourth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\chat\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\chat\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606091855_Third.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606091855_Third.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\chat\\chatroomparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\chat\\chatroomparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606085732_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606085732_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606085156_Third.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606085156_Third.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606084848_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606084848_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606082732_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606082732_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\chat\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\chat\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\project\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606025342_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606025342_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605110902_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240605110902_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605104518_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240605104518_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605102750_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240605102750_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605102209_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240605102209_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\controllers\\project\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\repository\\project\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\interfaces\\project\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\project\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\repository\\project\\userprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\userprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\interfaces\\project\\iuserprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\project\\iuserprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\controllers\\project\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\interfaces\\project\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\project\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\project\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\melat\\onedrive\\documents\\github\\backend\\dto\\project\\userprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\project\\userprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -260,9 +166,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -281,7 +190,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240606162515_thisu.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240606162515_thisu.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240606162515_thisu.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240606162515_thisu.cs",
+              "RelativeToolTip": "Migrations\\20240606162515_thisu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T16:25:15.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20240606162313_this.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240606162313_this.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240606162313_this.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240606162313_this.cs",
+              "RelativeToolTip": "Migrations\\20240606162313_this.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T16:23:14.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-06T16:22:01.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Account\\UserDto.cs",
               "RelativeDocumentMoniker": "Dto\\Account\\UserDto.cs",
@@ -289,12 +237,11 @@
               "RelativeToolTip": "Dto\\Account\\UserDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:31:28.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:31:28.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MappingProfiles.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Helper\\MappingProfiles.cs",
               "RelativeDocumentMoniker": "Helper\\MappingProfiles.cs",
@@ -303,222 +250,36 @@
               "ViewState": "AQIAABgAAAAAAAAAAAAQwDAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T15:30:39.377Z",
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20240606095521_Fourth.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606095521_Fourth.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606095521_Fourth.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606095521_Fourth.cs",
-              "RelativeToolTip": "Migrations\\20240606095521_Fourth.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T09:55:21.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "FormController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormController.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormController.cs",
               "RelativeToolTip": "Controllers\\Form\\FormController.cs",
               "ViewState": "AQIAAIMAAAAAAAAAAAAjwHwAAAANAAAA",
-              "Title": "20240606091855_Third.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606091855_Third.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606091855_Third.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606091855_Third.cs",
-              "RelativeToolTip": "Migrations\\20240606091855_Third.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T09:18:55.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T10:30:19.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20240606084848_Second.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606084848_Second.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606084848_Second.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606084848_Second.cs",
-              "RelativeToolTip": "Migrations\\20240606084848_Second.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T08:48:49.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "Data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Data\\DataContext.cs",
-              "RelativeToolTip": "Data\\DataContext.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAewJYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T20:55:38.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatController.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Chat\\ChatController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Chat\\ChatController.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Chat\\ChatController.cs",
-              "RelativeToolTip": "Controllers\\Chat\\ChatController.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAYwLwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:16:47.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChatMessage.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Chat\\ChatMessage.cs",
-              "RelativeDocumentMoniker": "Models\\Chat\\ChatMessage.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Chat\\ChatMessage.cs",
-              "RelativeToolTip": "Models\\Chat\\ChatMessage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T09:00:09.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Project\\UserProjectController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Project\\UserProjectController.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Project\\UserProjectController.cs",
-              "RelativeToolTip": "Controllers\\Project\\UserProjectController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAxwEoAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:56:11.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20240606025342_Second.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606025342_Second.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606025342_Second.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606025342_Second.cs",
-              "RelativeToolTip": "Migrations\\20240606025342_Second.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T02:53:42.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Account\\User.cs",
-              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Account\\User.cs",
-              "RelativeToolTip": "Models\\Account\\User.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:47:13.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChatRoomParticipant.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Chat\\ChatRoomParticipant.cs",
-              "RelativeDocumentMoniker": "Models\\Chat\\ChatRoomParticipant.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Chat\\ChatRoomParticipant.cs",
-              "RelativeToolTip": "Models\\Chat\\ChatRoomParticipant.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:13:33.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20240606085156_Third.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606085156_Third.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606085156_Third.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606085156_Third.cs",
-              "RelativeToolTip": "Migrations\\20240606085156_Third.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T08:51:56.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240606085732_Second.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606085732_Second.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606085732_Second.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606085732_Second.cs",
-              "RelativeToolTip": "Migrations\\20240606085732_Second.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T08:57:32.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ChatRoom.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Chat\\ChatRoom.cs",
-              "RelativeDocumentMoniker": "Models\\Chat\\ChatRoom.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Chat\\ChatRoom.cs",
-              "RelativeToolTip": "Models\\Chat\\ChatRoom.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T08:58:31.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserProject.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Project\\UserProject.cs",
-              "RelativeDocumentMoniker": "Models\\Project\\UserProject.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Project\\UserProject.cs",
-              "RelativeToolTip": "Models\\Project\\UserProject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:30:19.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "UserProjectController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\UserProjectController.cs",
               "RelativeDocumentMoniker": "Controllers\\Project\\UserProjectController.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\UserProjectController.cs",
               "RelativeToolTip": "Controllers\\Project\\UserProjectController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIwAAAANAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAswIwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T04:56:11.722Z",
-              "DocumentIndex": 13,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Project\\Project.cs",
-              "RelativeDocumentMoniker": "Models\\Project\\Project.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Project\\Project.cs",
-              "RelativeToolTip": "Models\\Project\\Project.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAkwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:46:35.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "IFormAnswerRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Form\\IFormAnswerRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Form\\IFormAnswerRepository.cs",
@@ -530,212 +291,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "DocumentIndex": 11,
-              "Title": "20240606082732_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606082732_Initial.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606082732_Initial.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240606082732_Initial.cs",
-              "RelativeToolTip": "Migrations\\20240606082732_Initial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T08:27:33.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20240605102209_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605102209_Initial.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240605102209_Initial.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605102209_Initial.cs",
-              "RelativeToolTip": "Migrations\\20240605102209_Initial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:22:09.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAJgAAAAAAAAAAAAewKYAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:21:48.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20240605110902_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605110902_Initial.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240605110902_Initial.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605110902_Initial.cs",
-              "RelativeToolTip": "Migrations\\20240605110902_Initial.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T11:09:02.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-05T07:45:54.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20240605104518_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605104518_Initial.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240605104518_Initial.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605104518_Initial.cs",
-              "RelativeToolTip": "Migrations\\20240605104518_Initial.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:45:18.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "20240605102750_Second.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605102750_Second.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240605102750_Second.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Migrations\\20240605102750_Second.cs",
-              "RelativeToolTip": "Migrations\\20240605102750_Second.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:27:50.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Repository\\Project\\ProjectRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Project\\ProjectRepository.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Repository\\Project\\ProjectRepository.cs",
-              "RelativeToolTip": "Repository\\Project\\ProjectRepository.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAgwCEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T05:06:52.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Interfaces\\Project\\IProjectRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\Project\\IProjectRepository.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Interfaces\\Project\\IProjectRepository.cs",
-              "RelativeToolTip": "Interfaces\\Project\\IProjectRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T05:06:08.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Project\\ProjectController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Project\\ProjectController.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Project\\ProjectController.cs",
-              "RelativeToolTip": "Controllers\\Project\\ProjectController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T05:05:42.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UserProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Repository\\Project\\UserProjectRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Project\\UserProjectRepository.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Repository\\Project\\UserProjectRepository.cs",
-              "RelativeToolTip": "Repository\\Project\\UserProjectRepository.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAqwFMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T05:07:02.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IUserProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\Project\\IUserProjectRepository.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
-              "RelativeToolTip": "Interfaces\\Project\\IUserProjectRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T05:06:16.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "TaskRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Repository\\Project\\TaskRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Project\\TaskRepository.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Repository\\Project\\TaskRepository.cs",
-              "RelativeToolTip": "Repository\\Project\\TaskRepository.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAgwEsAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:56:47.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ITaskRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Interfaces\\Project\\ITaskRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\Project\\ITaskRepository.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Interfaces\\Project\\ITaskRepository.cs",
-              "RelativeToolTip": "Interfaces\\Project\\ITaskRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:56:28.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TaskController.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Project\\TaskController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Project\\TaskController.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Controllers\\Project\\TaskController.cs",
-              "RelativeToolTip": "Controllers\\Project\\TaskController.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAqwKoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:43:03.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Project\\Task.cs",
-              "RelativeDocumentMoniker": "Models\\Project\\Task.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Models\\Project\\Task.cs",
-              "RelativeToolTip": "Models\\Project\\Task.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:46:37.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 6,
               "Title": "UserProjectDto.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Dto\\Project\\UserProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\UserProjectDto.cs",
               "RelativeDocumentMoniker": "Dto\\Project\\UserProjectDto.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Dto\\Project\\UserProjectDto.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\UserProjectDto.cs",
               "RelativeToolTip": "Dto\\Project\\UserProjectDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -743,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "FormResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Form\\FormResponseDto.cs",
               "RelativeDocumentMoniker": "Dto\\Form\\FormResponseDto.cs",
@@ -755,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "FormAnswerDto.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Form\\FormAnswerDto.cs",
               "RelativeDocumentMoniker": "Dto\\Form\\FormAnswerDto.cs",
@@ -767,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "FormResponse.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormResponse.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormResponse.cs",
@@ -779,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "FormFileStorage.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormFileStorage.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormFileStorage.cs",
@@ -791,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "FormAnswer.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormAnswer.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormAnswer.cs",
@@ -803,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "FormAnswerController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormAnswerController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormAnswerController.cs",
@@ -815,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "FormOption.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormOption.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormOption.cs",
@@ -827,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "FormOptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Form\\FormOptionRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Form\\FormOptionRepository.cs",
@@ -839,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "FormOptionController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormOptionController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormOptionController.cs",
@@ -851,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "IFormOptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Form\\IFormOptionRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Form\\IFormOptionRepository.cs",
@@ -863,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "IFormQuestionRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Form\\IFormQuestionRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Form\\IFormQuestionRepository.cs",
@@ -875,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "FormQuestionRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Form\\FormQuestionRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Form\\FormQuestionRepository.cs",
@@ -887,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "FormQuestionController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormQuestionController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormQuestionController.cs",
@@ -899,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "FormResponseRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Form\\FormResponseRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Form\\FormResponseRepository.cs",
@@ -911,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "FormQuestion.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormQuestion.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormQuestion.cs",
@@ -923,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "Form.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\Form.cs",
               "RelativeDocumentMoniker": "Models\\Form\\Form.cs",
@@ -935,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "ProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\ProjectRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Project\\ProjectRepository.cs",
@@ -947,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "IProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IProjectRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Project\\IProjectRepository.cs",
@@ -959,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "ProjectController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\ProjectController.cs",
               "RelativeDocumentMoniker": "Controllers\\Project\\ProjectController.cs",
@@ -971,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "UserProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\UserProjectRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Project\\UserProjectRepository.cs",
@@ -983,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "UserProject.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\UserProject.cs",
               "RelativeDocumentMoniker": "Models\\Project\\UserProject.cs",
@@ -995,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "IUserProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Project\\IUserProjectRepository.cs",
@@ -1007,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Project.cs",
               "RelativeDocumentMoniker": "Models\\Project\\Project.cs",
@@ -1019,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "TaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\TaskRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Project\\TaskRepository.cs",
@@ -1031,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "ITaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\ITaskRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Project\\ITaskRepository.cs",
@@ -1043,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "TaskController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
               "RelativeDocumentMoniker": "Controllers\\Project\\TaskController.cs",
@@ -1055,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Task.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
               "RelativeDocumentMoniker": "Models\\Project\\Task.cs",
@@ -1067,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
               "RelativeDocumentMoniker": "Models\\Account\\User.cs",
@@ -1079,12 +639,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "TaskDto.cs",
-              "DocumentMoniker": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Dto\\Project\\TaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\TaskDto.cs",
               "RelativeDocumentMoniker": "Dto\\Project\\TaskDto.cs",
-              "ToolTip": "C:\\Users\\Melat\\OneDrive\\Documents\\GitHub\\Backend\\Dto\\Project\\TaskDto.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\TaskDto.cs",
               "RelativeToolTip": "Dto\\Project\\TaskDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1092,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "Data\\DataContext.cs",
