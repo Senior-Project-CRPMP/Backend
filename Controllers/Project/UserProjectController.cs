@@ -80,6 +80,19 @@ namespace Backend.Controllers.Project
             return Ok(users);
         }
 
+        [HttpGet("userProjectsByProjectId/{projectId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<UserProjectDto>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetUserProjectsByProjectId(int projectId)
+        {
+            var userProjects = _mapper.Map<List<UserProjectDto>>(_userProjectRepository.GetUserProjectsByProjectId(projectId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(userProjects);
+        }
+
         [HttpPost]
         public IActionResult CreateUserProject([FromBody] UserProjectDto userProjectCreate)
         {

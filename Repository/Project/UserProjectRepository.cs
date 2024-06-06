@@ -79,5 +79,13 @@ namespace Backend.Repository.Project
             var saved = _context.SaveChanges();
             return saved > 0;
         }
+
+        public ICollection<UserProject> GetUserProjectsByProjectId(int projectId)
+        {
+            return _context.UserProjects.Include(up => up.User)
+                                        .Include(up => up.Project)
+                                        .Where(up => up.ProjectId == projectId)
+                                        .ToList();
+        }
     }
 }
