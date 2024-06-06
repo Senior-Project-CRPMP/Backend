@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
 
 namespace Backend.Models.Account
 {
@@ -17,5 +19,6 @@ namespace Backend.Models.Account
         // Add Refresh Token and its expiration
         public string? RefreshToken { get; set; }
         public DateTime RefreshTokenExpiryTime { get; set; }
+        public virtual ICollection<ChatRoomParticipant>? ChatRooms { get; set; }
     }
 }

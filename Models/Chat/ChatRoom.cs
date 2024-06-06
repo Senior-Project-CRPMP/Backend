@@ -1,12 +1,16 @@
-﻿using Backend.Models.Account;
+﻿using Backend.Models;
 
-namespace Backend.Models.Chat
+namespace Backend.Models
 {
     public class ChatRoom
     {
-        public int Id { get; set; }
+        public int ChatRoomId { get; set; }
         public string Name { get; set; }
-        public ICollection<ChatMessage>? Messages { get; set; }
-        public ICollection<string> Participants { get; set; }
+        public DateTime CreatedAt { get; set; }
+
+        // Navigation properties
+        public virtual ICollection<ChatRoomParticipant>? Participants { get; set; }
+        public virtual ICollection<ChatMessage>? Messages { get; set; }
     }
+
 }

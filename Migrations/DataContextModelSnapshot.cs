@@ -107,7 +107,7 @@ namespace Backend.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Backend.Models.Chat.ChatMessage", b =>
+            modelBuilder.Entity("Backend.Models.ChatMessage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -118,63 +118,61 @@ namespace Backend.Migrations
                     b.Property<int>("ChatRoomId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Message")
-                        .IsRequired()
+                    b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Timestamp")
+                    b.Property<DateTime>("SentAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ChatRoomId");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("ChatMessages");
                 });
 
-            modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
+            modelBuilder.Entity("Backend.Models.ChatRoom", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ChatRoomId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ChatRoomId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Participants")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
+                    b.HasKey("ChatRoomId");
 
                     b.ToTable("ChatRooms");
                 });
 
-            modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
+            modelBuilder.Entity("Backend.Models.ChatRoomParticipant", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<int?>("ChatRoomId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId1")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasIndex("ChatRoomId");
+                    b.HasKey("ChatRoomId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("ChatRoomParticipants");
                 });
@@ -697,24 +695,46 @@ namespace Backend.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Backend.Models.Chat.ChatMessage", b =>
+            modelBuilder.Entity("Backend.Models.ChatMessage", b =>
                 {
-                    b.HasOne("Backend.Models.Chat.ChatRoom", "ChatRoom")
+                    b.HasOne("Backend.Models.ChatRoom", "ChatRoom")
                         .WithMany("Messages")
+                        .HasForeignKey("ChatRoomId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Backend.Models.Account.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("ChatRoom");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Backend.Models.ChatRoomParticipant", b =>
+                {
+                    b.HasOne("Backend.Models.ChatRoom", "ChatRoom")
+                        .WithMany("Participants")
                         .HasForeignKey("ChatRoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ChatRoom");
-                });
-
-            modelBuilder.Entity("Backend.Models.Chat.ChatRoomParticipant", b =>
-                {
-                    b.HasOne("Backend.Models.Chat.ChatRoom", "ChatRoom")
+                    b.HasOne("Backend.Models.Account.User", "User")
                         .WithMany()
-                        .HasForeignKey("ChatRoomId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Backend.Models.Account.User", null)
+                        .WithMany("ChatRooms")
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("ChatRoom");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Backend.Models.Document.Document", b =>
@@ -906,12 +926,16 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Account.User", b =>
                 {
+                    b.Navigation("ChatRooms");
+
                     b.Navigation("UserProjects");
                 });
 
-            modelBuilder.Entity("Backend.Models.Chat.ChatRoom", b =>
+            modelBuilder.Entity("Backend.Models.ChatRoom", b =>
                 {
                     b.Navigation("Messages");
+
+                    b.Navigation("Participants");
                 });
 
             modelBuilder.Entity("Backend.Models.Form.Form", b =>
