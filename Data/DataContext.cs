@@ -3,10 +3,11 @@ using Backend.Models.Form;
 using Backend.Models.Document;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Backend.Models.Chat;
+using Backend.Models;
 using Backend.Models.Account;
 using Backend.Models.FileUpload;
 using Backend.Models.Project;
+using System.Reflection.Emit;
 
 namespace Backend.Data
 {
@@ -121,22 +122,33 @@ namespace Backend.Data
                 .OnDelete(DeleteBehavior.SetNull);
 
             // Chat relationships
-            builder.Entity<ChatRoom>()
-                .HasMany(c => c.Messages)
-                .WithOne(m => m.ChatRoom)
-                .HasForeignKey(m => m.ChatRoomId);
+            builder.Entity<ChatRoomParticipant>()
+            .HasKey(crp => new { crp.ChatRoomId, crp.UserId });
 
-           // builder.Entity<ChatRoomParticipant>()
-             //   .HasOne(crp => crp.ChatRoom)
-               // .WithMany(cr => cr.Participants)
-               // .HasForeignKey(crp => crp.ChatRoomId)
-             //   .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<ChatRoomParticipant>()
+                .HasOne(crp => crp.ChatRoom)
+                .WithMany(cr => cr.Participants)
+                .HasForeignKey(crp => crp.ChatRoomId);
 
-          //  builder.Entity<ChatRoomParticipant>()
-               // .HasOne(crp => crp.User)
-             //   .WithMany()
-           //     .HasForeignKey(crp => crp.UserId)
-         //       .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<ChatRoomParticipant>()
+                .HasOne(crp => crp.User)
+                .WithMany()
+                .HasForeignKey(crp => crp.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            // Configuring relationships for Message
+            builder.Entity<ChatMessage>()
+                .HasOne(m => m.ChatRoom)
+                .WithMany(cr => cr.Messages)
+                .HasForeignKey(m => m.ChatRoomId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<ChatMessage>()
+                .HasOne(m => m.User)
+                .WithMany()
+                .HasForeignKey(m => m.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+            
         }
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.Migrations
 {
     /// <inheritdoc />
-    public partial class changes : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -60,14 +60,14 @@ namespace Backend.Migrations
                 name: "ChatRooms",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    ChatRoomId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Participants = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChatRooms", x => x.Id);
+                    table.PrimaryKey("PK_ChatRooms", x => x.ChatRoomId);
                 });
 
             migrationBuilder.CreateTable(
@@ -268,19 +268,25 @@ namespace Backend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Message = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ChatRoomId = table.Column<int>(type: "int", nullable: false)
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SentAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ChatRoomId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ChatMessages", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_ChatMessages_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_ChatMessages_ChatRooms_ChatRoomId",
                         column: x => x.ChatRoomId,
                         principalTable: "ChatRooms",
-                        principalColumn: "Id",
+                        principalColumn: "ChatRoomId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -288,19 +294,24 @@ namespace Backend.Migrations
                 name: "ChatRoomParticipants",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ChatRoomId = table.Column<int>(type: "int", nullable: true),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ChatRoomId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChatRoomParticipants", x => x.Id);
+                    table.PrimaryKey("PK_ChatRoomParticipants", x => new { x.ChatRoomId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_ChatRoomParticipants_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ChatRoomParticipants_ChatRooms_ChatRoomId",
                         column: x => x.ChatRoomId,
                         principalTable: "ChatRooms",
-                        principalColumn: "Id");
+                        principalColumn: "ChatRoomId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -565,9 +576,14 @@ namespace Backend.Migrations
                 column: "ChatRoomId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ChatRoomParticipants_ChatRoomId",
+                name: "IX_ChatMessages_UserId",
+                table: "ChatMessages",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ChatRoomParticipants_UserId",
                 table: "ChatRoomParticipants",
-                column: "ChatRoomId");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Documents_ProjectId",
