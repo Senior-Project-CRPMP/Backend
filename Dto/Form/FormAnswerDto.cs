@@ -4,7 +4,8 @@
     {
         public int Id { get; set; }
         public int FormResponseId { get; set; }
-        public int QuestionId { get; set; }
+        public int FormQuestionId { get; set; }
+        public int FormOptionId { get; set; }
         public string? Response { get; set; }
     }
 }

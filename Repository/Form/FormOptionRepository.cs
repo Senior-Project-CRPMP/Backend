@@ -50,6 +50,11 @@ namespace Backend.Repository
             _context.Update(formOption);
             return Save();
         }
+
+        public ICollection<FormOption> GetOptionsByQuestionId(int questionId)
+        {
+            return _context.FormOptions.Where(o => o.FormQuestionId == questionId).ToList();
+        }
     }
 }
 

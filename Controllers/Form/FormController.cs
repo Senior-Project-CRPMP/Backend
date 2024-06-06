@@ -4,6 +4,8 @@ using Backend.Dto.Form;
 using Backend.Interfaces.Form;
 using Backend.Interfaces.Project;
 using Backend.Models;
+using Backend.Models.Form;
+using Backend.Repository.Form;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers.Form
@@ -14,12 +16,14 @@ namespace Backend.Controllers.Form
     {
         private readonly IFormRepository _formRepository;
         private readonly IProjectRepository _projectRepository;
+        private readonly IFormResponseRepository _formResponseRepository;
         private readonly IMapper _mapper;
 
-        public FormController(IFormRepository formRepository, IProjectRepository projectRepository, IMapper mapper)
+        public FormController(IFormRepository formRepository, IProjectRepository projectRepository, IFormResponseRepository formResponseRepository, IMapper mapper)
         {
             _formRepository = formRepository;
             _projectRepository = projectRepository;
+            _formResponseRepository = formResponseRepository;
             _mapper = mapper;
         }
 
@@ -106,8 +110,35 @@ namespace Backend.Controllers.Form
                 return StatusCode(500, ModelState);
             }
 
-            // Return the form ID
             return Ok(new { id = formMap.Id });
+        }
+
+        [HttpPost("SubmitForm")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult SubmitForm([FromBody] FormResponseDto formResponseDto)
+        {
+            if (formResponseDto == null)
+                return BadRequest(ModelState);
+
+            var formResponse = new FormResponse
+            {
+                FormId = formResponseDto.FormId,
+                FormAnswers = formResponseDto.Answers.Select(a => new FormAnswer
+                {
+                    FormQuestionId = a.FormQuestionId,
+                    FormOptionId = a.FormOptionId,
+                    Response = a.Response
+                }).ToList(),                                                                   
+            };
+
+            if (!_formResponseRepository.CreateFormResponse(formResponse))
+            {
+                ModelState.AddModelError("", "Something went wrong while submitting the form");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Successfully Submitted");
         }
 
 

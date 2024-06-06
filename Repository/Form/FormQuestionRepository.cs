@@ -57,6 +57,11 @@ namespace Backend.Repository.FormQuestion
             return Save();
         }
 
-  
+        public ICollection<Models.Form.FormQuestion> GetQuestionsByFormId(int formId)
+        {
+            return _context.FormQuestions.Where(q => q.FormId == formId).ToList();
+        }
+
+
     }
 }

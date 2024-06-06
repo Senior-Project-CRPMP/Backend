@@ -11,5 +11,6 @@ namespace Backend.Interfaces.Form
         bool UpdateFormOption(FormOption formOption);
         bool DeleteFormOption(FormOption formOption);
         bool Save();
+        ICollection<FormOption> GetOptionsByQuestionId(int questionId);
     }
 }

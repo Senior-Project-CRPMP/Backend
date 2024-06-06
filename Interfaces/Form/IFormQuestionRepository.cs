@@ -1,4 +1,5 @@
-﻿using Backend.Models.Form;
+﻿using System.Collections.Generic;
+using Backend.Models.Form;
 
 namespace Backend.Interfaces.Form
 {
@@ -12,5 +13,6 @@ namespace Backend.Interfaces.Form
         bool UpdateFormQuestion(FormQuestion formQuestion);
         bool DeleteFormQuestion(FormQuestion formQuestion);
         bool Save();
+        ICollection<FormQuestion> GetQuestionsByFormId(int formId);
     }
 }

@@ -3,7 +3,7 @@ using Backend.Dto.Form;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.SqlServer.Server;
+using System.Collections.Generic;
 
 namespace Backend.Controllers.Form
 {
@@ -57,6 +57,26 @@ namespace Backend.Controllers.Form
         {
             var count = _formQuestionRepository.GetFormQuestionCount();
             return Ok(count);
+        }
+
+        [HttpGet("QuestionsByFormId/{formId}")]  // Add this endpoint
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormQuestionDto>))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetQuestionsByFormId(int formId)
+        {
+            var formExists = _formRepository.FormExists(formId);
+            if (!formExists)
+            {
+                return NotFound();
+            }
+
+            var questions = _mapper.Map<List<FormQuestionDto>>(_formQuestionRepository.GetQuestionsByFormId(formId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(questions);
         }
 
         [HttpPost("CreateQuestion")]

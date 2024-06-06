@@ -6,6 +6,8 @@ using Backend.Models.Document;
 using Backend.Dto.Document;
 using Backend.Dto.Project;
 using Backend.Models.Project;
+using Backend.Dto.Account;
+using Backend.Models.Account;
 
 namespace Backend.Helper
 {
@@ -42,6 +44,10 @@ namespace Backend.Helper
 
             CreateMap<UserProject, UserProjectDto>();
             CreateMap<UserProjectDto, UserProject>();
+
+
+            CreateMap<User, UserDto>();
+            CreateMap<UserDto, User>();
         }
     }
 }

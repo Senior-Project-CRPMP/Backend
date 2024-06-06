@@ -3,6 +3,7 @@ using Backend.Dto.Form;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Backend.Controllers.Form
 {
@@ -48,6 +49,23 @@ namespace Backend.Controllers.Form
                 return BadRequest(ModelState);
 
             return Ok(formOption);
+        }
+
+        [HttpGet("OptionsByQuestionId/{questionId}")]  // Add this endpoint
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormOptionDto>))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetOptionsByQuestionId(int questionId)
+        {
+            var options = _mapper.Map<List<FormOptionDto>>(_formOptionRepository.GetOptionsByQuestionId(questionId));
+
+            if (options == null || options.Count == 0)
+                return NotFound();
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(options);
         }
 
         [HttpPost("CreateOption")]
