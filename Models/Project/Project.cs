@@ -20,5 +20,7 @@ namespace Backend.Models.Project
         public virtual ICollection<Models.Document.Document>? Documents { get; set; }
         public virtual ICollection<UserProject>? UserProjects { get; set; }
 
+        public virtual ICollection<Models.FileUpload.FileUpload>? FileUploads { get; set; }
+
     }
 }

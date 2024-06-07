@@ -23,6 +23,13 @@ namespace Backend.Repositories
             return fileUpload;
         }
 
+        public async Task<IEnumerable<FileUpload>> GetFilesByProjectIdAsync(int projectId)
+        {
+            return await _context.FileUploads
+                                 .Where(f => f.ProjectId == projectId)
+                                 .ToListAsync();
+        }
+
         public async Task<FileUpload> GetFileByIdAsync(int id)
         {
             return await _context.FileUploads.FindAsync(id);
@@ -51,6 +58,16 @@ namespace Backend.Repositories
             }
 
             return true;
+        }
+
+        public FileUpload GetFileUpload(int id)
+        {
+            return _context.FileUploads.Where(f => f.Id == id).FirstOrDefault();
+        }
+
+        public bool FileUploadExists(int id)
+        {
+            return _context.FileUploads.Any(f => f.Id == id);
         }
     }
 }

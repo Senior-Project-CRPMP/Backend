@@ -8,6 +8,7 @@ using Backend.Dto.Project;
 using Backend.Models.Project;
 using Backend.Dto.Account;
 using Backend.Models.Account;
+using Backend.Models.FileUpload;
 
 namespace Backend.Helper
 {
@@ -45,9 +46,11 @@ namespace Backend.Helper
             CreateMap<UserProject, UserProjectDto>();
             CreateMap<UserProjectDto, UserProject>();
 
-
             CreateMap<User, UserDto>();
             CreateMap<UserDto, User>();
+
+            CreateMap<FileUpload, FileUploadDto>();
+            CreateMap<FileUploadDto, FileUpload>();
         }
     }
 }

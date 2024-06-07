@@ -249,7 +249,12 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
 
                     b.ToTable("FileUploads");
                 });
@@ -747,6 +752,17 @@ namespace Backend.Migrations
                     b.Navigation("Project");
                 });
 
+            modelBuilder.Entity("Backend.Models.FileUpload.FileUpload", b =>
+                {
+                    b.HasOne("Backend.Models.Project.Project", "Project")
+                        .WithMany("FileUploads")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+                });
+
             modelBuilder.Entity("Backend.Models.Form.Form", b =>
                 {
                     b.HasOne("Backend.Models.Project.Project", "Project")
@@ -962,6 +978,8 @@ namespace Backend.Migrations
             modelBuilder.Entity("Backend.Models.Project.Project", b =>
                 {
                     b.Navigation("Documents");
+
+                    b.Navigation("FileUploads");
 
                     b.Navigation("Forms");
 

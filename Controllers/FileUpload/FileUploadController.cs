@@ -1,4 +1,7 @@
-﻿using Backend.Models.FileUpload;
+﻿using AutoMapper;
+using Backend.Dto.Project;
+using Backend.Models.FileUpload;
+using Backend.Models.Project;
 using Backend.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,12 +16,13 @@ namespace Backend.Controllers.FileUploads
     public class FileUploadController : ControllerBase
     {
         private readonly IFileUploadRepository _fileUploadRepository;
+        private readonly IMapper _mapper;
 
-        public FileUploadController(IFileUploadRepository fileUploadRepository)
+        public FileUploadController(IFileUploadRepository fileUploadRepository, IMapper mapper)
         {
             _fileUploadRepository = fileUploadRepository;
+            _mapper = mapper;
         }
-
 
         [HttpGet("download/{id}")]
         public async Task<IActionResult> DownloadById(int id)
@@ -51,6 +55,27 @@ namespace Backend.Controllers.FileUploads
         {
             var files = await _fileUploadRepository.GetAllFilesAsync();
             return Ok(files);
+        }
+
+        [HttpGet("project/{projectId}")]
+        public async Task<IActionResult> GetFilesByProjectId(int projectId)
+        {
+            var files = await _fileUploadRepository.GetFilesByProjectIdAsync(projectId);
+            return Ok(files);
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetFileById(int id)
+        {
+            var fileUpload = await _fileUploadRepository.GetFileByIdAsync(id);
+
+            if (fileUpload == null)
+            {
+                return NotFound("File not found");
+            }
+
+            return Ok(fileUpload);
         }
 
         [HttpPost("upload"), DisableRequestSizeLimit]
@@ -88,7 +113,8 @@ namespace Backend.Controllers.FileUploads
                 FilePath = dbPath,
                 FileName = fileName,
                 Name = model.Name,
-                Description = model.Description
+                Description = model.Description,
+                ProjectId = model.ProjectId
             };
 
             var createdFile = await _fileUploadRepository.AddFileAsync(fileUpload);

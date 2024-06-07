@@ -148,7 +148,13 @@ namespace Backend.Data
                 .WithMany()
                 .HasForeignKey(m => m.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
-            
+
+            builder.Entity<FileUpload>()
+                .HasOne(fu => fu.Project)
+                .WithMany(p => p.FileUploads)
+                .HasForeignKey(fu => fu.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }
