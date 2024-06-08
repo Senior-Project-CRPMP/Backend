@@ -72,12 +72,13 @@ namespace Backend.Controllers.Project
         [HttpGet("usersByProjectId/{projectId}")]
         public IActionResult GetUsersByProjectId(int projectId)
         {
-            var users = _mapper.Map<List<UserDto>>(_userProjectRepository.GetUsersByProjectId(projectId));
+            var users = _userProjectRepository.GetUsersByProjectId(projectId);
+            var usersDto = _mapper.Map<List<UserDto>>(users);
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(users);
+            return Ok(usersDto);
         }
 
         [HttpGet("userProjectsByProjectId/{projectId}")]
