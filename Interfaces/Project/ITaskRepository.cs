@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Backend.Models.Project;
-
-namespace Backend.Interfaces.Project
+﻿namespace Backend.Interfaces.Project
 {
     public interface ITaskRepository
     {
@@ -19,5 +16,7 @@ namespace Backend.Interfaces.Project
         bool UpdateTask(Models.Project.Task task);
         bool DeleteTask(Models.Project.Task task);
         bool Save();
+        int GetCountOfTasksByStatusInProject(int projectId, string status);
+        int GetCountOfTasksDoneByUserInProject(int projectId, string userId);
     }
 }

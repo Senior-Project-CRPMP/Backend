@@ -1,6 +1,8 @@
 ﻿using Backend.Data;
 using Backend.Interfaces.Project;
 using Backend.Models.Project;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Repository.Project
 {
@@ -64,6 +66,16 @@ namespace Backend.Repository.Project
         public ICollection<Models.Project.Project> GetProjects()
         {
             return _context.Projects.OrderBy(p => p.Id).ToList();
+        }
+
+        public ICollection<Models.Project.Project> GetProjectsByTitleContains(string title)
+        {
+            return _context.Projects.Where(p => p.Title.Contains(title)).ToList();
+        }
+
+        public int GetProjectCount()
+        {
+            return _context.Projects.Count();
         }
 
         public bool ProjectExists(int id)

@@ -159,5 +159,27 @@ namespace Backend.Controllers.Project
 
             return NoContent();
         }
+
+        [HttpGet("userCountByProjectId/{projectId}")]
+        public IActionResult GetUserCountByProjectId(int projectId)
+        {
+            var userCount = _userProjectRepository.GetUserCountByProjectId(projectId);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(userCount);
+        }
+
+        [HttpGet("projectCountByUserId/{userId}")]
+        public IActionResult GetProjectCountByUserId(string userId)
+        {
+            var projectCount = _userProjectRepository.GetProjectCountByUserId(userId);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(projectCount);
+        }
     }
 }

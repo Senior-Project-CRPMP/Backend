@@ -3,6 +3,7 @@ using Backend.Dto.Project;
 using Backend.Interfaces.Project;
 using Backend.Models.Project;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Backend.Controllers.Project
 {
@@ -50,19 +51,27 @@ namespace Backend.Controllers.Project
         }
 
         [HttpGet("SingleProjectByTitle/{projectTitle}")]
-        [ProducesResponseType(200, Type = typeof(Models.Project.Project))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Models.Project.Project>))]
         [ProducesResponseType(400)]
         public IActionResult GetProject(string projectTitle)
         {
-            if (!_projectRepository.ProjectExists(projectTitle))
-                return NotFound();
+            var projects = _projectRepository.GetProjectsByTitleContains(projectTitle);
 
-            var project = _projectRepository.GetProject(projectTitle);
+            if (!projects.Any())
+                return NotFound();
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(project);
+            return Ok(projects);
+        }
+
+        [HttpGet("TotalProjectCount")]
+        [ProducesResponseType(200)]
+        public IActionResult GetTotalProjectCount()
+        {
+            var count = _projectRepository.GetProjectCount();
+            return Ok(count);
         }
 
         [HttpPost("CreateProject")]

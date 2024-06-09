@@ -168,7 +168,7 @@ namespace Backend.Controllers.Project
         [ProducesResponseType(404)]
         public IActionResult DeleteTask(int taskId)
         {
-            if (_taskRepository.TaskExists(taskId))
+            if (!_taskRepository.TaskExists(taskId))
             {
                 return NotFound();
             }
@@ -183,5 +183,21 @@ namespace Backend.Controllers.Project
             return Ok("Successfully Deleted");
         }
 
+        
+        [HttpGet("CountTasksByStatus/{projectId}/{status}")]
+        [ProducesResponseType(200)]
+        public IActionResult GetCountTasksByStatus(int projectId, string status)
+        {
+            var count = _taskRepository.GetCountOfTasksByStatusInProject(projectId, status);
+            return Ok(count);
+        }
+
+        [HttpGet("CountTasksDoneByUser/{projectId}/{userId}")]
+        [ProducesResponseType(200)]
+        public IActionResult GetCountTasksDoneByUser(int projectId, string userId)
+        {
+            var count = _taskRepository.GetCountOfTasksDoneByUserInProject(projectId, userId);
+            return Ok(count);
+        }
     }
 }

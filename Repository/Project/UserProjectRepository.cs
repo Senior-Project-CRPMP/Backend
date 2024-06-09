@@ -87,5 +87,15 @@ namespace Backend.Repository.Project
                                         .Where(up => up.ProjectId == projectId)
                                         .ToList();
         }
+
+        public int GetUserCountByProjectId(int projectId)
+        {
+            return _context.UserProjects.Count(up => up.ProjectId == projectId);
+        }
+
+        public int GetProjectCountByUserId(string userId)
+        {
+            return _context.UserProjects.Count(up => up.UserId == userId);
+        }
     }
 }

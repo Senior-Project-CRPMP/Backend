@@ -14,6 +14,9 @@ namespace Backend.Models.Account
         [Column(TypeName = "datetime")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public bool IsAdmin { get; set; } = false;
+        public bool IsNotified { get; set; } = true;
+        public bool IsVisible { get; set; } = true;
+        public string? Bio { get; set; }
         public virtual ICollection<UserProject>? UserProjects { get; set; }
 
         // Add Refresh Token and its expiration

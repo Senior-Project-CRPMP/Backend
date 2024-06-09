@@ -17,5 +17,7 @@ namespace Backend.Interfaces.Project
         bool UpdateUserProject(UserProject userProject);
         bool DeleteUserProject(UserProject userProject);
         bool Save();
+        int GetUserCountByProjectId(int projectId);
+        int GetProjectCountByUserId(string userId);
     }
 }

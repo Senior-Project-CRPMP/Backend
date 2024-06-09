@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Backend.Data;
+﻿using Backend.Data;
 using Backend.Interfaces.Project;
 using Backend.Models.Project;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Repository.Project
 {
@@ -87,6 +87,16 @@ namespace Backend.Repository.Project
         public ICollection<Models.Project.Task> GetTasksByProjectAndUser(int projectId, string userId)
         {
             return _context.Tasks.Where(t => t.ProjectId == projectId && t.UserId == userId).ToList();
+        }
+
+        public int GetCountOfTasksByStatusInProject(int projectId, string status)
+        {
+            return _context.Tasks.Count(t => t.ProjectId == projectId && t.Status == status);
+        }
+
+        public int GetCountOfTasksDoneByUserInProject(int projectId, string userId)
+        {
+            return _context.Tasks.Count(t => t.ProjectId == projectId && t.UserId == userId && t.Status == "done");
         }
     }
 }
