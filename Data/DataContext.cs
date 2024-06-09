@@ -8,6 +8,7 @@ using Backend.Models.Account;
 using Backend.Models.FileUpload;
 using Backend.Models.Project;
 using System.Reflection.Emit;
+using Backend.Models.FAQ;
 
 namespace Backend.Data
 {
@@ -34,6 +35,8 @@ namespace Backend.Data
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserProject> UserProjects { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<FAQ> FAQs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -128,26 +131,27 @@ namespace Backend.Data
             builder.Entity<ChatRoomParticipant>()
                 .HasOne(crp => crp.ChatRoom)
                 .WithMany(cr => cr.Participants)
-                .HasForeignKey(crp => crp.ChatRoomId);
+                .HasForeignKey(crp => crp.ChatRoomId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<ChatRoomParticipant>()
                 .HasOne(crp => crp.User)
                 .WithMany()
                 .HasForeignKey(crp => crp.UserId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Configuring relationships for Message
             builder.Entity<ChatMessage>()
                 .HasOne(m => m.ChatRoom)
                 .WithMany(cr => cr.Messages)
                 .HasForeignKey(m => m.ChatRoomId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<ChatMessage>()
-                .HasOne(m => m.User)
-                .WithMany()
-                .HasForeignKey(m => m.UserId)
-                .OnDelete(DeleteBehavior.NoAction);
+                 .HasOne(cm => cm.User)
+                 .WithMany()
+                 .HasForeignKey(cm => cm.UserId)
+                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<FileUpload>()
                 .HasOne(fu => fu.Project)

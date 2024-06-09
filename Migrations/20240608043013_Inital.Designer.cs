@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240606162515_thisu")]
-    partial class thisu
+    [Migration("20240608043013_Inital")]
+    partial class Inital
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -252,7 +252,12 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
 
                     b.ToTable("FileUploads");
                 });
@@ -703,13 +708,13 @@ namespace Backend.Migrations
                     b.HasOne("Backend.Models.ChatRoom", "ChatRoom")
                         .WithMany("Messages")
                         .HasForeignKey("ChatRoomId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Backend.Models.Account.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ChatRoom");
@@ -728,7 +733,7 @@ namespace Backend.Migrations
                     b.HasOne("Backend.Models.Account.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Backend.Models.Account.User", null)
@@ -746,6 +751,17 @@ namespace Backend.Migrations
                         .WithMany("Documents")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("Backend.Models.FileUpload.FileUpload", b =>
+                {
+                    b.HasOne("Backend.Models.Project.Project", "Project")
+                        .WithMany("FileUploads")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Project");
                 });
@@ -965,6 +981,8 @@ namespace Backend.Migrations
             modelBuilder.Entity("Backend.Models.Project.Project", b =>
                 {
                     b.Navigation("Documents");
+
+                    b.Navigation("FileUploads");
 
                     b.Navigation("Forms");
 
