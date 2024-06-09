@@ -1,5 +1,6 @@
 ﻿using Backend.Models.Project;
 using System.Collections.Generic;
+using System;
 
 namespace Backend.Interfaces.Project
 {
@@ -10,12 +11,13 @@ namespace Backend.Interfaces.Project
         Models.Project.Project GetProject(string title);
         ICollection<Models.Project.Project> GetProjectsByTitleContains(string title);
         int GetProjectCount();
+        int GetProjectCountByDateRange(DateTime startDate, DateTime endDate);
         bool ProjectExists(int id);
         bool ProjectExists(string title);
         bool CreateProject(Models.Project.Project project);
         bool CreateProjectWithUser(Models.Project.Project project, string userId);
         bool UpdateProject(Models.Project.Project project);
-        bool DeleteProject(Models.Project.Project project);
+        bool DeleteProject( Models.Project.Project project);
         bool Save();
     }
 }

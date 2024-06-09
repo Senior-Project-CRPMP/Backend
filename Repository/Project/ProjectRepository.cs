@@ -3,6 +3,7 @@ using Backend.Interfaces.Project;
 using Backend.Models.Project;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Backend.Repository.Project
 {
@@ -76,6 +77,11 @@ namespace Backend.Repository.Project
         public int GetProjectCount()
         {
             return _context.Projects.Count();
+        }
+
+        public int GetProjectCountByDateRange(DateTime startDate, DateTime endDate)
+        {
+            return _context.Projects.Count(p => p.StartDate >= startDate && p.StartDate <= endDate);
         }
 
         public bool ProjectExists(int id)

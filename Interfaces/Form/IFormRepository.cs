@@ -7,7 +7,7 @@ namespace Backend.Interfaces.Form
     {
         ICollection<Models.Form.Form> GetForms();
         ICollection<Models.Form.Form> GetProjectForms(int id);
-        int GetFormCount();
+        int GetFormCount(); 
         Models.Form.Form GetForm(int id);
         Models.Form.Form GetForm(string title);
         bool FormExists(int id);

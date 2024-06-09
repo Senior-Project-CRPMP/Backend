@@ -40,6 +40,16 @@ namespace Backend.Repositories
             return await _context.FileUploads.ToListAsync();
         }
 
+        public async Task<int> GetFileCountAsync()
+        {
+            return await _context.FileUploads.CountAsync();
+        }
+
+        public async Task<int> GetFileCountByProjectIdAsync(int projectId)
+        {
+            return await _context.FileUploads.CountAsync(f => f.ProjectId == projectId);
+        }
+
         public async Task<bool> DeleteFileAsync(int id)
         {
             var fileUpload = await _context.FileUploads.FindAsync(id);

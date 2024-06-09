@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Backend.Dto.Project;
 using Backend.Models.FileUpload;
-using Backend.Models.Project;
 using Backend.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -64,6 +63,19 @@ namespace Backend.Controllers.FileUploads
             return Ok(files);
         }
 
+        [HttpGet("filecount")]
+        public async Task<IActionResult> GetFileCount()
+        {
+            var count = await _fileUploadRepository.GetFileCountAsync();
+            return Ok(count);
+        }
+
+        [HttpGet("filecount/project/{projectId}")]
+        public async Task<IActionResult> GetFileCountByProjectId(int projectId)
+        {
+            var count = await _fileUploadRepository.GetFileCountByProjectIdAsync(projectId);
+            return Ok(count);
+        }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetFileById(int id)

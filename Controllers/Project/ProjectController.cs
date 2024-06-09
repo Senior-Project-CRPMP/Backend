@@ -3,6 +3,7 @@ using Backend.Dto.Project;
 using Backend.Interfaces.Project;
 using Backend.Models.Project;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace Backend.Controllers.Project
@@ -71,6 +72,14 @@ namespace Backend.Controllers.Project
         public IActionResult GetTotalProjectCount()
         {
             var count = _projectRepository.GetProjectCount();
+            return Ok(count);
+        }
+
+        [HttpGet("ProjectCountByDateRange")]
+        [ProducesResponseType(200)]
+        public IActionResult GetProjectCountByDateRange([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        {
+            var count = _projectRepository.GetProjectCountByDateRange(startDate, endDate);
             return Ok(count);
         }
 

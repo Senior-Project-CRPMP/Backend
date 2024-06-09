@@ -7,6 +7,7 @@ using Backend.Models;
 using Backend.Models.Form;
 using Backend.Repository.Form;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Backend.Controllers.Form
 {
@@ -81,6 +82,19 @@ namespace Backend.Controllers.Form
             return Ok(count);
         }
 
+        [HttpGet("FormCountByProject/{projectId}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetFormCountByProject(int projectId)
+        {
+            if (!_projectRepository.ProjectExists(projectId))
+                return NotFound();
+
+            var count = _formRepository.GetProjectForms(projectId).Count;
+            return Ok(count);
+        }
+
         [HttpPost("CreateForm")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -112,8 +126,6 @@ namespace Backend.Controllers.Form
 
             return Ok(new { id = formMap.Id });
         }
-
-
 
         [HttpPut("UpdateForm/{formId}")]
         [ProducesResponseType(400)]

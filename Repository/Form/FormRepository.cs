@@ -1,13 +1,15 @@
 ﻿using Backend.Data;
-using Backend.Interfaces;
 using Backend.Interfaces.Form;
 using Backend.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Repository.Form
 {
     public class FormRepository : IFormRepository
     {
         private readonly DataContext _context;
+
         public FormRepository(DataContext context)
         {
             _context = context;
@@ -68,7 +70,7 @@ namespace Backend.Repository.Form
         public bool Save()
         {
             var saved = _context.SaveChanges();
-            return saved > 0 ? true : false;
+            return saved > 0;
         }
 
         public bool UpdateForm(Models.Form.Form form)
