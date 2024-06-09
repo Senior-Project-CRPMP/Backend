@@ -113,33 +113,6 @@ namespace Backend.Controllers.Form
             return Ok(new { id = formMap.Id });
         }
 
-        [HttpPost("SubmitForm")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        public IActionResult SubmitForm([FromBody] FormResponseDto formResponseDto)
-        {
-            if (formResponseDto == null)
-                return BadRequest(ModelState);
-
-            var formResponse = new FormResponse
-            {
-                FormId = formResponseDto.FormId,
-                FormAnswers = formResponseDto.Answers.Select(a => new FormAnswer
-                {
-                    FormQuestionId = a.FormQuestionId,
-                    FormOptionId = a.FormOptionId,
-                    Response = a.Response
-                }).ToList(),                                                                   
-            };
-
-            if (!_formResponseRepository.CreateFormResponse(formResponse))
-            {
-                ModelState.AddModelError("", "Something went wrong while submitting the form");
-                return StatusCode(500, ModelState);
-            }
-
-            return Ok("Successfully Submitted");
-        }
 
 
         [HttpPut("UpdateForm/{formId}")]

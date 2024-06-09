@@ -52,7 +52,7 @@ namespace Backend.Controllers.Form
         }
 
         [HttpPost("CreateFormResponse")]
-        [ProducesResponseType(201)] // Created status code
+        [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public IActionResult CreateFormResponse([FromBody] FormResponseDto formResponseCreate)
         {
@@ -70,11 +70,11 @@ namespace Backend.Controllers.Form
                 return StatusCode(500, ModelState);
             }
 
-            return CreatedAtAction("GetFormResponse", new { formResponseId = formResponseMap.Id }, "Successfully Created");
+            return Ok(new { formResponseId = formResponseMap.Id });
         }
 
         [HttpPut("UpdateFormResponse/{formResponseId}")]
-        [ProducesResponseType(204)] // No Content status code
+        [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult UpdateFormResponse(int formResponseId, [FromBody] FormResponseDto updatedFormResponse)

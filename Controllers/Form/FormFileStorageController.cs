@@ -51,7 +51,7 @@ namespace Backend.Controllers.Form
         }
 
         [HttpPost("CreateFormFileStorage")]
-        [ProducesResponseType(201)] // Created status code
+        [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public IActionResult CreateFormFileStorage([FromBody] FormFileStorageDto formFileStorageCreate)
         {
@@ -69,11 +69,11 @@ namespace Backend.Controllers.Form
                 return StatusCode(500, ModelState);
             }
 
-            return CreatedAtAction("GetFormFileStorage", new { formFileStorageId = formFileStorageMap.Id }, "Successfully Created");
+            return Ok(new { formFileStorageId = formFileStorageMap.Id });
         }
 
         [HttpPut("UpdateFormFileStorage/{formFileStorageId}")]
-        [ProducesResponseType(204)] // No Content status code
+        [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult UpdateFormFileStorage(int formFileStorageId, [FromBody] FormFileStorageDto updatedFormFileStorage)
@@ -102,7 +102,7 @@ namespace Backend.Controllers.Form
         }
 
         [HttpDelete("DeleteFormFileStorage/{formFileStorageId}")]
-        [ProducesResponseType(204)] // No Content status code
+        [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult DeleteFormFileStorage(int formFileStorageId)

@@ -69,7 +69,7 @@ namespace Backend.Controllers.Form
                 return StatusCode(500, ModelState);
             }
 
-            return CreatedAtAction("GetFormAnswer", new { formAnswerId = formAnswerMap.Id }, "Successfully Created");
+            return Ok(new { formAnswerId = formAnswerMap.Id });
         }
 
         [HttpPut("UpdateFormAnswer/{formAnswerId}")]
