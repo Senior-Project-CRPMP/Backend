@@ -94,9 +94,13 @@ namespace Backend.Repository.Project
             return _context.Tasks.Count(t => t.ProjectId == projectId && t.Status == status);
         }
 
-        public int GetCountOfTasksDoneByUserInProject(int projectId, string userId)
+        public int GetCountOfTasksByStatusForUserInProject(int projectId, string userId, string status)
         {
-            return _context.Tasks.Count(t => t.ProjectId == projectId && t.UserId == userId && t.Status == "done");
+            return _context.Tasks.Count(t => t.ProjectId == projectId && t.UserId == userId && t.Status == status);
+        }
+        public int GetTaskCountByProjectId(int projectId)
+        {
+            return _context.Tasks.Count(up => up.ProjectId == projectId);
         }
     }
 }

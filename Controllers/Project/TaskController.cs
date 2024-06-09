@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Backend.Dto.Project;
 using Backend.Interfaces.Project;
+using Backend.Repository.Project;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -183,7 +184,6 @@ namespace Backend.Controllers.Project
             return Ok("Successfully Deleted");
         }
 
-        
         [HttpGet("CountTasksByStatus/{projectId}/{status}")]
         [ProducesResponseType(200)]
         public IActionResult GetCountTasksByStatus(int projectId, string status)
@@ -192,12 +192,24 @@ namespace Backend.Controllers.Project
             return Ok(count);
         }
 
-        [HttpGet("CountTasksDoneByUser/{projectId}/{userId}")]
+        [HttpGet("CountTasksByStatusForUser/{projectId}/{userId}/{status}")]
         [ProducesResponseType(200)]
-        public IActionResult GetCountTasksDoneByUser(int projectId, string userId)
+        public IActionResult GetCountTasksByStatusForUser(int projectId, string userId, string status)
         {
-            var count = _taskRepository.GetCountOfTasksDoneByUserInProject(projectId, userId);
+            var count = _taskRepository.GetCountOfTasksByStatusForUserInProject(projectId, userId, status);
             return Ok(count);
+        }
+
+
+        [HttpGet("taskCountByProjectId/{projectId}")]
+        public IActionResult GetTaskCountByProjectId(int projectId)
+        {
+            var taskCount = _taskRepository.GetTaskCountByProjectId(projectId);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(taskCount);
         }
     }
 }

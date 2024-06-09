@@ -17,6 +17,7 @@
         bool DeleteTask(Models.Project.Task task);
         bool Save();
         int GetCountOfTasksByStatusInProject(int projectId, string status);
-        int GetCountOfTasksDoneByUserInProject(int projectId, string userId);
+        int GetCountOfTasksByStatusForUserInProject(int projectId, string userId, string status);
+        int GetTaskCountByProjectId(int projectId);
     }
 }

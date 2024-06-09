@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\project\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\project\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\project\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\project\\userprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +31,16 @@
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\project\\iuserprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\project\\userprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\project\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\project\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\project\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\project\\userprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,8 +67,8 @@
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\project\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Migrations\\20240609171758_changesAreComing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240609171758_changesAreComing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\migrations\\20240609171758_changesarecoming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:migrations\\20240609171758_changesarecoming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,26 +102,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\TaskRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Project\\TaskRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\TaskRepository.cs",
-              "RelativeToolTip": "Repository\\Project\\TaskRepository.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAywFAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "UserProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\UserProjectController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Project\\UserProjectController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\UserProjectController.cs",
+              "RelativeToolTip": "Controllers\\Project\\UserProjectController.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAUwKgAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T19:00:40.963Z",
+              "WhenOpened": "2024-06-09T18:42:54.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Project\\TaskController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
+              "RelativeToolTip": "Controllers\\Project\\TaskController.cs",
+              "ViewState": "AQIAAMMAAAAAAAAAAADwv9MAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T17:20:42.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ITaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\ITaskRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Project\\ITaskRepository.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\ITaskRepository.cs",
               "RelativeToolTip": "Interfaces\\Project\\ITaskRepository.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAywBEAAAAUAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA5wAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T19:00:17.3Z",
               "EditorCaption": ""
@@ -129,97 +142,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
-              "RelativeDocumentMoniker": "Models\\Project\\Task.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
-              "RelativeToolTip": "Models\\Project\\Task.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Project\\TaskRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\TaskRepository.cs",
+              "RelativeToolTip": "Repository\\Project\\TaskRepository.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAUwF0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:57:08.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Project\\TaskController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\TaskController.cs",
-              "RelativeToolTip": "Controllers\\Project\\TaskController.cs",
-              "ViewState": "AQIAAK8AAAAAAAAAAAAIwLkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:20:42.898Z",
+              "WhenOpened": "2024-06-09T19:00:40.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TaskDto.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\TaskDto.cs",
-              "RelativeDocumentMoniker": "Dto\\Project\\TaskDto.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\TaskDto.cs",
-              "RelativeToolTip": "Dto\\Project\\TaskDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:59:55.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\UserProjectRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Project\\UserProjectRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\UserProjectRepository.cs",
-              "RelativeToolTip": "Repository\\Project\\UserProjectRepository.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAUwF8AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:43:50.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\Project\\IUserProjectRepository.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
-              "RelativeToolTip": "Interfaces\\Project\\IUserProjectRepository.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBQAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:40:43.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\UserProjectController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Project\\UserProjectController.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Project\\UserProjectController.cs",
-              "RelativeToolTip": "Controllers\\Project\\UserProjectController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:42:54.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
-              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
-              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
-              "RelativeToolTip": "Models\\Account\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:15:14.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "UserProject.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\UserProject.cs",
               "RelativeDocumentMoniker": "Models\\Project\\UserProject.cs",
@@ -232,6 +167,68 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\UserProjectRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Project\\UserProjectRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Project\\UserProjectRepository.cs",
+              "RelativeToolTip": "Repository\\Project\\UserProjectRepository.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAUwFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T18:43:50.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Project\\IUserProjectRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Project\\IUserProjectRepository.cs",
+              "RelativeToolTip": "Interfaces\\Project\\IUserProjectRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA+wBIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T18:40:43.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
+              "RelativeDocumentMoniker": "Models\\Project\\Task.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Project\\Task.cs",
+              "RelativeToolTip": "Models\\Project\\Task.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T18:57:08.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\TaskDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Project\\TaskDto.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\TaskDto.cs",
+              "RelativeToolTip": "Dto\\Project\\TaskDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T18:59:55.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
+              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
+              "RelativeToolTip": "Models\\Account\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T17:15:14.014Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
               "Title": "UserProjectDto.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Project\\UserProjectDto.cs",
@@ -240,8 +237,7 @@
               "RelativeToolTip": "Dto\\Project\\UserProjectDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:43:11.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T18:43:11.495Z"
             },
             {
               "$type": "Document",
@@ -253,8 +249,7 @@
               "RelativeToolTip": "Repository\\Project\\ProjectRepository.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAAAywGcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:08:37.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:08:37.746Z"
             },
             {
               "$type": "Document",
@@ -266,8 +261,7 @@
               "RelativeToolTip": "Controllers\\Project\\ProjectController.cs",
               "ViewState": "AQIAAGYAAAAAAAAAAADwv3YAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:20:09.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:20:09.078Z"
             },
             {
               "$type": "Document",
@@ -279,8 +273,7 @@
               "RelativeToolTip": "Interfaces\\Project\\IProjectRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAmwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:23:55.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:23:55.194Z"
             },
             {
               "$type": "Document",
@@ -292,8 +285,7 @@
               "RelativeToolTip": "Dto\\Project\\ProjectDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:22:12.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:22:12.584Z"
             },
             {
               "$type": "Document",
@@ -305,8 +297,7 @@
               "RelativeToolTip": "Models\\Project\\Project.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAA8wBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:08:42.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:08:42.232Z"
             },
             {
               "$type": "Document",
@@ -318,8 +309,7 @@
               "RelativeToolTip": "Migrations\\20240609171758_changesAreComing.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:17:58.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:17:58.264Z"
             }
           ]
         }
