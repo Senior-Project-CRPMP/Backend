@@ -2,8 +2,9 @@
 using Backend.Dto.Document;
 using Backend.Interfaces.Document;
 using Backend.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Controllers.Document
 {
@@ -64,6 +65,22 @@ namespace Backend.Controllers.Document
                 return BadRequest(ModelState);
 
             return Ok(document);
+        }
+
+        [HttpGet("DocumentsByProject/{projectId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<DocumentDto>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetDocumentsByProjectId(int projectId)
+        {
+            var documents = _mapper.Map<List<DocumentDto>>(_documentRepository.GetDocumentsByProjectId(projectId));
+
+            if (!documents.Any())
+                return NotFound($"No documents found for projectId: {projectId}");
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(documents);
         }
 
         [HttpPost("CreateDocument")]
@@ -144,13 +161,9 @@ namespace Backend.Controllers.Document
             if (!_documentRepository.DeleteDocument(documentToDelete))
             {
                 ModelState.AddModelError("", "Something went wrong deleting document");
-
             }
 
             return NoContent();
-
-
-
         }
     }
 }

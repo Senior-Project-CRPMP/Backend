@@ -1,12 +1,15 @@
 ﻿using Backend.Data;
 using Backend.Interfaces.Document;
 using Backend.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Repository.Document
 {
     public class DocumentRepository : IDocumentRepository
     {
         private readonly DataContext _context;
+
         public DocumentRepository(DataContext context)
         {
             _context = context;
@@ -52,13 +55,18 @@ namespace Backend.Repository.Document
         public bool Save()
         {
             var saved = _context.SaveChanges();
-            return saved > 0 ? true : false;
+            return saved > 0;
         }
 
         public bool UpdateDocument(Models.Document.Document document)
         {
             _context.Update(document);
             return Save();
+        }
+
+        public ICollection<Models.Document.Document> GetDocumentsByProjectId(int projectId)
+        {
+            return _context.Documents.Where(d => d.ProjectId == projectId).ToList();
         }
     }
 }

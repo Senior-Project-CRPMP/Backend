@@ -14,5 +14,6 @@ namespace Backend.Interfaces.Form
         bool UpdateFormResponse(FormResponse formResponse);
         bool DeleteFormResponse(FormResponse formResponse);
         bool Save();
+        ICollection<FormResponse> GetFormResponsesByFormId(int formId);
     }
 }

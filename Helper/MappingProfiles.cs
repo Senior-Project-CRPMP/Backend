@@ -40,6 +40,9 @@ namespace Backend.Helper
             CreateMap<FormAnswer, FormAnswerDto>();
             CreateMap<FormAnswerDto, FormAnswer>();
 
+            CreateMap<Form, FormWithResponsesDto>();
+            CreateMap<FormWithResponsesDto, Form>();
+
             CreateMap<Models.Document.Document, DocumentDto>();
             CreateMap<DocumentDto, Models.Document.Document>();
 

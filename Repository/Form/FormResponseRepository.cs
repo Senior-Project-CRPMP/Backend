@@ -62,5 +62,9 @@ namespace Backend.Repository.Form
             _context.Update(formResponse);
             return Save();
         }
+        public ICollection<FormResponse> GetFormResponsesByFormId(int formId)
+        {
+            return _context.FormResponses.Where(fr => fr.FormId == formId).ToList();
+        }
     }
 }

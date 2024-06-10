@@ -1,6 +1,7 @@
 ﻿using Backend.Data;
 using Backend.Interfaces.Form;
 using Backend.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -77,6 +78,22 @@ namespace Backend.Repository.Form
         {
             _context.Update(form);
             return Save();
+        }
+
+        public ICollection<Models.Form.Form> GetFormsWithResponsesByProjectId(int projectId)
+        {
+            return _context.Forms
+                .Include(f => f.FormResponses)
+                .Where(f => f.ProjectId == projectId)
+                .ToList();
+        }
+
+        public ICollection<Models.Form.Form> GetFormsByProjectIdWithResponses(int projectId)
+        {
+            return _context.Forms
+                .Include(f => f.FormResponses)
+                .Where(f => f.ProjectId == projectId && f.FormResponses.Any())
+                .ToList();
         }
     }
 }

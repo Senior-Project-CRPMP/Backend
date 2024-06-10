@@ -67,6 +67,23 @@ namespace Backend.Controllers.Form
             return Ok(count);
         }
 
+        [HttpGet("FormResponsesByFormId/{formId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormResponseDto>))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetFormResponsesByFormId(int formId)
+        {
+            if (!_formResponseRepository.FormResponseExists(formId))
+                return NotFound();
+
+            var formResponses = _mapper.Map<List<FormResponseDto>>(_formResponseRepository.GetFormResponsesByFormId(formId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(formResponses);
+        }
+
         [HttpPost("CreateFormResponse")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]

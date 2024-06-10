@@ -13,5 +13,6 @@ namespace Backend.Interfaces.Document
         bool UpdateDocument(Models.Document.Document document);
         bool DeleteDocument(Models.Document.Document document);
         bool Save();
+        ICollection<Models.Document.Document> GetDocumentsByProjectId(int projectId);
     }
 }

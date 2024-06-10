@@ -17,5 +17,7 @@ namespace Backend.Interfaces.Form
         bool UpdateForm(Models.Form.Form form);
         bool DeleteForm(Models.Form.Form form);
         bool Save();
+        ICollection<Models.Form.Form> GetFormsWithResponsesByProjectId(int projectId);
+        ICollection<Models.Form.Form> GetFormsByProjectIdWithResponses(int projectId);
     }
 }

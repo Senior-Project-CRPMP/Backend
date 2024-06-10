@@ -178,5 +178,58 @@ namespace Backend.Controllers.Form
 
             return Ok("Successfully Deleted");
         }
+
+        [HttpGet("FormsWithResponses")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormDto>))]
+        public IActionResult GetFormsWithResponses()
+        {
+            var forms = _formRepository.GetForms();
+            foreach (var form in forms)
+            {
+                form.FormResponses = _formResponseRepository.GetFormResponsesByFormId(form.Id);
+            }
+            var formsDto = _mapper.Map<List<FormDto>>(forms);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(formsDto);
+        }
+
+        [HttpGet("ProjectFormsWithResponses/{projectId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormWithResponsesDto>))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetProjectFormsWithResponses(int projectId)
+        {
+            if (!_projectRepository.ProjectExists(projectId))
+                return NotFound();
+
+            var forms = _formRepository.GetFormsWithResponsesByProjectId(projectId);
+            var formDtos = _mapper.Map<List<FormWithResponsesDto>>(forms);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(formDtos);
+        }
+
+        [HttpGet("ProjectFormsWithResponsesOnly/{projectId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormDto>))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetProjectFormsWithResponsesOnly(int projectId)
+        {
+            if (!_projectRepository.ProjectExists(projectId))
+                return NotFound();
+
+            var forms = _formRepository.GetFormsByProjectIdWithResponses(projectId);
+            var formDtos = _mapper.Map<List<FormDto>>(forms);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(formDtos);
+        }
     }
 }
