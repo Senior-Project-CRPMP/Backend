@@ -50,6 +50,28 @@ namespace Backend.Controllers.Form
             return Ok(formAnswer);
         }
 
+        [HttpGet("FormAnswersByQuestionId/{questionId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<FormAnswerDto>))]
+        public IActionResult GetFormAnswersByQuestionId(int questionId)
+        {
+            var formAnswers = _mapper.Map<List<FormAnswerDto>>(_formAnswerRepository.GetFormAnswersByQuestionId(questionId));
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok(formAnswers);
+        }
+
+        [HttpGet("FormAnswerCountsByOptionId/{questionId}")]
+        [ProducesResponseType(200)]
+        public IActionResult GetFormAnswerCountsByOptionId(int questionId)
+        {
+            var counts = _formAnswerRepository.GetFormAnswerCountsByOptionId(questionId);
+            return Ok(counts);
+        }
+
         [HttpPost("CreateFormAnswer")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]

@@ -1,6 +1,8 @@
 ﻿using Backend.Data;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Repository.Form
 {
@@ -32,6 +34,19 @@ namespace Backend.Repository.Form
         public ICollection<FormAnswer> GetFormAnswers()
         {
             return _context.FormAnswers.OrderBy(p => p.Id).ToList();
+        }
+
+        public ICollection<FormAnswer> GetFormAnswersByQuestionId(int questionId)
+        {
+            return _context.FormAnswers.Where(fa => fa.FormQuestionId == questionId && fa.FormOptionId == null).ToList();
+        }
+
+        public IDictionary<int?, int> GetFormAnswerCountsByOptionId(int questionId)
+        {
+            return _context.FormAnswers
+                           .Where(fa => fa.FormQuestionId == questionId)
+                           .GroupBy(fa => fa.FormOptionId)
+                           .ToDictionary(g => g.Key, g => g.Count());
         }
 
         public bool FormAnswerExists(int id)

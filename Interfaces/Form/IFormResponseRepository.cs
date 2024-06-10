@@ -1,4 +1,5 @@
 ﻿using Backend.Models.Form;
+using System.Collections.Generic;
 
 namespace Backend.Interfaces.Form
 {
@@ -6,6 +7,8 @@ namespace Backend.Interfaces.Form
     {
         ICollection<FormResponse> GetFormResponses();
         FormResponse GetFormResponse(int id);
+        int GetFormResponseCount();
+        int GetFormResponseCountByFormId(int formId);
         bool FormResponseExists(int id);
         bool CreateFormResponse(FormResponse formResponse);
         bool UpdateFormResponse(FormResponse formResponse);

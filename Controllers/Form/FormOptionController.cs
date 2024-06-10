@@ -51,7 +51,7 @@ namespace Backend.Controllers.Form
             return Ok(formOption);
         }
 
-        [HttpGet("OptionsByQuestionId/{questionId}")]  // Add this endpoint
+        [HttpGet("OptionsByQuestionId/{questionId}")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<FormOptionDto>))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]

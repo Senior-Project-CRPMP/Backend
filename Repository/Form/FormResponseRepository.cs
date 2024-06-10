@@ -1,6 +1,8 @@
 ﻿using Backend.Data;
 using Backend.Interfaces.Form;
 using Backend.Models.Form;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Repository.Form
 {
@@ -32,6 +34,16 @@ namespace Backend.Repository.Form
         public ICollection<FormResponse> GetFormResponses()
         {
             return _context.FormResponses.OrderBy(p => p.Id).ToList();
+        }
+
+        public int GetFormResponseCount()
+        {
+            return _context.FormResponses.Count();
+        }
+
+        public int GetFormResponseCountByFormId(int formId)
+        {
+            return _context.FormResponses.Count(fr => fr.FormId == formId);
         }
 
         public bool FormResponseExists(int id)

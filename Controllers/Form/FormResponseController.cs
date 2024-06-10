@@ -51,6 +51,22 @@ namespace Backend.Controllers.Form
             return Ok(formResponse);
         }
 
+        [HttpGet("TotalFormResponseCount")]
+        [ProducesResponseType(200)]
+        public IActionResult GetTotalFormResponseCount()
+        {
+            var count = _formResponseRepository.GetFormResponseCount();
+            return Ok(count);
+        }
+
+        [HttpGet("FormResponseCountByFormId/{formId}")]
+        [ProducesResponseType(200)]
+        public IActionResult GetFormResponseCountByFormId(int formId)
+        {
+            var count = _formResponseRepository.GetFormResponseCountByFormId(formId);
+            return Ok(count);
+        }
+
         [HttpPost("CreateFormResponse")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -103,7 +119,7 @@ namespace Backend.Controllers.Form
         }
 
         [HttpDelete("DeleteFormResponse/{formResponseId}")]
-        [ProducesResponseType(204)] // No Content status code
+        [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult DeleteFormResponse(int formResponseId)
