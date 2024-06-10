@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:repository\\account\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:interfaces\\account\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:models\\account\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\dto\\account\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:dto\\account\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|c:\\users\\kidis\\visual studio code\\final project\\backend\\controllers\\form\\formanswercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8013615C-02CA-4D4B-9FE0-FB1C38A4C4D8}|Backend.csproj|solutionrelative:controllers\\form\\formanswercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -62,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -87,6 +107,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Account\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Account\\AccountRepository.cs",
+              "RelativeToolTip": "Repository\\Account\\AccountRepository.cs",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAiwAEBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T05:04:52.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
+              "RelativeDocumentMoniker": "Models\\Account\\User.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Account\\User.cs",
+              "RelativeToolTip": "Models\\Account\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T05:04:37.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Account\\IAccountRepository.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Account\\IAccountRepository.cs",
+              "RelativeToolTip": "Interfaces\\Account\\IAccountRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAwwBAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T05:04:24.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Account\\AccountController.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Account\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\Account\\AccountController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAADwv1YAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T05:03:52.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Account\\UserDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Account\\UserDto.cs",
+              "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Account\\UserDto.cs",
+              "RelativeToolTip": "Dto\\Account\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T05:04:11.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FormAnswerRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Form\\FormAnswerRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Form\\FormAnswerRepository.cs",
@@ -94,12 +179,11 @@
               "RelativeToolTip": "Repository\\Form\\FormAnswerRepository.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAswEUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T04:53:47.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T04:53:47.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "IFormAnswerRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Form\\IFormAnswerRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Form\\IFormAnswerRepository.cs",
@@ -107,25 +191,24 @@
               "RelativeToolTip": "Interfaces\\Form\\IFormAnswerRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T04:53:18.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T04:53:18.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "FormAnswerController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormAnswerController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormAnswerController.cs",
               "ToolTip": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormAnswerController.cs",
               "RelativeToolTip": "Controllers\\Form\\FormAnswerController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAA2wEQAAAAoAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAUwEQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T23:53:46.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "FormAnswerDto.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Form\\FormAnswerDto.cs",
               "RelativeDocumentMoniker": "Dto\\Form\\FormAnswerDto.cs",
@@ -133,12 +216,11 @@
               "RelativeToolTip": "Dto\\Form\\FormAnswerDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T04:53:03.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T04:53:03.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "FormAnswer.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormAnswer.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormAnswer.cs",
@@ -146,12 +228,11 @@
               "RelativeToolTip": "Models\\Form\\FormAnswer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T04:49:04.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T04:49:04.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "FormOptionController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormOptionController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormOptionController.cs",
@@ -159,12 +240,11 @@
               "RelativeToolTip": "Controllers\\Form\\FormOptionController.cs",
               "ViewState": "AQIAAHcAAAAAAAAAAAAswDUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:54:30.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:54:30.78Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "FormResponseRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Form\\FormResponseRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Form\\FormResponseRepository.cs",
@@ -172,12 +252,11 @@
               "RelativeToolTip": "Repository\\Form\\FormResponseRepository.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAqwEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:39:23.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:39:23.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "FormResponseController.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Controllers\\Form\\FormResponseController.cs",
               "RelativeDocumentMoniker": "Controllers\\Form\\FormResponseController.cs",
@@ -185,12 +264,11 @@
               "RelativeToolTip": "Controllers\\Form\\FormResponseController.cs",
               "ViewState": "AQIAAG0AAAAAAAAAAAAqwHsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:35:42.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:35:42.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "IFormResponseRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Form\\IFormResponseRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Form\\IFormResponseRepository.cs",
@@ -198,12 +276,11 @@
               "RelativeToolTip": "Interfaces\\Form\\IFormResponseRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:39:49.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:39:49.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "FormRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Repository\\Form\\FormRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Form\\FormRepository.cs",
@@ -211,12 +288,11 @@
               "RelativeToolTip": "Repository\\Form\\FormRepository.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAIwEEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:36:52.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:36:52.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "FormResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Dto\\Form\\FormResponseDto.cs",
               "RelativeDocumentMoniker": "Dto\\Form\\FormResponseDto.cs",
@@ -224,12 +300,11 @@
               "RelativeToolTip": "Dto\\Form\\FormResponseDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:35:58.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:35:58.369Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "FormResponse.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Models\\Form\\FormResponse.cs",
               "RelativeDocumentMoniker": "Models\\Form\\FormResponse.cs",
@@ -237,12 +312,11 @@
               "RelativeToolTip": "Models\\Form\\FormResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:36:34.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:36:34.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "IFormRepository.cs",
               "DocumentMoniker": "C:\\Users\\kidis\\Visual Studio Code\\Final Project\\Backend\\Interfaces\\Form\\IFormRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\Form\\IFormRepository.cs",
@@ -250,8 +324,7 @@
               "RelativeToolTip": "Interfaces\\Form\\IFormRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:36:12.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T23:36:12.761Z"
             }
           ]
         }

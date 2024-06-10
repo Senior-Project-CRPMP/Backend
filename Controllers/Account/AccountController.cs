@@ -74,6 +74,17 @@ namespace Backend.Controllers.Account
             return Ok(users);
         }
 
+        [HttpGet("search-users")]
+        public IActionResult SearchUsers([FromQuery] string query)
+        {
+            var users = _accountRepository.SearchUsers(query);
+
+            if (users == null || !users.Any())
+                return NotFound("No users found matching the search criteria.");
+
+            return Ok(users);
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> Register(Register model)
         {

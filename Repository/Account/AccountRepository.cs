@@ -231,5 +231,30 @@ namespace Backend.Repositories.Account
         {
             return await _userManager.UpdateAsync(user);
         }
+
+        public ICollection<User> SearchUsers(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return new List<User>();
+            }
+
+            var names = query.Split(' ');
+            var firstName = names[0];
+            var lastName = names.Length > 1 ? names[1] : null;
+
+            var users = _userManager.Users.AsQueryable();
+
+            if (lastName != null)
+            {
+                users = users.Where(u => u.FirstName.Contains(firstName) && u.LastName.Contains(lastName));
+            }
+            else
+            {
+                users = users.Where(u => u.FirstName.Contains(firstName) || u.LastName.Contains(firstName));
+            }
+
+            return users.ToList();
+        }
     }
 }

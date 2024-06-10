@@ -22,5 +22,6 @@ namespace Backend.Interfaces.Account
         Task<IdentityResult> RegisterUserAsync(User user, string password);
         Task<bool> DeleteUserAsync(User user);
         Task<IdentityResult> UpdateUserAsync(User user);
+        ICollection<User> SearchUsers(string name);
     }
 }
