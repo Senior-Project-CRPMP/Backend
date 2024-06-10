@@ -8,7 +8,9 @@ namespace Backend.Interfaces.Form
         ICollection<FormAnswer> GetFormAnswers();
         FormAnswer GetFormAnswer(int id);
         ICollection<FormAnswer> GetFormAnswersByQuestionId(int questionId);
-        IDictionary<int?, int> GetFormAnswerCountsByOptionId(int questionId);
+        IDictionary<int?, int> GetFormAnswerCountsByOptionId(int questionId, int? optionId = null);
+        int GetFormAnswerCountByOptionId(int optionId);
+
         bool FormAnswerExists(int id);
         bool CreateFormAnswer(FormAnswer formAnswer);
         bool UpdateFormAnswer(FormAnswer formAnswer);

@@ -41,13 +41,19 @@ namespace Backend.Repository.Form
             return _context.FormAnswers.Where(fa => fa.FormQuestionId == questionId && fa.FormOptionId == null).ToList();
         }
 
-        public IDictionary<int?, int> GetFormAnswerCountsByOptionId(int questionId)
+        public IDictionary<int?, int> GetFormAnswerCountsByOptionId(int questionId, int? optionId = null)
         {
-            return _context.FormAnswers
-                           .Where(fa => fa.FormQuestionId == questionId)
-                           .GroupBy(fa => fa.FormOptionId)
-                           .ToDictionary(g => g.Key, g => g.Count());
+            var query = _context.FormAnswers.Where(fa => fa.FormQuestionId == questionId);
+
+            if (optionId.HasValue)
+            {
+                query = query.Where(fa => fa.FormOptionId == optionId.Value);
+            }
+
+            return query.GroupBy(fa => fa.FormOptionId)
+                        .ToDictionary(g => g.Key, g => g.Count());
         }
+
 
         public bool FormAnswerExists(int id)
         {
@@ -65,5 +71,11 @@ namespace Backend.Repository.Form
             _context.Update(formAnswer);
             return Save();
         }
+
+        public int GetFormAnswerCountByOptionId(int optionId)
+        {
+            return _context.FormAnswers.Count(fa => fa.FormOptionId == optionId);
+        }
+
     }
 }

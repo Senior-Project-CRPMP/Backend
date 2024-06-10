@@ -64,13 +64,22 @@ namespace Backend.Controllers.Form
             return Ok(formAnswers);
         }
 
-        [HttpGet("FormAnswerCountsByOptionId/{questionId}")]
+        [HttpGet("FormAnswerCountsByOptionId/{questionId}/{optionId?}")]
         [ProducesResponseType(200)]
-        public IActionResult GetFormAnswerCountsByOptionId(int questionId)
+        public IActionResult GetFormAnswerCountsByOptionId(int questionId, int? optionId = null)
         {
-            var counts = _formAnswerRepository.GetFormAnswerCountsByOptionId(questionId);
+            var counts = _formAnswerRepository.GetFormAnswerCountsByOptionId(questionId, optionId);
             return Ok(counts);
         }
+
+        [HttpGet("FormAnswerCountByOptionId/{optionId}")]
+        [ProducesResponseType(200)]
+        public IActionResult GetFormAnswerCountByOptionId(int optionId)
+        {
+            var count = _formAnswerRepository.GetFormAnswerCountByOptionId(optionId);
+            return Ok(count);
+        }
+
 
         [HttpPost("CreateFormAnswer")]
         [ProducesResponseType(201)]
