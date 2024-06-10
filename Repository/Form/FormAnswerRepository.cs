@@ -38,7 +38,7 @@ namespace Backend.Repository.Form
 
         public ICollection<FormAnswer> GetFormAnswersByQuestionId(int questionId)
         {
-            return _context.FormAnswers.Where(fa => fa.FormQuestionId == questionId && fa.FormOptionId == null).ToList();
+            return _context.FormAnswers.Where(fa => fa.FormQuestionId == questionId).ToList();
         }
 
         public IDictionary<int?, int> GetFormAnswerCountsByOptionId(int questionId, int? optionId = null)
